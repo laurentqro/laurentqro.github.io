@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-06T12:34:27+01:00</updated><id>http://localhost:4000/</id><title type="html">Laurent Curau</title><subtitle>Laurent Curau's blog</subtitle><entry><title type="html">Coaching at Codebar</title><link href="http://localhost:4000/coaching-codebar/" rel="alternate" type="text/html" title="Coaching at Codebar" /><published>2014-10-30T09:51:42+00:00</published><updated>2014-10-30T09:51:42+00:00</updated><id>http://localhost:4000/coaching-codebar</id><content type="html" xml:base="http://localhost:4000/coaching-codebar/">&lt;p&gt;Yesterday was my first day coaching at &lt;a href=&quot;http://www.codebar.io&quot;&gt;Codebar&lt;/a&gt;. Despo Pentara posted a tweet in the afternoon that they were short of a coaches due to unusually high number of students, and I have always enjoyed teaching, so I jumped in without hesitation. It’s also the best way to learn and uncover the gaps in my knowledge.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-06T12:46:14+01:00</updated><id>http://localhost:4000/</id><title type="html">Laurent Curau</title><subtitle>Laurent Curau's blog</subtitle><entry><title type="html">The magic tricks of testing</title><link href="http://localhost:4000/the-magic-tricks-of-testing/" rel="alternate" type="text/html" title="The magic tricks of testing" /><published>2014-11-17T09:51:42+00:00</published><updated>2014-11-17T09:51:42+00:00</updated><id>http://localhost:4000/the-magic-tricks-of-testing</id><content type="html" xml:base="http://localhost:4000/the-magic-tricks-of-testing/">&lt;p&gt;Sandi Metz gave a talk titled &lt;a href=&quot;https://www.youtube.com/watch?v=URSWYvyc42M&quot;&gt;The Magic Tricks of Testing&lt;/a&gt; at Rails Conf 2013. She tells us about &lt;strong&gt;what&lt;/strong&gt; should be tested and &lt;strong&gt;whose responsibility&lt;/strong&gt; it is to do so. Here are my takeaways.&lt;/p&gt;
+
+&lt;p&gt;We want a unit test to be:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;thorough&lt;/li&gt;
+  &lt;li&gt;stable&lt;/li&gt;
+  &lt;li&gt;fast&lt;/li&gt;
+  &lt;li&gt;few&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;focus-on-messages&quot;&gt;Focus on messages&lt;/h3&gt;
+
+&lt;p&gt;There are three types of messages:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;incoming (receives from others)&lt;/li&gt;
+  &lt;li&gt;sent to self (the object sends to itself)&lt;/li&gt;
+  &lt;li&gt;outgoing (sends messages)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These messages come in two flavours: they can be queries or commands.&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;query message&lt;/strong&gt; returns something and changes nothing.&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;command returns&lt;/strong&gt; nothing and changes something.&lt;/p&gt;
+
+&lt;p&gt;The problem is, we conflate commands and queries. (e.g. pop method). It is not evil per se to mix command and query methods, but they get tested differently.&lt;/p&gt;
+
+&lt;h5 id=&quot;incoming-query-messages&quot;&gt;Incoming query messages&lt;/h5&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Wheel&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;attr_reader&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:rim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:tire&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tire&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# ..&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;diameter&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;rim&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tire&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The diameter method is an incoming query.&lt;/p&gt;
+
+&lt;p&gt;This is how it is tested:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WheelTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;MiniTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Unit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;TestCase&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_calculates_diameter&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;wheel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Wheel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;26.02&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wheel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;diameter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Rule&lt;/strong&gt;: Test incoming query messages by making &lt;em&gt;assertions&lt;/em&gt; about &lt;em&gt;what they send back&lt;/em&gt; (i.e. their state).&lt;/p&gt;
+
+&lt;p&gt;We don’t care about how it’s done. We care only about the message that is sent back. We test only the interface, not the implementation. That means we can change the implementation without breaking the tests.&lt;/p&gt;
+
+&lt;h4 id=&quot;incoming-command-messages&quot;&gt;Incoming command messages&lt;/h4&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Gear&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;attr_reader&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:chainring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:cog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:wheel&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# ...&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;set_cog&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@cog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_cog&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;set_cog&lt;/code&gt; method is a combination of a query and a command.&lt;/p&gt;
+
+&lt;p&gt;It returns a value - that’s the query part - that gets set on the &lt;code class=&quot;highlighter-rouge&quot;&gt;@cog&lt;/code&gt; instance variable - that’s the command part.&lt;/p&gt;
+
+&lt;p&gt;We test only the command:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GearTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;MiniTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Unit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;TestCase&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_set_cog&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;gear&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Gear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;gear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;set_cog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Rule&lt;/strong&gt;: Test incoming command messages by making &lt;strong&gt;assertions&lt;/strong&gt; about &lt;strong&gt;direct public side effects&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The receiver of the incoming message has sole responsibility making assertions about its value.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rule&lt;/strong&gt;: &lt;strong&gt;Do not test private methods&lt;/strong&gt;. Do not make assertions about their result. Do not expect to send them.&lt;/p&gt;
+
+&lt;p&gt;Writing tests for private methods binds us to a specific implementation and make it impossible to refactor without breaking the tests.&lt;/p&gt;
+
+&lt;p&gt;It’s an overspecification that adds costs, and absolutely no value.&lt;/p&gt;
+
+&lt;h4 id=&quot;outgoing-query-message&quot;&gt;Outgoing query message&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Rule&lt;/strong&gt;: Do not test outgoing query messages.&lt;/p&gt;
+
+&lt;p&gt;Do not make assertions about their result. Do not expect to send them.&lt;/p&gt;
+
+&lt;p&gt;If a sent message has no visible side-effect, then the sender should &lt;strong&gt;not&lt;/strong&gt; test it.&lt;/p&gt;
+
+&lt;h4 id=&quot;outgoing-command-message&quot;&gt;Outgoing command message&lt;/h4&gt;
+
+&lt;p&gt;Test outgoing command messages by setting expectations on them, expecting that you send them.&lt;/p&gt;
+
+&lt;h4 id=&quot;summary&quot;&gt;Summary&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/sandi_metz_unit_test_matrix.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Underlying principles:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Be a minimalist&lt;/li&gt;
+  &lt;li&gt;Use good judgement&lt;/li&gt;
+  &lt;li&gt;Test everything once&lt;/li&gt;
+  &lt;li&gt;Test the interface&lt;/li&gt;
+  &lt;li&gt;Trust collaborators&lt;/li&gt;
+  &lt;li&gt;Insist on simplicity&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Sandi Metz gave a talk titled The Magic Tricks of Testing at Rails Conf 2013. She tells us about what should be tested and whose responsibility it is to do so. Here are my takeaways.</summary></entry><entry><title type="html">Coaching at Codebar</title><link href="http://localhost:4000/coaching-codebar/" rel="alternate" type="text/html" title="Coaching at Codebar" /><published>2014-10-30T09:51:42+00:00</published><updated>2014-10-30T09:51:42+00:00</updated><id>http://localhost:4000/coaching-codebar</id><content type="html" xml:base="http://localhost:4000/coaching-codebar/">&lt;p&gt;Yesterday was my first day coaching at &lt;a href=&quot;http://www.codebar.io&quot;&gt;Codebar&lt;/a&gt;. Despo Pentara posted a tweet in the afternoon that they were short of a coaches due to unusually high number of students, and I have always enjoyed teaching, so I jumped in without hesitation. It’s also the best way to learn and uncover the gaps in my knowledge.&lt;/p&gt;
 
 &lt;p&gt;I coached Laura and Charlotte. Laura is a young web designer who wants to learn more about JavaScript so she can make her websites more interactive. Charlotte is a middle-aged woman, and coding is her hobby.&lt;/p&gt;
 
