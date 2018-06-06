@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-06T11:54:17+01:00</updated><id>http://localhost:4000/</id><title type="html">Laurent Curau</title><subtitle>Laurent Curau's blog</subtitle><entry><title type="html">How to customise your shell prompt</title><link href="http://localhost:4000/how-to-customise-your-shell-prompt/" rel="alternate" type="text/html" title="How to customise your shell prompt" /><published>2013-10-25T10:51:42+01:00</published><updated>2013-10-25T10:51:42+01:00</updated><id>http://localhost:4000/how-to-customise-your-shell-prompt</id><content type="html" xml:base="http://localhost:4000/how-to-customise-your-shell-prompt/">&lt;p&gt;By default, the shell prompt on Mac OS X is somewhat cluttered so I customised it to be nice and minimalistic.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-06T12:24:18+01:00</updated><id>http://localhost:4000/</id><title type="html">Laurent Curau</title><subtitle>Laurent Curau's blog</subtitle><entry><title type="html">Product development with Ryan Singer of 37signals</title><link href="http://localhost:4000/product-development-with-ryan-singer-of-37signals/" rel="alternate" type="text/html" title="Product development with Ryan Singer of 37signals" /><published>2013-11-21T09:51:42+00:00</published><updated>2013-11-21T09:51:42+00:00</updated><id>http://localhost:4000/product-development-with-ryan-singer-of-37signals</id><content type="html" xml:base="http://localhost:4000/product-development-with-ryan-singer-of-37signals/">&lt;p&gt;Ryan Singer of 37signals came to Starter School to talk to us about how to think about design and product development.&lt;/p&gt;
+
+&lt;p&gt;Here are a few takeaways.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;fr&quot;&gt;&lt;p&gt;.&lt;a href=&quot;https://twitter.com/rjs&quot;&gt;@rjs&lt;/a&gt; dropping product design knowledge on &lt;a href=&quot;https://twitter.com/starterschool&quot;&gt;@starterschool&lt;/a&gt; students this afternoon &lt;a href=&quot;http://t.co/D78mSydTTJ&quot;&gt;pic.twitter.com/D78mSydTTJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; The Starter League (@starterleague) &lt;a href=&quot;https://twitter.com/starterleague/statuses/403651941479112704&quot;&gt;21 Novembre 2013&lt;/a&gt;&lt;/blockquote&gt;&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;h2&gt;Design is an organic process&lt;/h2&gt;
+
+&lt;p&gt;From the center outward. From the epicenter to the periphery.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ryan-singer-epicenter.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote&gt;&quot;Designing a product is like building a city. You cannot start by building the first floor of every building of the city, then the second, and so on. You want to get one building right, and go on from there.&quot;&lt;/blockquote&gt;&lt;/p&gt;
+
+&lt;h2&gt;Don't leave your visitor guessing. Avoid surprises&lt;/h2&gt;
+
+&lt;p&gt;Show your customer the process he is supposed to go through. Let him see the entire process before he embarks on it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ryan-singer-tunnel.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The visitor must know at a glance what you expect him to do. You must also give him a heads up how many steps there are in the process. That way, he can estimate if it's worth his time and effort, and he can be sure there are no surprises along the way.&lt;/p&gt;
+
+&lt;h2&gt;Three types of features&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Must have (breaks on a car, wings on a plane, etc.)&lt;/li&gt;
+  &lt;li&gt;Performance (enhance)&lt;/li&gt;
+  &lt;li&gt;Delight (&lt;em&gt;oh, nice!&lt;/em&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Everything must be here for a reason&lt;/h2&gt;
+
+&lt;p&gt;Each element of our apps must have a good answer to the following questions: who is it for? why is it important for my customer? why does he care?&lt;/p&gt;
+
+&lt;h2&gt;Break free of the grid if you must&lt;/h2&gt;
+
+&lt;p&gt;It seems all web designers these days swear by grid design. It creates order and harmony. It’s easy on the eye.&lt;/p&gt;
+
+&lt;p&gt;But what if adding a critical link or button somewhere on the page breaks the grid. Should you leave it out? Or break out of the grid?&lt;/p&gt;
+
+&lt;p&gt;If that button is really important, if it adds more value to the customer than it takes away, then feel free to break out of the grid. It’s a trade-off. If it’s worth it, do it.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote&gt;&quot;Never let your decisions be dictated by the grid.&quot; -Ryan Singer.&lt;/blockquote&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Recommended by Ryan Singer&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[Video] &lt;a href=&quot;http://www.infoq.com/presentations/Simple-Made-Easy&quot; target=&quot;_blank&quot;&gt;Simple Made Easy, a talk by Richard Hickey&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[Book] &lt;a href=&quot;http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215&quot; target=&quot;_blank&quot;&gt;Domain-Driven Design&lt;/a&gt;, by Eric Evans&lt;/li&gt;
+  &lt;li&gt;[Book] &lt;a href=&quot;http://www.amazon.com/Notes-Synthesis-Form-Harvard-Paperbacks/dp/0674627512/&quot; target=&quot;_blank&quot;&gt;Timeless Way of Building&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/Nature-Order-Phenomenon-Environmental-Structure/dp/0972652914/&quot;&gt;The Nature of Order, by Christopher Alexander&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Ryan Singer on the web&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[Blog] &lt;a href=&quot;http://feltpresence.com/&quot; target=&quot;_blank&quot;&gt;Ryan Singer's blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[Video] &lt;a href=&quot;https://peepcode.com/products/ryan-singer-ux&quot; target=&quot;_blank&quot;&gt;UX Sketching on Peepcode&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[Video] &lt;a href=&quot;http://vimeo.com/10875362&quot; target=&quot;_blank&quot;&gt;Designing with forces, How to apply Christopher Alexander in everyday work&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Ryan Singer on Twitter: &lt;a href=&quot;https://twitter.com/rjs&quot; target=&quot;_blank&quot;&gt;@rjs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Ryan Singer of 37signals came to Starter School to talk to us about how to think about design and product development.</summary></entry><entry><title type="html">How to customise your shell prompt</title><link href="http://localhost:4000/how-to-customise-your-shell-prompt/" rel="alternate" type="text/html" title="How to customise your shell prompt" /><published>2013-10-25T10:51:42+01:00</published><updated>2013-10-25T10:51:42+01:00</updated><id>http://localhost:4000/how-to-customise-your-shell-prompt</id><content type="html" xml:base="http://localhost:4000/how-to-customise-your-shell-prompt/">&lt;p&gt;By default, the shell prompt on Mac OS X is somewhat cluttered so I customised it to be nice and minimalistic.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
