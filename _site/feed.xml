@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-06T12:58:03+01:00</updated><id>http://localhost:4000/</id><title type="html">Laurent Curau</title><subtitle>Laurent Curau's blog</subtitle><entry><title type="html">Java Streams</title><link href="http://localhost:4000/java-streams/" rel="alternate" type="text/html" title="Java Streams" /><published>2018-05-08T10:51:42+01:00</published><updated>2018-05-08T10:51:42+01:00</updated><id>http://localhost:4000/java-streams</id><content type="html" xml:base="http://localhost:4000/java-streams/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-06T12:59:41+01:00</updated><id>http://localhost:4000/</id><title type="html">Laurent Curau</title><subtitle>Laurent Curau's blog</subtitle><entry><title type="html">Building trust, managing expectations and delivering value</title><link href="http://localhost:4000/building-trust-managing-expectations-and-delivering-value/" rel="alternate" type="text/html" title="Building trust, managing expectations and delivering value" /><published>2018-05-29T10:51:42+01:00</published><updated>2018-05-29T10:51:42+01:00</updated><id>http://localhost:4000/building-trust-managing-expectations-and-delivering-value</id><content type="html" xml:base="http://localhost:4000/building-trust-managing-expectations-and-delivering-value/">&lt;p&gt;Once a week, I meet up with my mentors Christoph and Andrea to demo my work and to plan the upcoming iteration. The process mimics the agile practices used with 8th Light clients. My mentors act both as peers who review my work, and as clients who expect me to deliver value for their business.&lt;/p&gt;
+
+&lt;p&gt;As I have come to learn from my mentor/clients during iteration planning meetings, it is crucial to be transparent, manage expectations, and deliver some kind of value to the client in the space of the iteration.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Transparency x time = trust&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If a feature’s size was under estimated, you must be transparent and forthcoming with the client. Tell them outright that the feature has to be either re-estimated or downsized. Transparency x time = trust.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Manage expectations: underpromise, overdeliver&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Disappointment or joy is caused by the gap between expected and actual outcomes. Exceeded expectations result in joy. Failed expectations result in disappointment. Knowing that, it is important to actively manage client expectations for the best by underpromising and overdelivering.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Deliver value to your client. ANY value&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One of my assignments for iteration number three was to create an unbeatable Tic Tac Toe player using the minimax algorithm. I was unable to deliver on this assignment, for reasons I won’t delve into here (I am looking at you Java’s type system).&lt;/p&gt;
+
+&lt;p&gt;So I showed up at iteration planning meeting without an unbeatable computer player to show for all my troubles. If the requested feature can’t be delivered entirely, why deliver it at all, right?&lt;/p&gt;
+
+&lt;p&gt;Wrong.&lt;/p&gt;
+
+&lt;p&gt;There is no excuse for delivering nothing. There is always some value you can deliver. Identify what that value is, and discuss it with your client before the iteration planning meeting.&lt;/p&gt;
+
+&lt;p&gt;In my case, that value could have been:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;computer player is able to make a random move&lt;/li&gt;
+  &lt;li&gt;computer player is able to make semi-smart moves based on a set of rules&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Better to deliver a beatable computer player than no computer player at all.&lt;/p&gt;
+
+&lt;p&gt;Deliver value to your client. ANY value.&lt;/p&gt;</content><author><name></name></author><summary type="html">Once a week, I meet up with my mentors Christoph and Andrea to demo my work and to plan the upcoming iteration. The process mimics the agile practices used with 8th Light clients. My mentors act both as peers who review my work, and as clients who expect me to deliver value for their business.</summary></entry><entry><title type="html">Java Streams</title><link href="http://localhost:4000/java-streams/" rel="alternate" type="text/html" title="Java Streams" /><published>2018-05-08T10:51:42+01:00</published><updated>2018-05-08T10:51:42+01:00</updated><id>http://localhost:4000/java-streams</id><content type="html" xml:base="http://localhost:4000/java-streams/">&lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
