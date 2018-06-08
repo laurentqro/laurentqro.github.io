@@ -2,7 +2,7 @@ name: Laurent Curau
 meta_description: "Laurent Curau works at 8th Light and he writes about software development."
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 logo: false
 baseurl: /
 permalink: /:title
