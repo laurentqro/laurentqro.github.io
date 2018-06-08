@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Testing multi-threaded asynchronous code in Java"
-intro: "Test operates in one thread. The code under test runs in other threads, which your test knows nothing about. So how do you test multi-threaded code?"
+title:  Testing multi-threaded asynchronous code in Java
+intro: Test operates in one thread. The code under test runs in other threads, which your test knows nothing about. So how do you test multi-threaded code?
+meta: A test operates in one thread. The code under test runs in other threads, which your test knows nothing about. So how do you test multi-threaded code?
 date:   2018-06-08 11:15:00 +0100
 ---
 

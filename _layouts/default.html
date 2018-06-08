@@ -4,8 +4,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>{{ site.name }}</title>
-    <meta name="description" content="{{ site.meta_description}}" />
+    <title>{{page.title}}</title>
+    {% if page.meta %}
+      <meta name="description" content="{{page.title}}" />
+    {% else %}
+      <meta name="description" content="{{ site.meta_description}}" />
+    {% endif %}
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
