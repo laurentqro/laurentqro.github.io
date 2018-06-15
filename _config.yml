@@ -10,7 +10,7 @@ domain_name: 'https://laurentcurau.com'
 google_analytics: 'UA-374156-4'
 
 # Details for the RSS feed generator
-url:            'www.laurentcurau.com'
+url:            'laurentcurau.com'
 author:         'Laurent Curau'
 
 social:
