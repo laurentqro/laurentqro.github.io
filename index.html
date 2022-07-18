@@ -2,35 +2,54 @@
 layout: default
 title: Laurent Curau
 cover: false
-about: 'about'
 ---
 
 <header class="main-header {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
   <div class="vertical">
     <div class="main-header-content inner">
-      <a href="/about"><img class="profile" src="/assets/images/profile-circle-cropped-xs.png" alt="Author's profile picture"></a><br />
-      Hi, there! My name is <strong><a href="{{ page.about }}">Laurent Curau</a></strong> and this is my blog.
+      <p>
+        Hi! My name is Laurent, I'm an independent software engineer with a background in business, finance, and entrepreneurship. Passionate about software craftsmanship and product design.
+      </p>
+
+      <p>
+        I've been solving business problems using my programming skills since 2014. I always make sure to understand the business model and root causes of the problems I am solving.
+      </p>
+
+      <p>
+        Although I spend most of my time building software, I also enjoy collaborating with both technical and non-technical people to build great products, mentoring other developers, and learning from them.
+      </p>
+
+      <p>
+        I like working on tools that make people's lives easier, and businesses more efficient.
+      </p>
+
+      <p>
+        You can follow me on <a href="{{site.social.twitter}}">Twitter</a>, see my personal coding projects on <a href="{{site.social.github}}">Github</a> or send me a message on <a href="{{site.social.linkedin}}">LinkedIn</a>.
+      </p>
     </div>
   </div>
 </header>
 
-<main id="content" class="content" role="main">
-    {% for post in site.posts %}
-      <article class="post">
-          <header class="post-header">
-              <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-              <span class="post-meta">
-                <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
-              </span>
-          </header>
 
-          <section class="post-excerpt">
-            {% if post.intro %}
-              <p>{{ post.intro }}</p>
-            {% else %}
-              {{ post.excerpt }}
-            {%endif%}
-          </section>
-      </article>
-    {% endfor %}
+<main id="content" class="content" role="main">
+  <h2>Blog posts</h2>
+
+  {% for post in site.posts %}
+  <article class="post">
+    <header class="post-header">
+      <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <span class="post-meta">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+      </span>
+    </header>
+
+    <section class="post-excerpt">
+      {% if post.intro %}
+      <p>{{ post.intro }}</p>
+      {% else %}
+      {{ post.excerpt }}
+      {%endif%}
+    </section>
+  </article>
+  {% endfor %}
 </main>
