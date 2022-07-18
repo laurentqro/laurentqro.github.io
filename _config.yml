@@ -7,7 +7,6 @@ logo: false
 baseurl: /
 permalink: /:title
 domain_name: 'https://laurentcurau.com'
-google_analytics: 'UA-374156-4'
 
 # Details for the RSS feed generator
 url:            'laurentcurau.com'
@@ -16,4 +15,4 @@ author:         'Laurent Curau'
 social:
   twitter: https://twitter.com/laurentqro
   github: https://github.com/laurentqro
-  email: 'mailto:hello@thecodeshed.dev'
+  linkedin: https://www.linkedin.com/in/laurentcurau
