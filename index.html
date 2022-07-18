@@ -4,33 +4,25 @@ title: Laurent Curau
 cover: false
 ---
 
-<div class="main-header no-cover">
-  <div class="inner">
+<main class="content" role="main">
+  <section class="post">
     {% include about.html %}
 
     <hr />
 
     <h2>Blog posts</h2>
+    <br >
 
     {% for post in site.posts %}
-      <article class="post">
-        <header class="post-header">
-          <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-
-          <span class="post-meta">
-            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
-          </span>
+      <article class="">
+        <header>
+          <h4>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h4>
+          <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
         </header>
-
-        <section class="post-excerpt">
-          {% if post.intro %}
-            <p>{{ post.intro }}</p>
-          {% else %}
-            {{ post.excerpt }}
-          {%endif%}
-        </section>
-
       </article>
+      <br >
     {% endfor %}
-  </div>
-</div>
+    </section>
+</main>
