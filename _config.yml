@@ -1,5 +1,5 @@
-name: Laurent Curau
-meta_description: "Laurent Curau works at 8th Light and he writes about software development."
+name: Laurent Curau - Software Engineer
+meta_description: "Laurent Curau, independent software engineer. Solving business problems with software since 2014."
 
 markdown: kramdown
 highlighter: rouge
@@ -16,4 +16,4 @@ author:         'Laurent Curau'
 social:
   twitter: https://twitter.com/laurentqro
   github: https://github.com/laurentqro
-  email: 'mailto:laurentcurau@gmail.com'
+  email: 'mailto:hello@thecodeshed.dev'
