@@ -7,22 +7,5 @@ cover: false
 <main class="content" role="main">
   <section class="post">
     {% include about.html %}
-
-    <hr />
-
-    <h2>Blog posts</h2>
-    <br >
-
-    {% for post in site.posts %}
-      <article class="">
-        <header>
-          <h4>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h4>
-          <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
-        </header>
-      </article>
-      <br >
-    {% endfor %}
-    </section>
+  </section>
 </main>
