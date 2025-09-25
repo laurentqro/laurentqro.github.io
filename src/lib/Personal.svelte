@@ -111,7 +111,7 @@
     right: -20px;
     width: 120px;
     height: 120px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #0891b2 100%);
     border-radius: 50%;
     opacity: 0.1;
     z-index: 1;

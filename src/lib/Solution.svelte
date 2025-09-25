@@ -163,7 +163,7 @@
   }
 
   .stats-card {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #667eea, #0891b2);
     padding: 2rem;
     border-radius: 1rem;
     color: white;

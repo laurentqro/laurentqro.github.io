@@ -99,7 +99,7 @@
 
 <style>
   .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #0891b2 100%);
     color: white;
     min-height: 100vh;
     display: flex;

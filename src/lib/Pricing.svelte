@@ -215,7 +215,7 @@
   
   .pricing-card.featured {
     border-color: #3b82f6;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #667eea, #0891b2);
     color: white;
     transform: scale(1.05);
   }
