@@ -6,10 +6,14 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-brand">
-        <h3>Fractional CTO Services</h3>
+        <h3>Laurent Curau</h3>
         <p>Technical leadership on-demand for growing companies</p>
+        <br />
+        <p>10, rue du Gabian<br />
+          98000, Monaco 🇲🇨
+        </p>
       </div>
-      
+
       <div class="footer-links">
         <div class="link-group">
           <h4>Services</h4>
@@ -18,7 +22,7 @@
           <a href="#services">Team Building</a>
           <a href="#services">Architecture</a>
         </div>
-        
+
         <div class="link-group">
           <h4>Company</h4>
           <a href="#target">Who We Help</a>
