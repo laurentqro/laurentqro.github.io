@@ -1,21 +1,26 @@
 <script>
   let isMenuOpen = false;
-  
+
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
-  
-  function smoothScrollTo(targetId, event) {
+
+  function handleAnchorClick(event) {
     event.preventDefault();
-    
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
+    const link = event.currentTarget;
+    const anchorId = new URL(link.href).hash.replace('#', '');
+    const anchor = document.getElementById(anchorId);
+
+    if (anchor) {
+      // Add offset for navigation spacing and use slower scrolling
+      const offsetTop = anchor.offsetTop - 80;
+
+      // Custom smooth scroll with slower timing
       const startPosition = window.pageYOffset;
-      const targetPosition = targetElement.offsetTop - 80; // Adjust offset as needed
-      const distance = targetPosition - startPosition;
-      const duration = 1200; // Slower duration in milliseconds (1.2 seconds)
+      const distance = offsetTop - startPosition;
+      const duration = 1200; // 1.2 seconds
       let start = null;
-      
+
       function animation(currentTime) {
         if (start === null) start = currentTime;
         const timeElapsed = currentTime - start;
@@ -23,7 +28,7 @@
         window.scrollTo(0, run);
         if (timeElapsed < duration) requestAnimationFrame(animation);
       }
-      
+
       // Easing function for smoother animation
       function ease(t, b, c, d) {
         t /= d / 2;
@@ -31,7 +36,7 @@
         t--;
         return -c / 2 * (t * (t - 2) - 1) + b;
       }
-      
+
       requestAnimationFrame(animation);
     }
   }
@@ -44,9 +49,9 @@
         <span class="logo-text">Fractional CTO</span>
       </div>
       <div class="nav-links">
-        <a href="#services" on:click={(e) => smoothScrollTo('#services', e)}>Services</a>
-        <a href="#pricing" on:click={(e) => smoothScrollTo('#pricing', e)}>Pricing</a>
-        <a href="#contact" class="cta-button" on:click={(e) => smoothScrollTo('#contact', e)}>Get Started</a>
+        <a href="#services" on:click={handleAnchorClick}>Services</a>
+        <a href="#pricing" on:click={handleAnchorClick}>Pricing</a>
+        <a href="#contact" class="cta-button" on:click={handleAnchorClick}>Get Started</a>
       </div>
     </div>
   </nav>
@@ -59,8 +64,8 @@
         Build better products, make smarter tech decisions, and scale your team effectively.
       </p>
       <div class="hero-buttons">
-        <a href="#contact" class="primary-button" on:click={(e) => smoothScrollTo('#contact', e)}>Book a Call</a>
-        <a href="#services" class="secondary-button" on:click={(e) => smoothScrollTo('#services', e)}>Learn More</a>
+        <a href="#contact" class="primary-button" on:click={handleAnchorClick}>Book a Call</a>
+        <a href="#services" class="secondary-button" on:click={handleAnchorClick}>Learn More</a>
       </div>
     </div>
     <div class="hero-visual">
