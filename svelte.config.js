@@ -12,7 +12,8 @@ const config = {
             base: process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/').pop()}` : ''
         },
         prerender: {
-            handleHttpError: 'warn'
+            handleHttpError: 'warn',
+            handleMissingId: 'warn'
         }
     }
 };

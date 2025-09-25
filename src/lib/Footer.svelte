@@ -1,3 +1,7 @@
+<script>
+  const currentYear = new Date().getFullYear();
+</script>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
@@ -22,7 +26,7 @@
           <a href="#process">Process</a>
           <a href="#contact">Contact</a>
         </div>
-        
+
         <div class="link-group">
           <h4>Connect</h4>
           <a href="mailto:hello@laurentcurau.com">Email</a>
@@ -31,11 +35,11 @@
         </div>
       </div>
     </div>
-    
+
     <div class="footer-bottom">
       <div class="footer-divider"></div>
       <div class="footer-copyright">
-        <p>&copy; 2025 Fractional CTO Services. All rights reserved.</p>
+        <p>&copy; {currentYear} Laurent Curau. All rights reserved.</p>
         <div class="footer-legal">
           <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Service</a>
