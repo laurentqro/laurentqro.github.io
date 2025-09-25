@@ -1,4 +1,5 @@
 <script>
+  import * as m from '$lib/paraglide/messages';
   const currentYear = new Date().getFullYear();
 </script>
 
@@ -7,10 +8,10 @@
     <div class="footer-content">
       <div class="footer-brand">
         <h3>Laurent Curau</h3>
-        <p>Technical leadership on-demand for growing companies</p>
+        <p>{m.footer_brand_description()}</p>
         <br />
-        <p>10, rue du Gabian<br />
-          98000, Monaco 🇲🇨
+        <p>{m.footer_address_line_1()}<br />
+          {m.footer_address_line_2()}
         </p>
       </div>
 
@@ -43,10 +44,10 @@
     <div class="footer-bottom">
       <div class="footer-divider"></div>
       <div class="footer-copyright">
-        <p>&copy; {currentYear} Laurent Curau. All rights reserved.</p>
+        <p>&copy; {currentYear} Laurent Curau. {m.footer_copyright()}</p>
         <div class="footer-legal">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
+          <a href="/privacy">{m.footer_links_privacy()}</a>
+          <a href="/terms">{m.footer_links_terms()}</a>
         </div>
       </div>
     </div>

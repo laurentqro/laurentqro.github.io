@@ -1,10 +1,14 @@
+<script>
+  import * as m from '$lib/paraglide/messages';
+</script>
+
 <section id="solution" class="solution">
   <div class="container">
     <div class="solution-content">
       <div class="solution-text">
-        <h2>Your Fractional CTO Solution</h2>
+        <h2>{m.solution_title()}</h2>
         <p class="solution-subtitle">
-          I act as your <strong>Fractional CTO</strong>, providing the technical leadership you need without the full-time commitment.
+          {m.solution_subtitle()}
         </p>
 
         <div class="solution-points">
@@ -16,8 +20,8 @@
               </svg>
             </div>
             <div class="point-content">
-              <h3>Hands-on Development</h3>
-              <p>Build or modernize your product with experienced hands-on coding and architecture.</p>
+              <h3>{m.solution_point_1_title()}</h3>
+              <p>{m.solution_point_1()}</p>
             </div>
           </div>
 
@@ -28,8 +32,8 @@
               </svg>
             </div>
             <div class="point-content">
-              <h3>Technology Strategy</h3>
-              <p>Ensure technical decisions align with your business goals and long-term vision.</p>
+              <h3>{m.solution_point_2_title()}</h3>
+              <p>{m.solution_point_2()}</p>
             </div>
           </div>
 
@@ -43,8 +47,8 @@
               </svg>
             </div>
             <div class="point-content">
-              <h3>Team & Process Setup</h3>
-              <p>Build the foundation for smooth scaling with proper processes and team structure.</p>
+              <h3>{m.solution_point_3_title()}</h3>
+              <p>{m.solution_point_3()}</p>
             </div>
           </div>
         </div>
@@ -54,20 +58,20 @@
         <div class="stats-card">
           <div class="stat">
             <div class="stat-number">50+</div>
-            <div class="stat-label">Projects Delivered</div>
+            <div class="stat-label">{m.solution_stat_1_label()}</div>
           </div>
           <div class="stat">
             <div class="stat-number">€2M+</div>
-            <div class="stat-label">Development Costs Saved</div>
+            <div class="stat-label">{m.solution_stat_2_label()}</div>
           </div>
           <div class="stat">
             <div class="stat-number">95%</div>
-            <div class="stat-label">Client Satisfaction</div>
+            <div class="stat-label">{m.solution_stat_3_label()}</div>
           </div>
         </div>
 
         <div class="tech-stack">
-          <h4>Technology Expertise</h4>
+          <h4>{m.solution_tech_stack_title()}</h4>
           <div class="tech-grid">
             <span class="tech-item">React</span>
             <span class="tech-item">Node.js</span>

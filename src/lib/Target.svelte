@@ -1,8 +1,12 @@
+<script>
+  import * as m from '$lib/paraglide/messages';
+</script>
+
 <section id="target" class="target">
   <div class="container">
     <div class="section-header">
-      <h2>Who This Helps</h2>
-      <p>Perfect for companies at the right stage for fractional technical leadership</p>
+      <h2>{m.target_title()}</h2>
+      <p>{m.target_subtitle()}</p>
     </div>
     
     <div class="target-grid">

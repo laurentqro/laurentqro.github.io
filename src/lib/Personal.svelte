@@ -1,4 +1,5 @@
 <script>
+  import * as m from '$lib/paraglide/messages';
   import profilePhoto from '$lib/assets/profile.jpg';
 </script>
 
@@ -11,42 +12,38 @@
       </div>
       <div class="message-container">
         <div class="personal-header">
-          <h2>A Personal Message</h2>
-          <div class="subtitle">From Laurent Curau</div>
+          <h2>{m.personal_title()}</h2>
+          <div class="subtitle">{m.personal_subtitle()}</div>
         </div>
         <div class="message">
           <p>
-            Hi there! I'm Laurent, and I've spent over 10 years helping startups and growing companies 
-            navigate the complex world of technology leadership.
+            {m.personal_message_1()}
           </p>
           <p>
-            I know how overwhelming it can feel when you're building something amazing but need technical 
-            guidance without the commitment of a full-time CTO. That's exactly why I created this service.
+            {m.personal_message_2()}
           </p>
           <p>
-            Whether you're a founder who needs someone to translate business goals into technical strategy, 
-            or a growing team that needs architectural guidance, I'm here to help you make the right 
-            decisions at the right time.
+            {m.personal_message_3()}
           </p>
           <p class="signature">
-            Let's build something great together.
+            {m.personal_signature()}
           </p>
           <div class="signature-name">
-            — Laurent
+            {m.personal_signature_name()}
           </div>
         </div>
         <div class="credentials">
           <div class="credential-item">
             <span class="credential-number">10+</span>
-            <span class="credential-text">Years Experience</span>
+            <span class="credential-text">{m.personal_credentials_years()}</span>
           </div>
           <div class="credential-item">
             <span class="credential-number">30+</span>
-            <span class="credential-text">Companies Helped</span>
+            <span class="credential-text">{m.personal_credentials_companies()}</span>
           </div>
           <div class="credential-item">
             <span class="credential-number">€2M+</span>
-            <span class="credential-text">Value Created</span>
+            <span class="credential-text">{m.personal_credentials_value()}</span>
           </div>
         </div>
       </div>

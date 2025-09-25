@@ -1,8 +1,12 @@
+<script>
+  import * as m from '$lib/paraglide/messages';
+</script>
+
 <section id="services" class="services">
   <div class="container">
     <div class="section-header">
-      <h2>How I Help You Succeed</h2>
-      <p>Comprehensive technical leadership across all aspects of your product development</p>
+      <h2>{m.services_title()}</h2>
+      <p>{m.services_subtitle()}</p>
     </div>
     
     <div class="services-grid">
@@ -12,8 +16,8 @@
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
           </svg>
         </div>
-        <h3>Build MVPs & Internal Tools</h3>
-        <p>Rapid development of minimum viable products and internal tools that solve real business problems efficiently.</p>
+        <h3>{m.services_card_1_title()}</h3>
+        <p>{m.services_card_1()}</p>
       </div>
       
       <div class="service-card">
@@ -22,8 +26,8 @@
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
           </svg>
         </div>
-        <h3>Tech Stack & Architecture</h3>
-        <p>Choose the right technology stack and system architecture that scales with your business needs.</p>
+        <h3>{m.services_card_2_title()}</h3>
+        <p>{m.services_card_2()}</p>
       </div>
       
       <div class="service-card">
@@ -33,8 +37,8 @@
             <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
           </svg>
         </div>
-        <h3>Mentor & Upskill Developers</h3>
-        <p>Level up your existing development team through code reviews, best practices, and hands-on mentoring.</p>
+        <h3>{m.services_card_3_title()}</h3>
+        <p>{m.services_card_3()}</p>
       </div>
       
       <div class="service-card">
@@ -46,8 +50,8 @@
             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </div>
-        <h3>Help Recruit Engineers</h3>
-        <p>Define technical roles, interview candidates, and build your engineering team with the right talent.</p>
+        <h3>{m.services_card_4_title()}</h3>
+        <p>{m.services_card_4()}</p>
       </div>
       
       <div class="service-card">
@@ -56,8 +60,8 @@
             <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
           </svg>
         </div>
-        <h3>CI/CD & Testing Setup</h3>
-        <p>Implement continuous integration, deployment pipelines, and testing frameworks for long-term maintainability.</p>
+        <h3>{m.services_card_5_title()}</h3>
+        <p>{m.services_card_5()}</p>
       </div>
       
       <div class="service-card featured">
@@ -68,8 +72,8 @@
             <line x1="12" y1="2" x2="12" y2="14"/>
           </svg>
         </div>
-        <h3>Complete Handover Process</h3>
-        <p>Seamless transition when you hire in-house, with full documentation and knowledge transfer to ensure continuity.</p>
+        <h3>{m.services_card_6_title()}</h3>
+        <p>{m.services_card_6()}</p>
       </div>
     </div>
   </div>

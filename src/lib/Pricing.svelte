@@ -1,8 +1,12 @@
+<script>
+  import * as m from '$lib/paraglide/messages';
+</script>
+
 <section id="pricing" class="pricing">
   <div class="container">
     <div class="section-header">
-      <h2>Flexible Engagement Options</h2>
-      <p>Monthly retainer packages designed to fit your needs and budget</p>
+      <h2>{m.pricing_title()}</h2>
+      <p>{m.pricing_subtitle()}</p>
     </div>
     
     <div class="pricing-grid">

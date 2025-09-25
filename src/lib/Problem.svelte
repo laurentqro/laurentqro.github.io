@@ -1,8 +1,12 @@
+<script>
+  import * as m from '$lib/paraglide/messages';
+</script>
+
 <section id="problem" class="problem">
   <div class="container">
     <div class="section-header">
-      <h2>The Challenge Every Growing Company Faces</h2>
-      <p>Building software without senior technical leadership is like sailing without a compass</p>
+      <h2>{m.problem_title()}</h2>
+      <p>{m.problem_subtitle()}</p>
     </div>
 
     <div class="problems-grid">
@@ -15,10 +19,10 @@
             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </div>
-        <h3>No Technical Leadership</h3>
-        <p>You want to build software, but don't have a CTO to guide technical decisions and strategy.</p>
+        <h3>{m.problem_card_1_title()}</h3>
+        <p>{m.problem_card_1()}</p>
       </div>
-      
+
       <div class="problem-card">
         <div class="problem-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -26,8 +30,8 @@
             <path d="M12 6v6l4 2"/>
           </svg>
         </div>
-        <h3>Too Early for Full-Time</h3>
-        <p>Hiring a full-time CTO is too expensive or premature for your current stage and budget.</p>
+        <h3>{m.problem_card_2_title()}</h3>
+        <p>{m.problem_card_2()}</p>
       </div>
 
       <div class="problem-card">
@@ -36,8 +40,8 @@
             <path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
           </svg>
         </div>
-        <h3>Costly Mistakes</h3>
-        <p>Without senior guidance, product decisions and tech choices can become expensive mistakes that slow you down.</p>
+        <h3>{m.problem_card_3_title()}</h3>
+        <p>{m.problem_card_3()}</p>
       </div>
     </div>
   </div>

@@ -1,8 +1,12 @@
+<script>
+  import * as m from '$lib/paraglide/messages';
+</script>
+
 <section id="process" class="process">
   <div class="container">
     <div class="section-header">
-      <h2>Typical Engagement Process</h2>
-      <p>A structured approach to ensure successful outcomes and smooth transitions</p>
+      <h2>{m.process_title()}</h2>
+      <p>{m.process_subtitle()}</p>
     </div>
     
     <div class="process-timeline">

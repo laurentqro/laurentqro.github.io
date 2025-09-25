@@ -1,5 +1,8 @@
 <script>
   import logo from '$lib/assets/logo.svg';
+  import * as m from '$lib/paraglide/messages';
+  import { locales, localizeHref } from '$lib/paraglide/runtime';
+  import { page } from '$app/stores';
   
   function handleAnchorClick(event) {
     event.preventDefault();
@@ -45,9 +48,22 @@
       <span class="logo-text">Laurent Curau</span>
     </div>
     <div class="nav-links">
-      <a href="#services" on:click={handleAnchorClick}>Services</a>
-      <a href="#pricing" on:click={handleAnchorClick}>Pricing</a>
-      <a href="#contact" class="cta-button" on:click={handleAnchorClick}>Get Started</a>
+      <a href="#services" onclick={handleAnchorClick}>{m.nav_services()}</a>
+      <a href="#pricing" onclick={handleAnchorClick}>{m.nav_pricing()}</a>
+      
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        {#each locales as locale}
+          <a href={localizeHref($page.url.pathname, { locale })} 
+             class="lang-button" 
+             class:active={$page.url.pathname.includes(`/${locale}`)}
+             title={locale === 'fr' ? 'Français' : 'English'}>
+            {locale.toUpperCase()}
+          </a>
+        {/each}
+      </div>
+      
+      <a href="#contact" class="cta-button" onclick={handleAnchorClick}>{m.nav_contact()}</a>
     </div>
   </div>
 </nav>
@@ -118,6 +134,41 @@
   .cta-button:hover {
     transform: translateY(-1px);
     color: white !important;
+  }
+
+  .language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 0 1rem;
+  }
+
+  .lang-button {
+    background: none;
+    border: none;
+    color: #4a5568;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-size: 0.875rem;
+  }
+
+  .lang-button:hover {
+    background-color: #f0f4f8;
+    color: #667eea;
+  }
+
+  .lang-button.active {
+    background-color: #667eea;
+    color: white;
+    font-weight: 700;
+  }
+
+  .lang-button.active:hover {
+    background-color: #5a67d8;
   }
   
   @media (max-width: 768px) {

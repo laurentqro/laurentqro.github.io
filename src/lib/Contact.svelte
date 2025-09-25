@@ -1,10 +1,14 @@
+<script>
+  import * as m from '$lib/paraglide/messages';
+</script>
+
 <section id="contact" class="contact">
   <div class="container">
     <div class="contact-content">
       <div class="contact-text">
-        <h2>Ready to Get Started?</h2>
+        <h2>{m.contact_title()}</h2>
         <p class="contact-subtitle">
-          Send a short note about your product, stage, and goals. Let's discuss how fractional CTO services can accelerate your success.
+          {m.contact_subtitle()}
         </p>
 
         <div class="contact-methods">

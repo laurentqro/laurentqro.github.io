@@ -1,4 +1,5 @@
 <script>
+  import * as m from '$lib/paraglide/messages';
   function handleAnchorClick(event) {
     event.preventDefault();
     const link = event.currentTarget;
@@ -39,14 +40,13 @@
 <section class="hero">
   <div class="hero-content">
     <div class="hero-text">
-      <h1>Your Technical Co-Founder, On-Demand</h1>
+      <h1>{m.hero_title()}</h1>
       <p class="hero-subtitle">
-        Get senior engineering leadership without the full-time commitment. 
-        Build better products, make smarter tech decisions, and scale your team effectively.
+        {m.hero_subtitle()}
       </p>
       <div class="hero-buttons">
-        <a href="#contact" class="primary-button" on:click={handleAnchorClick}>Book a Call</a>
-        <a href="#services" class="secondary-button" on:click={handleAnchorClick}>Learn More</a>
+        <a href="#contact" class="primary-button" onclick={handleAnchorClick}>{m.hero_cta_primary()}</a>
+        <a href="#services" class="secondary-button" onclick={handleAnchorClick}>{m.hero_cta_secondary()}</a>
       </div>
     </div>
     <div class="hero-visual">
