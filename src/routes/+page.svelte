@@ -1,5 +1,6 @@
 <script>
   import Hero from '../lib/Hero.svelte'
+  import Personal from '../lib/Personal.svelte'
   import Problem from '../lib/Problem.svelte'
   import Solution from '../lib/Solution.svelte'
   import Services from '../lib/Services.svelte'
@@ -11,6 +12,7 @@
 </script>
 
 <Hero />
+<Personal />
 <Problem />
 <Solution />
 <Services />
