@@ -25,9 +25,9 @@
         
         <div class="link-group">
           <h4>Connect</h4>
-          <a href="mailto:hello@yourdomain.com">Email</a>
-          <a href="https://cal.com/your-handle" target="_blank" rel="noopener noreferrer">Book a Call</a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:hello@laurentcurau.com">Email</a>
+          <a href="https://cal.com/laurentcurau" target="_blank" rel="noopener noreferrer">Book a Call</a>
+          <a href="https://linkedin.com/in/laurentcurau" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </div>

@@ -6,9 +6,9 @@
         <p class="contact-subtitle">
           Send a short note about your product, stage, and goals. Let's discuss how fractional CTO services can accelerate your success.
         </p>
-        
+
         <div class="contact-methods">
-          <a href="mailto:hello@yourdomain.com" class="contact-method">
+          <a href="mailto:hello@laurentcurau.com" class="contact-method">
             <div class="method-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -17,11 +17,11 @@
             </div>
             <div class="method-content">
               <h3>Email</h3>
-              <p>hello@yourdomain.com</p>
+              <p>hello@laurentcurau.com</p>
             </div>
           </a>
-          
-          <a href="https://cal.com/your-handle" target="_blank" rel="noopener noreferrer" class="contact-method">
+
+          <a href="https://cal.com/laurentcurau" target="_blank" rel="noopener noreferrer" class="contact-method">
             <div class="method-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
@@ -47,24 +47,24 @@
           <p>Typical response time: <strong>24 hours</strong></p>
         </div>
       </div>
-      
+
       <div class="contact-form">
         <form class="form">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
           </div>
-          
+
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
           </div>
-          
+
           <div class="form-group">
             <label for="company">Company</label>
             <input type="text" id="company" name="company">
           </div>
-          
+
           <div class="form-group">
             <label for="stage">Company Stage</label>
             <select id="stage" name="stage">
@@ -76,12 +76,12 @@
               <option value="established">Established</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <label for="message">Tell me about your product and goals</label>
             <textarea id="message" name="message" rows="4" placeholder="What are you building? What challenges are you facing? What are your goals?" required></textarea>
           </div>
-          
+
           <button type="submit" class="submit-button">
             Send Message
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -100,41 +100,41 @@
     padding: 6rem 0;
     background: white;
   }
-  
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
   }
-  
+
   .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
   }
-  
+
   .contact-text h2 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #1f2937;
     margin-bottom: 1rem;
   }
-  
+
   .contact-subtitle {
     font-size: 1.25rem;
     color: #6b7280;
     line-height: 1.6;
     margin-bottom: 2rem;
   }
-  
+
   .contact-methods {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 2rem;
   }
-  
+
   .contact-method {
     display: flex;
     align-items: center;
@@ -145,12 +145,12 @@
     text-decoration: none;
     transition: all 0.2s;
   }
-  
+
   .contact-method:hover {
     background: #e0e7ff;
     transform: translateX(4px);
   }
-  
+
   .method-icon {
     width: 3rem;
     height: 3rem;
@@ -162,24 +162,24 @@
     color: white;
     flex-shrink: 0;
   }
-  
+
   .method-icon svg {
     width: 1.5rem;
     height: 1.5rem;
   }
-  
+
   .method-content h3 {
     font-size: 1.125rem;
     font-weight: 600;
     color: #1f2937;
     margin-bottom: 0.25rem;
   }
-  
+
   .method-content p {
     color: #6b7280;
     margin: 0;
   }
-  
+
   .response-time {
     display: flex;
     align-items: center;
