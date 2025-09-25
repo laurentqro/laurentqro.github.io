@@ -53,39 +53,6 @@
         </div>
       </div>
     </div>
-    
-    <div class="success-stories">
-      <h3>Success Stories</h3>
-      <div class="stories-grid">
-        <div class="story">
-          <div class="story-quote">
-            "Helped us build our MVP in 3 months and guided our first engineering hire. Now we have a solid foundation to scale."
-          </div>
-          <div class="story-author">
-            <strong>Sarah Chen</strong> - Founder, FinTech Startup
-          </div>
-        </div>
-        
-        <div class="story">
-          <div class="story-quote">
-            "Modernized our legacy system and set up proper CI/CD. Our deployment time went from hours to minutes."
-          </div>
-          <div class="story-author">
-            <strong>Marcus Weber</strong> - CTO, Manufacturing SME
-          </div>
-        </div>
-        
-        <div class="story">
-          <div class="story-quote">
-            "The fractional CTO approach was perfect for our Series A stage. Got enterprise-level guidance at startup budget."
-          </div>
-          <div class="story-author">
-            <strong>Lisa Rodriguez</strong> - CEO, SaaS Platform
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <style>
