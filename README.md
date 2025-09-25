@@ -1,38 +1,151 @@
-# sv
+# Laurent Curau - Fractional CTO Services
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A modern, professional website showcasing fractional CTO services built with SvelteKit and deployed on GitHub Pages.
 
-## Creating a project
+## 🚀 Live Site
 
-If you're seeing this, you've probably already done this step. Congrats!
+Visit: [https://laurentcurau.com](https://laurentcurau.com)
 
-```sh
-# create a new project in the current directory
-npx sv create
+## 📋 Overview
 
-# create a new project in my-app
-npx sv create my-app
+This website serves as a professional landing page for Laurent Curau's fractional CTO services, targeting startups and growing companies that need senior technical leadership without the full-time commitment.
+
+## ✨ Features
+
+### 🎨 Design & UX
+- **Modern gradient design** with blue-to-teal color scheme
+- **Responsive layout** optimized for all devices
+- **Smooth scrolling navigation** with custom 1.2-second animations
+- **Fixed white navigation bar** with professional styling
+- **Personal branding** with custom logo integration
+
+### 📱 Components
+- **Hero Section** - Compelling value proposition and call-to-action
+- **Personal Message** - Human touch with profile photo and personal story
+- **Problem/Solution** - Clear articulation of client pain points and solutions
+- **Services** - Detailed breakdown of offerings
+- **Pricing** - Transparent pricing structure
+- **Target Audience** - Who benefits from the services
+- **Contact Form** - Professional contact integration
+- **Process** - How the service works
+- **Footer** - Contact information and legal links
+
+### 🔧 Technical Features
+- **SvelteKit** - Modern web framework
+- **Static Site Generation** - Fast loading and SEO-friendly
+- **GitHub Pages** deployment with custom domain
+- **SEO optimized** with comprehensive meta tags
+- **Social media previews** with Open Graph and Twitter Cards
+- **Automatic copyright year** updates
+- **Professional favicon** and branding
+
+## 🛠 Technology Stack
+
+- **Framework**: SvelteKit
+- **Styling**: Custom CSS with Tailwind CSS
+- **Build Tool**: Vite
+- **Deployment**: GitHub Pages with GitHub Actions
+- **Domain**: Custom domain (laurentcurau.com)
+
+## 📦 Project Structure
+
+```
+src/
+├── lib/
+│   ├── assets/          # Images, icons, and static assets
+│   ├── Contact.svelte   # Contact form component
+│   ├── Footer.svelte    # Footer with contact info
+│   ├── Hero.svelte      # Main hero section
+│   ├── Navigation.svelte # Fixed navigation bar
+│   ├── Personal.svelte  # Personal message section
+│   ├── Pricing.svelte   # Pricing information
+│   ├── Problem.svelte   # Problem identification
+│   ├── Process.svelte   # Service process
+│   ├── Services.svelte  # Service offerings
+│   ├── Solution.svelte  # Solution presentation
+│   └── Target.svelte    # Target audience
+├── routes/
+│   ├── +layout.svelte   # Main layout with SEO meta tags
+│   ├── +page.js         # Page configuration
+│   └── +page.svelte     # Main page component
+└── app.css              # Global styles
 ```
 
-## Developing
+## 🚀 Development
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Prerequisites
+- Node.js (v20+)
+- npm
 
-```sh
+### Setup
+```bash
+# Clone the repository
+git clone https://github.com/laurentqro/laurentqro.github.io.git
+cd laurentqro.github.io
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+### Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run format` - Format code with Prettier
+- `npm run lint` - Check code formatting
 
-To create a production version of your app:
+## 🌐 Deployment
 
-```sh
-npm run build
-```
+The site automatically deploys to GitHub Pages when changes are pushed to the `master` branch using GitHub Actions.
 
-You can preview the production build with `npm run preview`.
+### Deployment Configuration
+- **Source**: GitHub Actions workflow (`.github/workflows/pages.yml`)
+- **Build**: SvelteKit static adapter
+- **Output**: `build/` directory
+- **Domain**: Custom domain configured via CNAME
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## 📊 SEO & Social Media
+
+### SEO Features
+- Comprehensive meta tags (title, description, keywords)
+- Open Graph tags for social media sharing
+- Twitter Card integration
+- Structured data (JSON-LD) for search engines
+- Canonical URLs
+- Proper heading hierarchy
+
+### Social Media Preview
+- Custom logo as preview image (`logo.png`)
+- Optimized dimensions (1200x630px)
+- Professional branding across all platforms
+
+## 🎨 Brand Guidelines
+
+### Colors
+- **Primary Blue**: `#667eea`
+- **Accent Teal**: `#0891b2`
+- **Background**: White with subtle gradients
+- **Text**: Professional dark grays
+
+### Typography
+- Clean, modern sans-serif fonts
+- Hierarchical heading structure
+- Readable line heights and spacing
+
+## 📧 Contact Information
+
+**Laurent Curau**  
+Fractional CTO Services  
+10, rue du Gabian  
+98000, Monaco 🇲🇨
+
+## 📄 License
+
+This project is private and proprietary to Laurent Curau.
+
+---
+
+*Built with ❤️ using SvelteKit*
