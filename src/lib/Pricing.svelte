@@ -14,7 +14,7 @@
         <div class="pricing-body">
           <div class="price">
             <span class="currency">€</span>
-            <span class="amount">3-4k</span>
+            <span class="amount">5-6k</span>
             <span class="period">/month</span>
           </div>
           <div class="features">
@@ -59,7 +59,7 @@
         <div class="pricing-body">
           <div class="price">
             <span class="currency">€</span>
-            <span class="amount">6-9k</span>
+            <span class="amount">10-12k</span>
             <span class="period">/month</span>
           </div>
           <div class="features">
@@ -110,7 +110,7 @@
         <div class="pricing-body">
           <div class="price">
             <span class="currency">€</span>
-            <span class="amount">12k+</span>
+            <span class="amount">15k+</span>
             <span class="period">/month</span>
           </div>
           <div class="features">
