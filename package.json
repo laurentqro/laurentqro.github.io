@@ -28,5 +28,8 @@
 	},
 	"dependencies": {
 		"@inlang/paraglide-js": "^2.3.2"
+	},
+	"overrides": {
+		"cookie": "^0.7.0"
 	}
 }
