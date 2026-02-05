@@ -20,7 +20,7 @@
               </svg>
             </div>
             <div class="method-content">
-              <h3>Email</h3>
+              <h3>{m.contact_email()}</h3>
               <p>hello@laurentcurau.com</p>
             </div>
           </a>
@@ -35,12 +35,12 @@
               </svg>
             </div>
             <div class="method-content">
-              <h3>Calendar</h3>
-              <p>Book a call</p>
+              <h3>{m.contact_calendar()}</h3>
+              <p>{m.contact_book_call()}</p>
             </div>
           </a>
         </div>
-        
+
         <div class="response-time">
           <div class="response-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -48,46 +48,46 @@
               <polyline points="12,6 12,12 16,14"/>
             </svg>
           </div>
-          <p>Typical response time: <strong>24 hours</strong></p>
+          <p>{m.contact_response_time()} <strong>{m.contact_response_hours()}</strong></p>
         </div>
       </div>
 
       <div class="contact-form">
         <form class="form">
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name">{m.contact_form_name()}</label>
             <input type="text" id="name" name="name" required>
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">{m.contact_form_email()}</label>
             <input type="email" id="email" name="email" required>
           </div>
 
           <div class="form-group">
-            <label for="company">Company</label>
+            <label for="company">{m.contact_form_company()}</label>
             <input type="text" id="company" name="company">
           </div>
 
           <div class="form-group">
-            <label for="stage">Company Stage</label>
+            <label for="stage">{m.contact_form_stage()}</label>
             <select id="stage" name="stage">
-              <option value="">Select stage</option>
-              <option value="pre-seed">Pre-seed</option>
-              <option value="seed">Seed</option>
-              <option value="series-a">Series A</option>
-              <option value="sme">SME</option>
-              <option value="established">Established</option>
+              <option value="">{m.contact_form_stage_placeholder()}</option>
+              <option value="pre-seed">{m.contact_form_stage_preseed()}</option>
+              <option value="seed">{m.contact_form_stage_seed()}</option>
+              <option value="series-a">{m.contact_form_stage_series_a()}</option>
+              <option value="sme">{m.contact_form_stage_sme()}</option>
+              <option value="established">{m.contact_form_stage_established()}</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="message">Tell me about your product and goals</label>
-            <textarea id="message" name="message" rows="4" placeholder="What are you building? What challenges are you facing? What are your goals?" required></textarea>
+            <label for="message">{m.contact_form_message()}</label>
+            <textarea id="message" name="message" rows="4" placeholder={m.contact_form_message_placeholder()} required></textarea>
           </div>
 
           <button type="submit" class="submit-button">
-            Send Message
+            {m.contact_form_submit()}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="22" y1="2" x2="11" y2="13"/>
               <polygon points="22,2 15,22 11,13 2,9 22,2"/>
@@ -193,45 +193,45 @@
     border-radius: 0.75rem;
     border: 1px solid #d1fae5;
   }
-  
+
   .response-icon {
     color: #10b981;
   }
-  
+
   .response-icon svg {
     width: 1.25rem;
     height: 1.25rem;
   }
-  
+
   .response-time p {
     color: #374151;
     margin: 0;
   }
-  
+
   .contact-form {
     background: #f8fafc;
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   }
-  
+
   .form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
-  
+
   .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .form-group label {
     font-weight: 600;
     color: #374151;
   }
-  
+
   .form-group input,
   .form-group select,
   .form-group textarea {
@@ -242,19 +242,19 @@
     transition: border-color 0.2s;
     background: white;
   }
-  
+
   .form-group input:focus,
   .form-group select:focus,
   .form-group textarea:focus {
     outline: none;
     border-color: #3b82f6;
   }
-  
+
   .form-group textarea {
     resize: vertical;
     min-height: 100px;
   }
-  
+
   .submit-button {
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     color: white;
@@ -270,31 +270,31 @@
     justify-content: center;
     gap: 0.5rem;
   }
-  
+
   .submit-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
   }
-  
+
   .submit-button svg {
     width: 1.25rem;
     height: 1.25rem;
   }
-  
+
   @media (max-width: 768px) {
     .contact {
       padding: 4rem 0;
     }
-    
+
     .contact-content {
       grid-template-columns: 1fr;
       gap: 2rem;
     }
-    
+
     .contact-text h2 {
       font-size: 2rem;
     }
-    
+
     .contact-form {
       padding: 1.5rem;
     }
