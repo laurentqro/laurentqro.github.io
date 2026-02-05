@@ -30,6 +30,13 @@ This website serves as a professional landing page for Laurent Curau's fractiona
 - **Process** - How the service works
 - **Footer** - Contact information and legal links
 
+### 🌍 Internationalization
+- **Bilingual support** - French (default) and English
+- **Paraglide.js** - Type-safe i18n with automatic locale detection
+- **URL-based locales** - `/` for French, `/en/` for English
+- **Language switcher** - Easy locale switching in navigation
+- **SEO-friendly** - Proper `hreflang` tags for multilingual SEO
+
 ### 🔧 Technical Features
 - **SvelteKit** - Modern web framework
 - **Static Site Generation** - Fast loading and SEO-friendly
@@ -42,7 +49,8 @@ This website serves as a professional landing page for Laurent Curau's fractiona
 ## 🛠 Technology Stack
 
 - **Framework**: SvelteKit
-- **Styling**: Custom CSS with Tailwind CSS
+- **Internationalization**: Paraglide.js (inlang)
+- **Styling**: Custom CSS
 - **Build Tool**: Vite
 - **Deployment**: GitHub Pages with GitHub Actions
 - **Domain**: Custom domain (laurentcurau.com)
@@ -53,10 +61,11 @@ This website serves as a professional landing page for Laurent Curau's fractiona
 src/
 ├── lib/
 │   ├── assets/          # Images, icons, and static assets
+│   ├── paraglide/       # Generated i18n runtime and messages
 │   ├── Contact.svelte   # Contact form component
 │   ├── Footer.svelte    # Footer with contact info
 │   ├── Hero.svelte      # Main hero section
-│   ├── Navigation.svelte # Fixed navigation bar
+│   ├── Navigation.svelte # Fixed navigation bar with language switcher
 │   ├── Personal.svelte  # Personal message section
 │   ├── Pricing.svelte   # Pricing information
 │   ├── Problem.svelte   # Problem identification
@@ -66,9 +75,16 @@ src/
 │   └── Target.svelte    # Target audience
 ├── routes/
 │   ├── +layout.svelte   # Main layout with SEO meta tags
+│   ├── +layout.ts       # Prerender and trailing slash config
 │   ├── +page.js         # Page configuration
 │   └── +page.svelte     # Main page component
+├── hooks.ts             # SvelteKit reroute hook for i18n
 └── app.css              # Global styles
+messages/
+├── fr.json              # French translations
+└── en.json              # English translations
+project.inlang/
+└── settings.json        # Paraglide configuration
 ```
 
 ## 🚀 Development
