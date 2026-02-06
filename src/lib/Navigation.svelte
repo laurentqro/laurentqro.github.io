@@ -1,7 +1,7 @@
 <script>
   import logo from '$lib/assets/logo.svg';
   import * as m from '$lib/paraglide/messages';
-  import { locales, localizeHref } from '$lib/paraglide/runtime';
+  import { locales, localizeHref, getLocale } from '$lib/paraglide/runtime';
   import { page } from '$app/stores';
   
   function handleAnchorClick(event) {
@@ -54,10 +54,11 @@
       <!-- Language Switcher -->
       <div class="language-switcher">
         {#each locales as locale}
-          <a href={localizeHref($page.url.pathname, { locale })} 
-             class="lang-button" 
-             class:active={$page.url.pathname.includes(`/${locale}`)}
-             title={locale === 'fr' ? 'Français' : 'English'}>
+          <a href={localizeHref($page.url.pathname, { locale })}
+             class="lang-button"
+             class:active={getLocale() === locale}
+             title={locale === 'fr' ? 'Français' : 'English'}
+             data-sveltekit-reload>
             {locale.toUpperCase()}
           </a>
         {/each}
