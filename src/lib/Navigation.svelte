@@ -11,42 +11,17 @@
     const anchor = document.getElementById(anchorId);
 
     if (anchor) {
-      // Add offset for navigation spacing and use slower scrolling
-      const offsetTop = anchor.offsetTop - 80;
-
-      // Custom smooth scroll with slower timing
-      const startPosition = window.pageYOffset;
-      const distance = offsetTop - startPosition;
-      const duration = 1200; // 1.2 seconds
-      let start = null;
-
-      function animation(currentTime) {
-        if (start === null) start = currentTime;
-        const timeElapsed = currentTime - start;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-      }
-
-      // Easing function for smoother animation
-      function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      }
-
-      requestAnimationFrame(animation);
+      anchor.scrollIntoView({ behavior: 'smooth' });
     }
   }
 </script>
 
 <nav class="nav">
   <div class="nav-container">
-    <div class="logo">
+    <a href="#" class="logo" onclick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
       <img src={logo} alt="Laurent Curau Logo" class="logo-icon" />
       <span class="logo-text">Laurent Curau</span>
-    </div>
+    </a>
     <div class="nav-links">
       <a href="#services" onclick={handleAnchorClick}>{m.nav_services()}</a>
       <a href="#pricing" onclick={handleAnchorClick}>{m.nav_pricing()}</a>
@@ -96,6 +71,8 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .logo-icon {

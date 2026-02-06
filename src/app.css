@@ -13,9 +13,13 @@ body {
   color: #e2e8f0;
 }
 
-/* Enhanced smooth scrolling with custom timing */
-@media (prefers-reduced-motion: no-preference) {
+/* Offset scroll targets to account for fixed nav */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+@media (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 }
