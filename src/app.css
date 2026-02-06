@@ -1,10 +1,16 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
 /* Smooth scrolling for the entire document */
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background: #0f0f1a;
+  color: #e2e8f0;
 }
 
 /* Enhanced smooth scrolling with custom timing */

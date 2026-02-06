@@ -56,7 +56,7 @@
 
 <style>
   .footer {
-    background: #1f2937;
+    background: #0a0a14;
     color: white;
     padding: 4rem 0 2rem;
   }
@@ -78,11 +78,12 @@
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: white;
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .footer-brand p {
-    color: #9ca3af;
+    color: rgba(255, 255, 255, 0.4);
     line-height: 1.6;
   }
 
@@ -96,19 +97,20 @@
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: white;
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .link-group a {
     display: block;
-    color: #9ca3af;
+    color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
     margin-bottom: 0.75rem;
     transition: color 0.2s;
   }
 
   .link-group a:hover {
-    color: #3b82f6;
+    color: #667eea;
   }
 
   .footer-bottom {
@@ -117,7 +119,7 @@
 
   .footer-divider {
     height: 1px;
-    background: #374151;
+    background: rgba(102, 126, 234, 0.15);
     margin-bottom: 2rem;
   }
 
@@ -125,7 +127,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #9ca3af;
+    color: rgba(255, 255, 255, 0.3);
     font-size: 0.875rem;
   }
 
@@ -135,13 +137,13 @@
   }
 
   .footer-legal a {
-    color: #9ca3af;
+    color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
     transition: color 0.2s;
   }
 
   .footer-legal a:hover {
-    color: #3b82f6;
+    color: #667eea;
   }
 
   @media (max-width: 768px) {

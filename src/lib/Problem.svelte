@@ -50,7 +50,7 @@
 <style>
   .problem {
     padding: 6rem 0;
-    background: #f8fafc;
+    background: #0f0f1a;
   }
 
   .container {
@@ -67,13 +67,14 @@
   .section-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .section-header p {
     font-size: 1.25rem;
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
     max-width: 600px;
     margin: 0 auto;
   }
@@ -85,29 +86,30 @@
   }
 
   .problem-card {
-    background: white;
+    background: #1a1a2e;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.12);
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   }
 
   .problem-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.1);
   }
 
   .problem-icon {
     width: 4rem;
     height: 4rem;
-    background: linear-gradient(135deg, #ef4444, #dc2626);
+    background: rgba(239, 68, 68, 0.15);
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    color: white;
+    color: #ef4444;
   }
 
   .problem-icon svg {
@@ -118,12 +120,12 @@
   .problem-card h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1rem;
   }
 
   .problem-card p {
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
   }
 

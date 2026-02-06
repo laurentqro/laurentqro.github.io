@@ -102,7 +102,7 @@
 <style>
   .contact {
     padding: 6rem 0;
-    background: white;
+    background: #141422;
   }
 
   .container {
@@ -121,13 +121,14 @@
   .contact-text h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .contact-subtitle {
     font-size: 1.25rem;
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
     margin-bottom: 2rem;
   }
@@ -144,21 +145,21 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background: #f8fafc;
+    background: rgba(102, 126, 234, 0.05);
     border-radius: 0.75rem;
     text-decoration: none;
     transition: all 0.2s;
   }
 
   .contact-method:hover {
-    background: #e0e7ff;
+    background: rgba(102, 126, 234, 0.1);
     transform: translateX(4px);
   }
 
   .method-icon {
     width: 3rem;
     height: 3rem;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    background: linear-gradient(135deg, #667eea, #0891b2);
     border-radius: 0.75rem;
     display: flex;
     align-items: center;
@@ -175,12 +176,13 @@
   .method-content h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 0.25rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .method-content p {
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
     margin: 0;
   }
 
@@ -189,13 +191,13 @@
     align-items: center;
     gap: 0.75rem;
     padding: 1rem;
-    background: #ecfdf5;
+    background: rgba(102, 126, 234, 0.08);
     border-radius: 0.75rem;
-    border: 1px solid #d1fae5;
+    border: 1px solid rgba(102, 126, 234, 0.15);
   }
 
   .response-icon {
-    color: #10b981;
+    color: #667eea;
   }
 
   .response-icon svg {
@@ -204,15 +206,15 @@
   }
 
   .response-time p {
-    color: #374151;
+    color: rgba(255, 255, 255, 0.6);
     margin: 0;
   }
 
   .contact-form {
-    background: #f8fafc;
+    background: #1a1a2e;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.12);
   }
 
   .form {
@@ -229,25 +231,26 @@
 
   .form-group label {
     font-weight: 600;
-    color: #374151;
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
     padding: 0.75rem;
-    border: 2px solid #e5e7eb;
+    border: 1px solid rgba(102, 126, 234, 0.2);
     border-radius: 0.5rem;
     font-size: 1rem;
     transition: border-color 0.2s;
-    background: white;
+    background: #1a1a2e;
+    color: #e2e8f0;
   }
 
   .form-group input:focus,
   .form-group select:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #3b82f6;
+    border-color: #667eea;
   }
 
   .form-group textarea {
@@ -256,7 +259,7 @@
   }
 
   .submit-button {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    background: linear-gradient(135deg, #667eea, #0891b2);
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -273,7 +276,7 @@
 
   .submit-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
   }
 
   .submit-button svg {

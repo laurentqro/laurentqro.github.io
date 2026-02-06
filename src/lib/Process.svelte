@@ -104,7 +104,7 @@
 <style>
   .process {
     padding: 6rem 0;
-    background: #f8fafc;
+    background: #0f0f1a;
   }
 
   .container {
@@ -121,13 +121,14 @@
   .section-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .section-header p {
     font-size: 1.25rem;
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .process-timeline {
@@ -138,17 +139,18 @@
   }
 
   .process-step {
-    background: white;
+    background: #1a1a2e;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.12);
     position: relative;
     transition: all 0.3s ease;
   }
 
   .process-step:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.1);
   }
 
   .step-number {
@@ -157,7 +159,7 @@
     left: 2rem;
     width: 2rem;
     height: 2rem;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    background: linear-gradient(135deg, #667eea, #0891b2);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -165,18 +167,20 @@
     justify-content: center;
     font-weight: 700;
     font-size: 1.125rem;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   .step-content h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .step-content p {
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
     margin-bottom: 1.5rem;
   }
@@ -188,27 +192,29 @@
   }
 
   .detail {
-    background: #e0e7ff;
-    color: #3730a3;
+    background: rgba(102, 126, 234, 0.1);
+    color: #a5b4fc;
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.875rem;
     font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   .process-benefits {
-    background: white;
+    background: #1a1a2e;
     padding: 3rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.12);
   }
 
   .process-benefits h3 {
     font-size: 2rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #e2e8f0;
     text-align: center;
     margin-bottom: 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .benefits-grid {
@@ -224,13 +230,13 @@
   .benefit-icon {
     width: 4rem;
     height: 4rem;
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: rgba(102, 126, 234, 0.15);
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1rem;
-    color: white;
+    color: #667eea;
   }
 
   .benefit-icon svg {
@@ -241,12 +247,13 @@
   .benefit h4 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 0.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .benefit p {
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
   }
 

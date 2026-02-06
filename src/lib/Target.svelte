@@ -62,7 +62,7 @@
 <style>
   .target {
     padding: 6rem 0;
-    background: #f8fafc;
+    background: #0f0f1a;
   }
 
   .container {
@@ -79,13 +79,14 @@
   .section-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .section-header p {
     font-size: 1.25rem;
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .target-grid {
@@ -96,28 +97,29 @@
   }
 
   .target-card {
-    background: white;
+    background: #1a1a2e;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.12);
     transition: all 0.3s ease;
   }
 
   .target-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.1);
   }
 
   .target-icon {
     width: 4rem;
     height: 4rem;
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    background: rgba(102, 126, 234, 0.15);
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    color: white;
+    color: #667eea;
   }
 
   .target-icon svg {
@@ -128,12 +130,13 @@
   .target-card h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .target-card p {
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
     margin-bottom: 1.5rem;
   }
@@ -145,27 +148,29 @@
   }
 
   .example {
-    background: #e0e7ff;
-    color: #3730a3;
+    background: rgba(102, 126, 234, 0.1);
+    color: #a5b4fc;
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.875rem;
     font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   .success-stories {
-    background: white;
+    background: #1a1a2e;
     padding: 3rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(102, 126, 234, 0.12);
   }
 
   .success-stories h3 {
     font-size: 2rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #e2e8f0;
     text-align: center;
     margin-bottom: 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .stories-grid {
@@ -176,25 +181,25 @@
 
   .story {
     padding: 1.5rem;
-    background: #f8fafc;
+    background: rgba(102, 126, 234, 0.05);
     border-radius: 0.75rem;
-    border-left: 4px solid #3b82f6;
+    border-left: 4px solid #667eea;
   }
 
   .story-quote {
     font-style: italic;
-    color: #374151;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
     margin-bottom: 1rem;
   }
 
   .story-author {
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.4);
     font-size: 0.875rem;
   }
 
   .story-author strong {
-    color: #1f2937;
+    color: #e2e8f0;
   }
 
   @media (max-width: 768px) {

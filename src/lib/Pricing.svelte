@@ -9,160 +9,49 @@
       <p>{m.pricing_subtitle()}</p>
     </div>
 
-    <div class="pricing-grid">
+    <div class="pricing-single">
       <div class="pricing-card">
-        <div class="pricing-header">
-          <h3>{m.pricing_tier_1_title()}</h3>
-          <div class="commitment">{m.pricing_tier_1_commitment()}</div>
+        <div class="price">
+          <span class="currency">€</span>
+          <span class="amount">{m.pricing_price()}</span>
+          <span class="period">{m.pricing_per_month()}</span>
         </div>
-        <div class="pricing-body">
-          <div class="price">
-            <span class="currency">€</span>
-            <span class="amount">{m.pricing_tier_1_price()}</span>
-            <span class="period">{m.pricing_per_month()}</span>
-          </div>
-          <div class="features">
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_1_feature_1()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_1_feature_2()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_1_feature_3()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_1_feature_4()}
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="pricing-card featured">
-        <div class="popular-badge">{m.pricing_popular()}</div>
-        <div class="pricing-header">
-          <h3>{m.pricing_tier_2_title()}</h3>
-          <div class="commitment">{m.pricing_tier_2_commitment()}</div>
-        </div>
-        <div class="pricing-body">
-          <div class="price">
-            <span class="currency">€</span>
-            <span class="amount">{m.pricing_tier_2_price()}</span>
-            <span class="period">{m.pricing_per_month()}</span>
+        <div class="features">
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 13l4 4L19 7"/>
+            </svg>
+            {m.pricing_feature_1()}
           </div>
-          <div class="features">
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_2_feature_1()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_2_feature_2()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_2_feature_3()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_2_feature_4()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_2_feature_5()}
-            </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 13l4 4L19 7"/>
+            </svg>
+            {m.pricing_feature_2()}
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 13l4 4L19 7"/>
+            </svg>
+            {m.pricing_feature_3()}
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 13l4 4L19 7"/>
+            </svg>
+            {m.pricing_feature_4()}
           </div>
         </div>
-      </div>
 
-      <div class="pricing-card">
-        <div class="pricing-header">
-          <h3>{m.pricing_tier_3_title()}</h3>
-          <div class="commitment">{m.pricing_tier_3_commitment()}</div>
-        </div>
-        <div class="pricing-body">
-          <div class="price">
-            <span class="currency">€</span>
-            <span class="amount">{m.pricing_tier_3_price()}</span>
-            <span class="period">{m.pricing_per_month()}</span>
-          </div>
-          <div class="features">
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_3_feature_1()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_3_feature_2()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_3_feature_3()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_3_feature_4()}
-            </div>
-            <div class="feature">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4"/>
-                <circle cx="12" cy="12" r="10"/>
-              </svg>
-              {m.pricing_tier_3_feature_5()}
-            </div>
-          </div>
-        </div>
+        <a href="#contact" class="cta-button">
+          {m.pricing_cta()}
+        </a>
       </div>
     </div>
 
     <div class="pricing-note">
-      <div class="note-content">
-        <h4>{m.pricing_note_title()}</h4>
-        <p>{m.pricing_note_text()}</p>
-      </div>
+      <p>{m.pricing_note_text()}</p>
     </div>
   </div>
 </section>
@@ -170,7 +59,7 @@
 <style>
   .pricing {
     padding: 6rem 0;
-    background: white;
+    background: #141422;
   }
 
   .container {
@@ -181,163 +70,114 @@
 
   .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .section-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .section-header p {
     font-size: 1.25rem;
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
   }
 
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .pricing-card {
-    background: white;
-    border: 2px solid #e5e7eb;
-    border-radius: 1rem;
-    padding: 2rem;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-
-  .pricing-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  }
-
-  .pricing-card.featured {
-    border-color: #3b82f6;
-    background: linear-gradient(135deg, #667eea, #0891b2);
-    color: white;
-    transform: scale(1.05);
-  }
-
-  .pricing-card.featured:hover {
-    transform: scale(1.05) translateY(-4px);
-  }
-
-  .popular-badge {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #10b981;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-  }
-
-  .pricing-header h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .pricing-card.featured .pricing-header h3 {
-    color: white;
-  }
-
-  .commitment {
-    font-size: 0.875rem;
-    color: #6b7280;
+  .pricing-single {
+    display: flex;
+    justify-content: center;
     margin-bottom: 2rem;
   }
 
-  .pricing-card.featured .commitment {
-    color: rgba(255, 255, 255, 0.8);
+  .pricing-card {
+    background: #1a1a2e;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid rgba(102, 126, 234, 0.2);
   }
 
   .price {
     display: flex;
     align-items: baseline;
-    margin-bottom: 2rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
   }
 
   .currency {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
-    color: #6b7280;
+    color: #667eea;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   .amount {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #e2e8f0;
     margin: 0 0.25rem;
+    line-height: 1;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   .period {
-    font-size: 1rem;
-    color: #6b7280;
-  }
-
-  .pricing-card.featured .currency,
-  .pricing-card.featured .amount,
-  .pricing-card.featured .period {
-    color: white;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .features {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
   }
 
   .feature {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: #374151;
-  }
-
-  .pricing-card.featured .feature {
-    color: white;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
   }
 
   .feature svg {
-    width: 1.25rem;
-    height: 1.25rem;
-    color: #10b981;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #667eea;
     flex-shrink: 0;
   }
 
-  .pricing-card.featured .feature svg {
-    color: rgba(255, 255, 255, 0.8);
+  .cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea, #0891b2);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
   }
 
   .pricing-note {
-    background: #f8fafc;
-    border-radius: 1rem;
-    padding: 2rem;
     text-align: center;
   }
 
-  .note-content h4 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .note-content p {
-    color: #6b7280;
-    line-height: 1.6;
-    max-width: 600px;
+  .pricing-note p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    max-width: 500px;
     margin: 0 auto;
   }
 
@@ -350,16 +190,12 @@
       font-size: 2rem;
     }
 
-    .pricing-grid {
-      grid-template-columns: 1fr;
+    .pricing-card {
+      padding: 2rem;
     }
 
-    .pricing-card.featured {
-      transform: none;
-    }
-
-    .pricing-card.featured:hover {
-      transform: translateY(-4px);
+    .amount {
+      font-size: 3rem;
     }
   }
 </style>

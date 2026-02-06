@@ -89,7 +89,7 @@
 <style>
   .solution {
     padding: 6rem 0;
-    background: white;
+    background: #141422;
   }
 
   .container {
@@ -108,13 +108,14 @@
   .solution-text h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .solution-subtitle {
     font-size: 1.25rem;
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
     margin-bottom: 2rem;
     line-height: 1.6;
   }
@@ -134,12 +135,12 @@
   .point-icon {
     width: 3rem;
     height: 3rem;
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: rgba(102, 126, 234, 0.15);
     border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #667eea;
     flex-shrink: 0;
   }
 
@@ -151,12 +152,13 @@
   .point-content h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 0.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .point-content p {
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
   }
 
@@ -181,6 +183,7 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   .stat-label {
@@ -189,7 +192,7 @@
   }
 
   .tech-stack {
-    background: #f8fafc;
+    background: #1a1a2e;
     padding: 2rem;
     border-radius: 1rem;
   }
@@ -197,9 +200,10 @@
   .tech-stack h4 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1f2937;
+    color: #e2e8f0;
     margin-bottom: 1rem;
     text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .tech-grid {
@@ -209,13 +213,13 @@
   }
 
   .tech-item {
-    background: white;
+    background: rgba(102, 126, 234, 0.1);
     padding: 0.75rem;
     border-radius: 0.5rem;
     text-align: center;
     font-weight: 500;
-    color: #374151;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #a5b4fc;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   @media (max-width: 768px) {

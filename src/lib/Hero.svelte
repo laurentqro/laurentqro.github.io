@@ -1,21 +1,19 @@
 <script>
   import * as m from '$lib/paraglide/messages';
+  import heroImage from '$lib/assets/hero-monaco.jpg';
   function handleAnchorClick(event) {
     event.preventDefault();
     const link = event.currentTarget;
     const anchorId = new URL(link.href).hash.replace('#', '');
     const anchor = document.getElementById(anchorId);
-    
+
     if (anchor) {
-      // Add offset for navigation spacing and use slower scrolling
       const offsetTop = anchor.offsetTop - 80;
-      
-      // Custom smooth scroll with slower timing
       const startPosition = window.pageYOffset;
       const distance = offsetTop - startPosition;
-      const duration = 1200; // 1.2 seconds
+      const duration = 1200;
       let start = null;
-      
+
       function animation(currentTime) {
         if (start === null) start = currentTime;
         const timeElapsed = currentTime - start;
@@ -23,188 +21,196 @@
         window.scrollTo(0, run);
         if (timeElapsed < duration) requestAnimationFrame(animation);
       }
-      
-      // Easing function for smoother animation
+
       function ease(t, b, c, d) {
         t /= d / 2;
         if (t < 1) return c / 2 * t * t + b;
         t--;
         return -c / 2 * (t * (t - 2) - 1) + b;
       }
-      
+
       requestAnimationFrame(animation);
     }
   }
 </script>
 
 <section class="hero">
+  <div class="hero-glow"></div>
   <div class="hero-content">
-    <div class="hero-text">
-      <h1>{m.hero_title()}</h1>
-      <p class="hero-subtitle">
-        {m.hero_subtitle()}
-      </p>
-      <div class="hero-buttons">
-        <a href="#contact" class="primary-button" onclick={handleAnchorClick}>{m.hero_cta_primary()}</a>
-        <a href="#services" class="secondary-button" onclick={handleAnchorClick}>{m.hero_cta_secondary()}</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="code-window">
-        <div class="window-header">
-          <div class="window-controls">
-            <span class="control red"></span>
-            <span class="control yellow"></span>
-            <span class="control green"></span>
-          </div>
-          <span class="window-title">strategy.js</span>
-        </div>
-        <div class="code-content">
-          <div class="code-line"><span class="punctuation">&#123;</span>
-          </div>
-          <div class="code-line indent">
-            <span class="property">mvp</span>: <span class="string">'build fast'</span>,
-          </div>
-          <div class="code-line indent">
-            <span class="property">architecture</span>: <span class="string">'scale ready'</span>,
-          </div>
-          <div class="code-line indent">
-            <span class="property">team</span>: <span class="string">'grow smart'</span>
-          </div>
-          <div class="code-line"><span class="punctuation">&#125;</span></div>
-        </div>
-      </div>
-    </div>
+    <h1 class="hero-title">{m.hero_title()}</h1>
+    <p class="hero-subtitle">{m.hero_subtitle()}</p>
+  </div>
+  <div class="hero-image-wrapper">
+    <div class="hero-image-glow"></div>
+    <img src={heroImage} alt="Monaco skyline in pixel art style" class="hero-image" />
+  </div>
+  <div class="hero-actions">
+    <a href="#contact" class="cta-primary" onclick={handleAnchorClick}>
+      <span class="cta-prompt">$</span> {m.hero_cta_primary()}
+    </a>
+    <a href="#services" class="cta-secondary" onclick={handleAnchorClick}>{m.hero_cta_secondary()}</a>
   </div>
 </section>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
   .hero {
-    background: linear-gradient(135deg, #667eea 0%, #0891b2 100%);
+    background: #0f0f1a;
     color: white;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-top: 80px; /* Account for fixed navigation */
+    justify-content: center;
+    padding: 120px 2rem 4rem;
+    position: relative;
+    overflow: hidden;
   }
-  
+
+  .hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 60%;
+    background: radial-gradient(ellipse at center, rgba(102, 126, 234, 0.12) 0%, rgba(8, 145, 178, 0.06) 40%, transparent 70%);
+    pointer-events: none;
+  }
+
   .hero-content {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
   }
-  
-  .hero-text h1 {
-    font-size: 3.5rem;
+
+  .hero-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+    background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #67e8f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.03em;
   }
-  
+
   .hero-subtitle {
-    font-size: 1.25rem;
-    opacity: 0.9;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
   }
-  
-  .hero-buttons {
+
+  .hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 3rem;
+    z-index: 1;
+  }
+
+  .hero-image-glow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(ellipse at center, rgba(102, 126, 234, 0.2) 0%, rgba(8, 145, 178, 0.1) 50%, transparent 70%);
+    border-radius: 1.5rem;
+    pointer-events: none;
+    filter: blur(30px);
+  }
+
+  .hero-image {
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    box-shadow:
+      0 0 60px rgba(102, 126, 234, 0.15),
+      0 0 120px rgba(8, 145, 178, 0.08),
+      0 25px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-actions {
     display: flex;
     gap: 1rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
   }
-  
-  .primary-button, .secondary-button {
-    padding: 1rem 2rem;
+
+  .cta-primary {
+    font-family: 'JetBrains Mono', monospace;
+    background: linear-gradient(135deg, #667eea 0%, #0891b2 100%);
+    color: white;
+    padding: 0.875rem 2rem;
     border-radius: 0.5rem;
     text-decoration: none;
-    font-weight: 600;
-    transition: all 0.2s;
-    display: inline-block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
   }
-  
-  .primary-button {
-    background: white;
-    color: #667eea;
-  }
-  
-  .primary-button:hover {
+
+  .cta-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 40px rgba(102, 126, 234, 0.5);
   }
-  
-  .secondary-button {
-    background: transparent;
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+
+  .cta-prompt {
+    opacity: 0.6;
+    margin-right: 0.25rem;
   }
-  
-  .secondary-button:hover {
-    background: rgba(255, 255, 255, 0.1);
+
+  .cta-secondary {
+    font-family: 'JetBrains Mono', monospace;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.25s ease;
   }
-  
-  .code-window {
-    background: #1e1e1e;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+  .cta-secondary:hover {
+    color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.03);
   }
-  
-  .window-header {
-    background: #2d2d2d;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .window-controls {
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  .control {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-  }
-  
-  .control.red { background: #ff5f57; }
-  .control.yellow { background: #ffbd2e; }
-  .control.green { background: #28ca42; }
-  
-  .window-title {
-    color: #888;
-    font-size: 0.875rem;
-  }
-  
-  .code-content {
-    padding: 1.5rem;
-    font-family: 'Fira Code', monospace;
-    font-size: 0.875rem;
-    line-height: 1.6;
-  }
-  
-  .code-line {
-  }
-  
+
   @media (max-width: 768px) {
+    .hero {
+      padding: 100px 1.25rem 3rem;
+    }
+
     .hero-content {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.85rem;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .cta-primary, .cta-secondary {
       text-align: center;
-    }
-    
-    .hero-text h1 {
-      font-size: 2.5rem;
-    }
-    
-    .hero-buttons {
-      justify-content: center;
+      width: 100%;
     }
   }
 </style>
