@@ -26,20 +26,20 @@
       <a href="#services" onclick={handleAnchorClick}>{m.nav_services()}</a>
       <a href="#pricing" onclick={handleAnchorClick}>{m.nav_pricing()}</a>
 
-      <!-- Language Switcher -->
-      <div class="language-switcher">
-        {#each locales as locale}
-          <a href={localizeHref($page.url.pathname, { locale })}
-             class="lang-button"
-             class:active={getLocale() === locale}
-             title={locale === 'fr' ? 'Français' : 'English'}
-             data-sveltekit-reload>
-            {locale.toUpperCase()}
-          </a>
-        {/each}
-      </div>
-
       <a href="#contact" class="cta-button" onclick={handleAnchorClick}>{m.nav_contact()}</a>
+    </div>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+      {#each locales as locale}
+        <a href={localizeHref($page.url.pathname, { locale })}
+           class="lang-button"
+           class:active={getLocale() === locale}
+           title={locale === 'fr' ? 'Français' : 'English'}
+           data-sveltekit-reload>
+          {locale.toUpperCase()}
+        </a>
+      {/each}
     </div>
   </div>
 </nav>
@@ -126,7 +126,6 @@
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    margin: 0 1rem;
   }
 
   .lang-button {
