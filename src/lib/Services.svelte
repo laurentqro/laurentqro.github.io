@@ -54,27 +54,6 @@
         <p>{m.services_card_4()}</p>
       </div>
       
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-          </svg>
-        </div>
-        <h3>{m.services_card_5_title()}</h3>
-        <p>{m.services_card_5()}</p>
-      </div>
-      
-      <div class="service-card featured">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-4"/>
-            <polyline points="9,11 12,14 15,11"/>
-            <line x1="12" y1="2" x2="12" y2="14"/>
-          </svg>
-        </div>
-        <h3>{m.services_card_6_title()}</h3>
-        <p>{m.services_card_6()}</p>
-      </div>
     </div>
   </div>
 </section>
@@ -133,21 +112,6 @@
     box-shadow: 0 0 30px rgba(102, 126, 234, 0.1);
   }
 
-  .service-card.featured {
-    background: linear-gradient(135deg, #667eea, #0891b2);
-    color: white;
-    border: none;
-  }
-
-  .service-card.featured .service-icon {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-  }
-
-  .service-card.featured h3,
-  .service-card.featured p {
-    color: white;
-  }
 
   .service-icon {
     width: 4rem;
@@ -195,9 +159,6 @@
     opacity: 1;
   }
 
-  .service-card.featured::before {
-    opacity: 0;
-  }
 
   @media (max-width: 768px) {
     .services {

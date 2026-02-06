@@ -32,20 +32,6 @@
             {m.personal_signature_name()}
           </div>
         </div>
-        <div class="credentials">
-          <div class="credential-item">
-            <span class="credential-number">10+</span>
-            <span class="credential-text">{m.personal_credentials_years()}</span>
-          </div>
-          <div class="credential-item">
-            <span class="credential-number">30+</span>
-            <span class="credential-text">{m.personal_credentials_companies()}</span>
-          </div>
-          <div class="credential-item">
-            <span class="credential-number">€2M+</span>
-            <span class="credential-text">{m.personal_credentials_value()}</span>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -152,35 +138,6 @@
     margin-bottom: 2rem;
   }
 
-  .credentials {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  .credential-item {
-    text-align: center;
-  }
-
-  .credential-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #667eea, #67e8f9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-  }
-
-  .credential-text {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-family: 'JetBrains Mono', monospace;
-  }
 
   @media (max-width: 768px) {
     .personal-section {
@@ -206,13 +163,5 @@
       font-size: 2rem;
     }
 
-    .credentials {
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .credential-number {
-      font-size: 1.5rem;
-    }
   }
 </style>
