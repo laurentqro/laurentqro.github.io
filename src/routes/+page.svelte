@@ -4,6 +4,7 @@
   import Problem from '../lib/Problem.svelte'
   import Solution from '../lib/Solution.svelte'
   import Services from '../lib/Services.svelte'
+  import Projects from '../lib/Projects.svelte'
   import Pricing from '../lib/Pricing.svelte'
   import Target from '../lib/Target.svelte'
   import Contact from '../lib/Contact.svelte'
@@ -16,6 +17,7 @@
 <Problem />
 <Solution />
 <Services />
+<Projects />
 <Pricing />
 <Target />
 <Contact />
