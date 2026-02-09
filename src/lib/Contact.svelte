@@ -53,7 +53,7 @@
       </div>
 
       <div class="contact-form">
-        <form class="form">
+        <form class="form" action="https://formspree.io/f/mjgekwde" method="POST">
           <div class="form-group">
             <label for="name">{m.contact_form_name()}</label>
             <input type="text" id="name" name="name" required>
