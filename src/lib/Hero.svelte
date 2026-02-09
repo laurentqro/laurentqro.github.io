@@ -32,8 +32,6 @@
 </section>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
-
   .hero {
     background: #0f0f1a;
     color: white;
