@@ -13,7 +13,7 @@
       <div class="pricing-card">
         <div class="price">
           <span class="currency">€</span>
-          <span class="amount">{m.pricing_price()}</span>
+          <span class="amount">3</span><span class="amount-separator"></span><span class="amount">500</span>
           <span class="period">{m.pricing_per_month()}</span>
         </div>
 
@@ -47,6 +47,27 @@
         <a href="#contact" class="cta-button">
           {m.pricing_cta()}
         </a>
+      </div>
+    </div>
+
+    <div class="pricing-compare">
+      <p class="compare-title">{m.pricing_compare_title()}</p>
+      <div class="compare-grid">
+        <div class="compare-item">
+          <span class="compare-label">{m.pricing_compare_employee_label()}</span>
+          <span class="compare-price">{m.pricing_compare_employee_price()}</span>
+          <span class="compare-detail">{m.pricing_compare_employee_detail()}</span>
+        </div>
+        <div class="compare-item">
+          <span class="compare-label">{m.pricing_compare_agency_label()}</span>
+          <span class="compare-price">{m.pricing_compare_agency_price()}</span>
+          <span class="compare-detail">{m.pricing_compare_agency_detail()}</span>
+        </div>
+        <div class="compare-item">
+          <span class="compare-label">{m.pricing_compare_freelance_label()}</span>
+          <span class="compare-price">{m.pricing_compare_freelance_price()}</span>
+          <span class="compare-detail">{m.pricing_compare_freelance_detail()}</span>
+        </div>
       </div>
     </div>
 
@@ -120,9 +141,18 @@
     font-size: 4rem;
     font-weight: 700;
     color: #e2e8f0;
-    margin: 0 0.25rem;
     line-height: 1;
     font-family: 'JetBrains Mono', monospace;
+    letter-spacing: -0.02em;
+  }
+
+  .amount:first-of-type {
+    margin-left: 0.25rem;
+  }
+
+  .amount-separator {
+    display: inline-block;
+    width: 0.35rem;
   }
 
   .period {
@@ -170,6 +200,58 @@
     box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
   }
 
+  .pricing-compare {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .compare-title {
+    text-align: center;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.35);
+    margin-bottom: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .compare-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: center;
+  }
+
+  .compare-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+  }
+
+  .compare-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'JetBrains Mono', monospace;
+    text-decoration: line-through;
+    text-decoration-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .compare-detail {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.25);
+  }
+
   .pricing-note {
     text-align: center;
   }
@@ -196,6 +278,10 @@
 
     .amount {
       font-size: 3rem;
+    }
+
+    .compare-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>

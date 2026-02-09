@@ -21,7 +21,7 @@
   </div>
   <div class="hero-image-wrapper">
     <div class="hero-image-glow"></div>
-    <img src={heroImage} alt="Monaco skyline in pixel art style" class="hero-image" />
+    <img src={heroImage} alt="Monaco skyline in pixel art style" class="hero-image" fetchpriority="high" />
   </div>
   <div class="hero-actions">
     <a href="#contact" class="cta-primary" onclick={handleAnchorClick}>

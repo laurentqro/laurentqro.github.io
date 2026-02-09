@@ -1,6 +1,6 @@
 <script>
   import * as m from '$lib/paraglide/messages';
-  import monibotLogo from '$lib/assets/monibot-logo.png';
+  import monibotLogo from '$lib/assets/monibot-logo.webp';
   import monibotMatch from '$lib/assets/monibot-match.png';
   import monibotAlerts from '$lib/assets/monibot-alerts.png';
   import xbrlLogo from '$lib/assets/xbrl.png';
@@ -30,7 +30,7 @@
     <div class="project-feature">
       <div class="project-info">
         <div class="project-logo">
-          <img src={monibotLogo} alt="Monibot" class="logo-img" />
+          <img src={monibotLogo} alt="Monibot" class="logo-img" loading="lazy" />
         </div>
         <h3>{m.projects_monibot_title()}</h3>
         <p class="project-description">{m.projects_monibot_description()}</p>
@@ -48,17 +48,17 @@
       </div>
       <div class="project-screenshots">
         <div class="screenshot-wrapper screenshot-back">
-          <img src={monibotAlerts} alt="Monibot - buyer alerts" />
+          <img src={monibotAlerts} alt="Monibot - buyer alerts" loading="lazy" />
         </div>
         <div class="screenshot-wrapper screenshot-front">
-          <img src={monibotMatch} alt="Monibot - property match" />
+          <img src={monibotMatch} alt="Monibot - property match" loading="lazy" />
         </div>
       </div>
     </div>
 
     <div class="project-card">
       <div class="project-card-icon">
-        <img src={xbrlLogo} alt="XBRL" class="xbrl-logo" />
+        <img src={xbrlLogo} alt="XBRL" class="xbrl-logo" loading="lazy" />
       </div>
       <div class="project-card-content">
         <div class="immocrm-header">

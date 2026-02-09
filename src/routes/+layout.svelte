@@ -58,38 +58,109 @@
 	<link rel="icon" href={favicon} />
 	<link rel="apple-touch-icon" href={favicon} />
 	
-	<!-- Structured Data (JSON-LD) -->
+	<!-- Structured Data: Person (JSON-LD) -->
 	<script type="application/ld+json">
 		{JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "Person",
 			"name": "Laurent Curau",
-			"jobTitle": "Fractional CTO",
-			"description": "Technical leadership consultant providing fractional CTO services to startups and growing companies",
-			"url": $page.url.href,
+			"jobTitle": m.footer_brand_description(),
+			"description": m.meta_description(),
+			"url": "https://laurentcurau.com",
+			"image": "https://laurentcurau.com/logo.png",
 			"address": {
 				"@type": "PostalAddress",
-				"streetAddress": m.footer_address_line_1(),
-				"postalCode": "98000",
 				"addressLocality": "Monaco",
+				"postalCode": "98000",
 				"addressCountry": "MC"
 			},
-			"sameAs": [],
+			"sameAs": [
+				"https://www.linkedin.com/in/laurentcurau"
+			],
 			"knowsAbout": [
-				"Software Architecture",
-				"Technical Leadership",
-				"Startup Scaling",
-				"Engineering Management",
-				"Technology Strategy"
+				"Real Estate Software",
+				"Custom CRM Development",
+				"Business Automation",
+				"Monaco Real Estate IT",
+				"AML/KYC Compliance Software"
 			],
 			"offers": {
 				"@type": "Service",
-				"name": "Fractional CTO Services",
-				"description": m.footer_brand_description(),
+				"name": m.hero_title(),
+				"description": m.meta_description(),
+				"areaServed": {
+					"@type": "City",
+					"name": "Monaco"
+				},
 				"provider": {
 					"@type": "Person",
 					"name": "Laurent Curau"
 				}
+			}
+		})}
+	</script>
+
+	<!-- Structured Data: LocalBusiness (JSON-LD) -->
+	<script type="application/ld+json">
+		{JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"name": "Laurent Curau - " + m.footer_brand_description(),
+			"description": m.meta_description(),
+			"url": "https://laurentcurau.com",
+			"image": "https://laurentcurau.com/logo.png",
+			"email": "hello@laurentcurau.com",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Monaco",
+				"postalCode": "98000",
+				"addressCountry": "MC"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": 43.7384,
+				"longitude": 7.4246
+			},
+			"areaServed": {
+				"@type": "City",
+				"name": "Monaco"
+			},
+			"priceRange": "€€€",
+			"openingHoursSpecification": {
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+				"opens": "09:00",
+				"closes": "18:00"
+			},
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Services",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": m.services_card_1_title(),
+							"description": m.services_card_1()
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": m.services_card_2_title(),
+							"description": m.services_card_2()
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": m.services_card_3_title(),
+							"description": m.services_card_3()
+						}
+					}
+				]
 			}
 		})}
 	</script>
