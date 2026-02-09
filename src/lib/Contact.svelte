@@ -1,5 +1,23 @@
 <script>
   import * as m from '$lib/paraglide/messages';
+
+  let contactStatus = $state('idle');
+
+  async function handleContact(e) {
+    e.preventDefault();
+    contactStatus = 'submitting';
+    const form = e.target;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      contactStatus = res.ok ? 'success' : 'idle';
+    } catch {
+      contactStatus = 'idle';
+    }
+  }
 </script>
 
 <section id="contact" class="contact">
@@ -53,47 +71,51 @@
       </div>
 
       <div class="contact-form">
-        <form class="form" action="https://formspree.io/f/mjgekwde" method="POST">
-          <div class="form-group">
-            <label for="name">{m.contact_form_name()}</label>
-            <input type="text" id="name" name="name" required>
-          </div>
+        {#if contactStatus === 'success'}
+          <p class="contact-success">{m.contact_form_success()}</p>
+        {:else}
+          <form class="form" action="https://formspree.io/f/mjgekwde" method="POST" onsubmit={handleContact}>
+            <div class="form-group">
+              <label for="name">{m.contact_form_name()}</label>
+              <input type="text" id="name" name="name" required disabled={contactStatus === 'submitting'}>
+            </div>
 
-          <div class="form-group">
-            <label for="email">{m.contact_form_email()}</label>
-            <input type="email" id="email" name="email" required>
-          </div>
+            <div class="form-group">
+              <label for="email">{m.contact_form_email()}</label>
+              <input type="email" id="email" name="email" required disabled={contactStatus === 'submitting'}>
+            </div>
 
-          <div class="form-group">
-            <label for="company">{m.contact_form_company()}</label>
-            <input type="text" id="company" name="company">
-          </div>
+            <div class="form-group">
+              <label for="company">{m.contact_form_company()}</label>
+              <input type="text" id="company" name="company" disabled={contactStatus === 'submitting'}>
+            </div>
 
-          <div class="form-group">
-            <label for="stage">{m.contact_form_stage()}</label>
-            <select id="stage" name="stage">
-              <option value="">{m.contact_form_stage_placeholder()}</option>
-              <option value="pre-seed">{m.contact_form_stage_preseed()}</option>
-              <option value="seed">{m.contact_form_stage_seed()}</option>
-              <option value="series-a">{m.contact_form_stage_series_a()}</option>
-              <option value="sme">{m.contact_form_stage_sme()}</option>
-              <option value="established">{m.contact_form_stage_established()}</option>
-            </select>
-          </div>
+            <div class="form-group">
+              <label for="stage">{m.contact_form_stage()}</label>
+              <select id="stage" name="stage" disabled={contactStatus === 'submitting'}>
+                <option value="">{m.contact_form_stage_placeholder()}</option>
+                <option value="pre-seed">{m.contact_form_stage_preseed()}</option>
+                <option value="seed">{m.contact_form_stage_seed()}</option>
+                <option value="series-a">{m.contact_form_stage_series_a()}</option>
+                <option value="sme">{m.contact_form_stage_sme()}</option>
+                <option value="established">{m.contact_form_stage_established()}</option>
+              </select>
+            </div>
 
-          <div class="form-group">
-            <label for="message">{m.contact_form_message()}</label>
-            <textarea id="message" name="message" rows="4" placeholder={m.contact_form_message_placeholder()} required></textarea>
-          </div>
+            <div class="form-group">
+              <label for="message">{m.contact_form_message()}</label>
+              <textarea id="message" name="message" rows="4" placeholder={m.contact_form_message_placeholder()} required disabled={contactStatus === 'submitting'}></textarea>
+            </div>
 
-          <button type="submit" class="submit-button">
-            {m.contact_form_submit()}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="22" y1="2" x2="11" y2="13"/>
-              <polygon points="22,2 15,22 11,13 2,9 22,2"/>
-            </svg>
-          </button>
-        </form>
+            <button type="submit" class="submit-button" disabled={contactStatus === 'submitting'}>
+              {contactStatus === 'submitting' ? m.contact_form_submitting() : m.contact_form_submit()}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+              </svg>
+            </button>
+          </form>
+        {/if}
       </div>
     </div>
   </div>
@@ -256,6 +278,19 @@
   .form-group textarea {
     resize: vertical;
     min-height: 100px;
+  }
+
+  .contact-success {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #67e8f9;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   .submit-button {

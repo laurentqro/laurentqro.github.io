@@ -119,6 +119,8 @@
   "contact_form_message": "Qu'est-ce qui vous pose problème aujourd'hui ?",
   "contact_form_message_placeholder": "Tableurs qui s'accumulent ? Logiciels qui ne communiquent pas ? Tâches répétitives ?",
   "contact_form_submit": "Envoyer",
+  "contact_form_submitting": "Envoi...",
+  "contact_form_success": "Message envoyé ! Je vous répondrai dans les 24h.",
   "process_title": "Comment je travaille",
   "process_subtitle": "Simple, transparent, efficace",
   "process_step_1_title": "Un café",

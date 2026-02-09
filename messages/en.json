@@ -119,6 +119,8 @@
   "contact_form_message": "What's bothering you today?",
   "contact_form_message_placeholder": "Spreadsheets piling up? Software that doesn't talk to each other? Repetitive tasks?",
   "contact_form_submit": "Send",
+  "contact_form_submitting": "Sending...",
+  "contact_form_success": "Message sent! I'll get back to you within 24h.",
   "process_title": "How I work",
   "process_subtitle": "Simple, transparent, effective",
   "process_step_1_title": "A coffee",
