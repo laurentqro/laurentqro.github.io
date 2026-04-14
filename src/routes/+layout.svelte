@@ -78,11 +78,11 @@
 				"https://www.linkedin.com/in/laurentcurau"
 			],
 			"knowsAbout": [
-				"Real Estate Software",
+				"Custom Software Development",
 				"Custom CRM Development",
 				"Business Automation",
-				"Monaco Real Estate IT",
-				"AML/KYC Compliance Software"
+				"Monaco SME IT Services",
+				"Professional Services Software"
 			],
 			"offers": {
 				"@type": "Service",
