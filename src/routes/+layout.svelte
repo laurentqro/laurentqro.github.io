@@ -77,6 +77,22 @@
 			"sameAs": [
 				"https://www.linkedin.com/in/laurentcurau"
 			],
+			"alumniOf": {
+				"@type": "CollegeOrUniversity",
+				"name": "University of Oxford",
+				"url": "https://www.ox.ac.uk/",
+				"sameAs": "https://en.wikipedia.org/wiki/University_of_Oxford"
+			},
+			"hasCredential": {
+				"@type": "EducationalOccupationalCredential",
+				"credentialCategory": "degree",
+				"educationalLevel": "Master's",
+				"name": "MSc in Software Engineering",
+				"recognizedBy": {
+					"@type": "CollegeOrUniversity",
+					"name": "University of Oxford"
+				}
+			},
 			"knowsAbout": [
 				"Custom Software Development",
 				"Custom CRM Development",

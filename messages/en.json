@@ -151,6 +151,7 @@
   "personal_subtitle": "Software engineer · Monaco",
   "personal_message_1": "I've been writing production software for over ten years — primarily Ruby on Rails, plus everything that lives around it: Postgres, background jobs, integrations, deployment, on-call.",
   "personal_message_2": "I work with Monaco SMEs because I live here and I know the local pain: software priced for global enterprises, agencies that send junior staff after they win the pitch, freelancers who disappear between projects. I don't subcontract. I don't fixed-price work I haven't scoped. I won't pretend I have capacity when I don't.",
+  "personal_education": "MSc in Software Engineering, University of Oxford.",
   "personal_signature_name": "— Laurent",
 
   "trust_label": "Software shipped for",
