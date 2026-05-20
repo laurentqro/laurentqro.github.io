@@ -104,6 +104,17 @@
         <span class="hero-stat-label">{m.stats_clients_label()}</span>
       </div>
     </div>
+
+    <div class="hero-previously">
+      <span class="hero-previously-label">{m.previously_at_label()}</span>
+      <ul class="hero-previously-names">
+        <li>{m.previously_at_1()}</li>
+        <li aria-hidden="true" class="sep">·</li>
+        <li>{m.previously_at_2()}</li>
+        <li aria-hidden="true" class="sep">·</li>
+        <li>{m.previously_at_3()}</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -314,6 +325,44 @@
     background: rgba(255, 255, 255, 0.1);
   }
 
+  .hero-previously {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    flex-wrap: wrap;
+  }
+
+  .hero-previously-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    flex-shrink: 0;
+  }
+
+  .hero-previously-names {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: -0.005em;
+  }
+
+  .hero-previously-names .sep {
+    color: rgba(255, 255, 255, 0.2);
+  }
+
   @media (max-width: 768px) {
     .hero {
       padding: 100px 1.25rem 3rem;
@@ -340,6 +389,16 @@
 
     .hero-stat-value {
       font-size: 1.5rem;
+    }
+
+    .hero-previously {
+      margin-top: 2rem;
+      gap: 0.75rem;
+    }
+
+    .hero-previously-names {
+      gap: 0.5rem;
+      font-size: 0.85rem;
     }
   }
 </style>

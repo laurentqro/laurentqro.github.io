@@ -1,6 +1,5 @@
 <script>
   import Hero from '$lib/Hero.svelte';
-  import PreviouslyAt from '$lib/PreviouslyAt.svelte';
   import Work from '$lib/Work.svelte';
   import MissionQuote from '$lib/MissionQuote.svelte';
   import ServicesPreview from '$lib/ServicesPreview.svelte';
@@ -12,7 +11,6 @@
 </script>
 
 <Hero />
-<PreviouslyAt />
 <Work />
 <MissionQuote />
 <ServicesPreview />
