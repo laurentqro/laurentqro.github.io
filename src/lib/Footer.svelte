@@ -17,10 +17,6 @@
           <h3>Laurent Curau</h3>
         </div>
         <p>{m.footer_brand_description()}</p>
-        <br />
-        <p>{m.footer_address_line_1()}<br />
-          {m.footer_address_line_2()}
-        </p>
       </div>
 
       <div class="footer-links">
