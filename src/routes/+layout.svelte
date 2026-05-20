@@ -86,7 +86,7 @@
 			],
 			"offers": {
 				"@type": "Service",
-				"name": m.hero_title(),
+				"name": m.meta_og_title(),
 				"description": m.meta_description(),
 				"areaServed": {
 					"@type": "City",
@@ -140,24 +140,24 @@
 						"@type": "Offer",
 						"itemOffered": {
 							"@type": "Service",
-							"name": m.services_card_1_title(),
-							"description": m.services_card_1()
+							"name": m.service_1_title(),
+							"description": m.service_1_summary()
 						}
 					},
 					{
 						"@type": "Offer",
 						"itemOffered": {
 							"@type": "Service",
-							"name": m.services_card_2_title(),
-							"description": m.services_card_2()
+							"name": m.service_2_title(),
+							"description": m.service_2_summary()
 						}
 					},
 					{
 						"@type": "Offer",
 						"itemOffered": {
 							"@type": "Service",
-							"name": m.services_card_3_title(),
-							"description": m.services_card_3()
+							"name": m.service_3_title(),
+							"description": m.service_3_summary()
 						}
 					}
 				]

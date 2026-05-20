@@ -3,30 +3,40 @@
   import * as m from '$lib/paraglide/messages';
   import { locales, localizeHref, getLocale } from '$lib/paraglide/runtime';
   import { page } from '$app/stores';
+  import { whatsappLink } from '$lib/whatsapp.js';
+
+  const waHref = whatsappLink(m.whatsapp_prefill());
 
   function handleAnchorClick(event) {
     event.preventDefault();
     const link = event.currentTarget;
-    const anchorId = new URL(link.href).hash.replace('#', '');
-    const anchor = document.getElementById(anchorId);
+    const url = new URL(link.href);
 
+    if (url.pathname !== window.location.pathname) {
+      window.location.href = link.href;
+      return;
+    }
+
+    const anchorId = url.hash.replace('#', '');
+    const anchor = anchorId ? document.getElementById(anchorId) : null;
     if (anchor) {
       anchor.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 </script>
 
 <nav class="nav">
   <div class="nav-container">
-    <a href="#" class="logo" onclick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+    <a href={localizeHref('/')} class="logo" onclick={handleAnchorClick}>
       <img src={logo} alt="Laurent Curau Logo" class="logo-icon" />
       <span class="logo-text">Laurent Curau</span>
     </a>
     <div class="nav-links">
-      <a href="#services" onclick={handleAnchorClick}>{m.nav_services()}</a>
-      <a href="#pricing" onclick={handleAnchorClick}>{m.nav_pricing()}</a>
+      <a href={localizeHref('/portfolio')}>{m.nav_work()}</a>
+      <a href={localizeHref('/services')}>{m.nav_services()}</a>
 
-      <!-- Language Switcher -->
       <div class="language-switcher">
         {#each locales as locale}
           <a href={localizeHref($page.url.pathname, { locale })}
@@ -39,7 +49,12 @@
         {/each}
       </div>
 
-      <a href="#contact" class="cta-button" onclick={handleAnchorClick}>{m.nav_contact()}</a>
+      <a href={waHref} target="_blank" rel="noopener noreferrer" class="cta-button">
+        <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.83 9.83 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/>
+        </svg>
+        {m.nav_whatsapp()}
+      </a>
     </div>
   </div>
 </nav>
@@ -83,7 +98,7 @@
 
   .logo-text {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #e2e8f0;
   }
@@ -94,7 +109,7 @@
     align-items: center;
   }
 
-  .nav-links a {
+  .nav-links > a:not(.cta-button):not(.lang-button) {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
     font-weight: 500;
@@ -102,44 +117,50 @@
     transition: color 0.2s;
   }
 
-  .nav-links a:hover {
+  .nav-links > a:not(.cta-button):not(.lang-button):hover {
     color: #e2e8f0;
   }
 
   .cta-button {
-    background: linear-gradient(135deg, #667eea 0%, #0891b2 100%);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
     color: white !important;
-    padding: 0.5rem 1rem;
+    padding: 0.55rem 1rem;
     border-radius: 0.5rem;
     transition: all 0.25s ease;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.85rem;
+    text-decoration: none;
   }
 
   .cta-button:hover {
     transform: translateY(-1px);
     color: white !important;
-    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.35);
+  }
+
+  .cta-icon {
+    width: 0.95rem;
+    height: 0.95rem;
   }
 
   .language-switcher {
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    margin: 0 1rem;
+    margin: 0 0.5rem 0 1rem;
   }
 
   .lang-button {
-    background: none;
-    border: none;
     color: rgba(255, 255, 255, 0.4);
     font-weight: 500;
-    cursor: pointer;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     transition: all 0.2s ease;
     text-decoration: none;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     font-family: 'JetBrains Mono', monospace;
   }
 
@@ -152,10 +173,6 @@
     background-color: rgba(102, 126, 234, 0.2);
     color: #a5b4fc;
     font-weight: 700;
-  }
-
-  .lang-button.active:hover {
-    background-color: rgba(102, 126, 234, 0.3);
   }
 
   @media (max-width: 768px) {

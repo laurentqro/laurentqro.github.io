@@ -1,5 +1,9 @@
 <script>
   import * as m from '$lib/paraglide/messages';
+  import { localizeHref } from '$lib/paraglide/runtime';
+  import { whatsappLink } from '$lib/whatsapp.js';
+
+  const waHref = whatsappLink(m.whatsapp_prefill());
   const currentYear = new Date().getFullYear();
 </script>
 
@@ -17,25 +21,21 @@
 
       <div class="footer-links">
         <div class="link-group">
-          <h4>{m.footer_services_title()}</h4>
-          <a href="#services">{m.footer_services_mvp()}</a>
-          <a href="#services">{m.footer_services_strategy()}</a>
-          <a href="#services">{m.footer_services_team()}</a>
-          <a href="#services">{m.footer_services_architecture()}</a>
+          <h4>{m.footer_work_title()}</h4>
+          <a href={localizeHref('/case-study/afida')}>{m.footer_work_afida()}</a>
+          <a href={localizeHref('/case-study/agence-de-la-gare')}>{m.footer_work_gare()}</a>
+          <a href={localizeHref('/case-study/christian-curau-architecte')}>{m.footer_work_cca()}</a>
         </div>
 
         <div class="link-group">
           <h4>{m.footer_company_title()}</h4>
-          <a href="#target">{m.footer_company_who()}</a>
-          <a href="#pricing">{m.footer_company_pricing()}</a>
-          <a href="#process">{m.footer_company_process()}</a>
-          <a href="#contact">{m.footer_company_contact()}</a>
+          <a href={localizeHref('/services')}>{m.footer_company_services()}</a>
         </div>
 
         <div class="link-group">
           <h4>{m.footer_connect_title()}</h4>
+          <a href={waHref} target="_blank" rel="noopener noreferrer">{m.footer_connect_call()}</a>
           <a href="mailto:hello@laurentcurau.com">{m.footer_connect_email()}</a>
-          <a href="https://cal.com/laurentcurau" target="_blank" rel="noopener noreferrer">{m.footer_connect_call()}</a>
           <a href="https://linkedin.com/in/laurentcurau" target="_blank" rel="noopener noreferrer">{m.footer_connect_linkedin()}</a>
         </div>
       </div>
@@ -46,8 +46,8 @@
       <div class="footer-copyright">
         <p>&copy; {currentYear} Laurent Curau. {m.footer_copyright()}</p>
         <div class="footer-legal">
-          <a href="/privacy">{m.footer_links_privacy()}</a>
-          <a href="/terms">{m.footer_links_terms()}</a>
+          <a href={localizeHref('/privacy')}>{m.footer_links_privacy()}</a>
+          <a href={localizeHref('/terms')}>{m.footer_links_terms()}</a>
         </div>
       </div>
     </div>
@@ -75,7 +75,7 @@
   }
 
   .footer-brand h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: #e2e8f0;
@@ -94,11 +94,13 @@
   }
 
   .link-group h4 {
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     color: #e2e8f0;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
   .link-group a {
@@ -107,10 +109,11 @@
     text-decoration: none;
     margin-bottom: 0.75rem;
     transition: color 0.2s;
+    font-size: 0.92rem;
   }
 
   .link-group a:hover {
-    color: #667eea;
+    color: #a5b4fc;
   }
 
   .footer-bottom {
@@ -128,7 +131,7 @@
     justify-content: space-between;
     align-items: center;
     color: rgba(255, 255, 255, 0.3);
-    font-size: 0.875rem;
+    font-size: 0.85rem;
   }
 
   .footer-legal {
@@ -143,7 +146,7 @@
   }
 
   .footer-legal a:hover {
-    color: #667eea;
+    color: #a5b4fc;
   }
 
   @media (max-width: 768px) {
