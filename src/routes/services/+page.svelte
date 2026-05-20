@@ -32,12 +32,6 @@
     }
   ];
 
-  const processSteps = [
-    { n: '01', title: m.services_page_process_step_1_title(), body: m.services_page_process_step_1() },
-    { n: '02', title: m.services_page_process_step_2_title(), body: m.services_page_process_step_2() },
-    { n: '03', title: m.services_page_process_step_3_title(), body: m.services_page_process_step_3() },
-    { n: '04', title: m.services_page_process_step_4_title(), body: m.services_page_process_step_4() }
-  ];
 </script>
 
 <section class="hero">
@@ -79,24 +73,6 @@
         </div>
       </article>
     {/each}
-  </div>
-</section>
-
-<section class="process">
-  <div class="container">
-    <div class="section-header">
-      <div class="eyebrow">{m.services_page_process_eyebrow()}</div>
-      <h2>{m.services_page_process_title()}</h2>
-    </div>
-    <div class="steps">
-      {#each processSteps as step}
-        <div class="step">
-          <div class="step-num">{step.n}</div>
-          <h3>{step.title}</h3>
-          <p>{step.body}</p>
-        </div>
-      {/each}
-    </div>
   </div>
 </section>
 
@@ -263,64 +239,6 @@
   .service-cta svg {
     width: 1rem;
     height: 1rem;
-  }
-
-  .process {
-    padding: 6rem 0;
-    background: #141422;
-  }
-
-  .section-header {
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto 3.5rem;
-  }
-
-  .section-header h2 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    font-weight: 800;
-    color: #e2e8f0;
-    margin: 0;
-    letter-spacing: -0.02em;
-  }
-
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .step {
-    background: #1a1a2e;
-    border: 1px solid rgba(102, 126, 234, 0.12);
-    border-radius: 1rem;
-    padding: 2rem;
-    position: relative;
-  }
-
-  .step-num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-    color: rgba(165, 180, 252, 0.6);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    letter-spacing: 0.1em;
-  }
-
-  .step h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #f5f5fa;
-    margin: 0 0 0.75rem;
-  }
-
-  .step p {
-    color: rgba(255, 255, 255, 0.55);
-    line-height: 1.55;
-    margin: 0;
-    font-size: 0.95rem;
   }
 
   @media (max-width: 800px) {

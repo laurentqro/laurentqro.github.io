@@ -34,7 +34,7 @@
       <span class="logo-text">Laurent Curau</span>
     </a>
     <div class="nav-links">
-      <a href={localizeHref('/') + '#work'} onclick={handleAnchorClick}>{m.nav_work()}</a>
+      <a href={localizeHref('/portfolio')}>{m.nav_work()}</a>
       <a href={localizeHref('/services')}>{m.nav_services()}</a>
 
       <div class="language-switcher">
