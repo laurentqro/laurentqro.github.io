@@ -2,6 +2,7 @@
   import * as m from '$lib/paraglide/messages';
   import { localizeHref } from '$lib/paraglide/runtime';
   import { whatsappLink } from '$lib/whatsapp.js';
+  import logo from '$lib/assets/logo.svg';
 
   const waHref = whatsappLink(m.whatsapp_prefill());
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,10 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-brand">
-        <h3>Laurent Curau</h3>
+        <div class="brand-wordmark">
+          <img src={logo} alt="" class="brand-logo" aria-hidden="true" />
+          <h3>Laurent Curau</h3>
+        </div>
         <p>{m.footer_brand_description()}</p>
         <br />
         <p>{m.footer_address_line_1()}<br />
@@ -74,10 +78,24 @@
     margin-bottom: 3rem;
   }
 
+  .brand-wordmark {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .brand-logo {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+    flex-shrink: 0;
+  }
+
   .footer-brand h3 {
     font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin: 0;
     color: #e2e8f0;
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
