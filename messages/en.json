@@ -16,7 +16,7 @@
   "hero_rotate_2": "e-commerce stores",
   "hero_rotate_3": "apps",
   "hero_rotate_4": "internal tools",
-  "hero_subtitle": "Senior software engineer. 10+ years of production systems.",
+  "hero_subtitle": "Software engineer. 10+ years of production systems.",
   "hero_cta_primary": "See the work",
   "hero_cta_secondary": "Get in touch",
 
@@ -148,7 +148,7 @@
 
   "personal_eyebrow": "The engineer you'd actually work with",
   "personal_title": "Laurent Curau",
-  "personal_subtitle": "Senior software engineer · Monaco",
+  "personal_subtitle": "Software engineer · Monaco",
   "personal_message_1": "I've been writing production software for over ten years — primarily Ruby on Rails, plus everything that lives around it: Postgres, background jobs, integrations, deployment, on-call.",
   "personal_message_2": "I work with Monaco SMEs because I live here and I know the local pain: software priced for global enterprises, agencies that send junior staff after they win the pitch, freelancers who disappear between projects. I don't subcontract. I don't fixed-price work I haven't scoped. I won't pretend I have capacity when I don't.",
   "personal_signature_name": "— Laurent",
@@ -195,7 +195,7 @@
   "contact_form_submitting": "Sending...",
   "contact_form_success": "Message sent. I'll reply within a few hours.",
 
-  "footer_brand_description": "Senior software engineer in Monaco.",
+  "footer_brand_description": "Software engineer in Monaco.",
   "footer_address_line_1": "Monaco",
   "footer_address_line_2": "98000 🇲🇨",
   "footer_work_title": "Work",
@@ -339,9 +339,9 @@
   "case_cca_related_service_title": "Internal tools",
   "case_cca_related_service_body": "Quiet software that sits behind your operations.",
 
-  "meta_title": "Laurent Curau — Senior software engineer in Monaco",
-  "meta_description": "Senior software engineer in Monaco. Custom web applications, e-commerce, multilingual sites and compliance tooling — built end-to-end by one person.",
-  "meta_keywords": "software engineer Monaco, senior developer Monaco, custom software Monaco, Rails developer Monaco, fractional CTO Monaco",
-  "meta_og_title": "Laurent Curau — Senior software engineer in Monaco",
+  "meta_title": "Laurent Curau — Software engineer in Monaco",
+  "meta_description": "Software engineer in Monaco. Custom web applications, e-commerce, multilingual sites and compliance tooling — built end-to-end by one person.",
+  "meta_keywords": "software engineer Monaco, custom software Monaco, Rails developer Monaco, fractional CTO Monaco",
+  "meta_og_title": "Laurent Curau — Software engineer in Monaco",
   "meta_og_description": "Custom software for Monaco businesses, built end-to-end by one person."
 }

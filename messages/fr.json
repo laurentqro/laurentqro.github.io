@@ -16,7 +16,7 @@
   "hero_rotate_2": "shops e-commerce",
   "hero_rotate_3": "apps",
   "hero_rotate_4": "outils internes",
-  "hero_subtitle": "Ingénieur logiciel senior. 10+ ans de systèmes en production.",
+  "hero_subtitle": "Ingénieur logiciel. 10+ ans de systèmes en production.",
   "hero_cta_primary": "Voir les réalisations",
   "hero_cta_secondary": "Me contacter",
 
@@ -148,7 +148,7 @@
 
   "personal_eyebrow": "L'ingénieur avec qui vous travailleriez",
   "personal_title": "Laurent Curau",
-  "personal_subtitle": "Ingénieur logiciel senior · Monaco",
+  "personal_subtitle": "Ingénieur logiciel · Monaco",
   "personal_message_1": "Je code des logiciels en production depuis plus de dix ans — principalement Ruby on Rails, plus tout ce qui gravite autour : Postgres, jobs en arrière-plan, intégrations, déploiement, astreinte.",
   "personal_message_2": "Je travaille avec les PME de Monaco parce que j'y vis et que je connais la douleur locale : logiciels pensés pour grands groupes, agences qui envoient des juniors après avoir gagné l'appel d'offres, freelances qui disparaissent entre deux projets. Je ne sous-traite pas. Je ne fais pas de forfait que je n'ai pas cadré. Je ne fais pas semblant d'avoir de la capacité quand je n'en ai pas.",
   "personal_signature_name": "— Laurent",
@@ -195,7 +195,7 @@
   "contact_form_submitting": "Envoi...",
   "contact_form_success": "Message envoyé. Je vous réponds dans quelques heures.",
 
-  "footer_brand_description": "Ingénieur logiciel senior à Monaco.",
+  "footer_brand_description": "Ingénieur logiciel à Monaco.",
   "footer_address_line_1": "Monaco",
   "footer_address_line_2": "98000 🇲🇨",
   "footer_work_title": "Réalisations",
@@ -339,9 +339,9 @@
   "case_cca_related_service_title": "Outils internes",
   "case_cca_related_service_body": "Les logiciels discrets qui vivent derrière vos opérations.",
 
-  "meta_title": "Laurent Curau — Ingénieur logiciel senior à Monaco",
-  "meta_description": "Ingénieur logiciel senior à Monaco. Applications web sur mesure, e-commerce, sites multilingues et outils de conformité — construits de bout en bout par une seule personne.",
-  "meta_keywords": "ingénieur logiciel Monaco, développeur senior Monaco, logiciel sur mesure Monaco, développeur Rails Monaco, CTO fractionnaire Monaco",
-  "meta_og_title": "Laurent Curau — Ingénieur logiciel senior à Monaco",
+  "meta_title": "Laurent Curau — Ingénieur logiciel à Monaco",
+  "meta_description": "Ingénieur logiciel à Monaco. Applications web sur mesure, e-commerce, sites multilingues et outils de conformité — construits de bout en bout par une seule personne.",
+  "meta_keywords": "ingénieur logiciel Monaco, logiciel sur mesure Monaco, développeur Rails Monaco, CTO fractionnaire Monaco",
+  "meta_og_title": "Laurent Curau — Ingénieur logiciel à Monaco",
   "meta_og_description": "Logiciels sur mesure pour entreprises monégasques, construits de bout en bout par une seule personne."
 }
