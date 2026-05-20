@@ -9,7 +9,7 @@
   "whatsapp_cta": "Me joindre sur WhatsApp",
   "whatsapp_prefill": "Bonjour Laurent, j'aimerais discuter d'un projet.",
 
-  "hero_eyebrow": "Ingénieur logiciel indépendant · Monaco · Depuis 2014",
+  "hero_eyebrow": "Ingénieur logiciel indépendant · Monaco",
   "hero_title_prefix": "Je crée des",
   "hero_title_suffix": "au service de votre business.",
   "hero_rotate_1": "sites web",
@@ -25,8 +25,11 @@
   "stats_clients_label": "Clients actifs à la fois",
   "stats_clients_value": "2–3",
 
-  "trust_label": "Conçu et livré par moi",
   "trust_clients_using": "Logiciels en service quotidien chez",
+  "previously_at_label": "Pratique acquise auprès de",
+  "previously_at_1": "Government Digital Service",
+  "previously_at_2": "UK Ministry of Justice",
+  "previously_at_3": "UK Department for Education",
 
   "work_section_title": "Mes réalisations",
   "work_view_case_study": "Voir l'étude de cas",
@@ -117,13 +120,16 @@
   "service_4_bullet_3": "Intégrations cron, supervisées",
 
   "how_section_eyebrow": "Comment je travaille",
-  "how_section_title": "Pas de tickets. Pas de file. Pas d'intermédiaires.",
-  "how_point_1_title": "Vous parlez à l'ingénieur",
-  "how_point_1": "Pas à un commercial. Pas à un chef de projet. La personne qui écrit votre code est la même que celle à qui vous envoyez un message à 9h pour signaler un bug.",
-  "how_point_2_title": "Pas de tickets, pas de cérémonie",
-  "how_point_2": "Pas de file, pas de Slack à surveiller, pas de JIRA. Un message court quand il faut mon attention, un point écrit chaque semaine pour le reste.",
-  "how_point_3_title": "Deux ou trois clients. Pas plus.",
-  "how_point_3": "Je prends une poignée de clients à la fois. Quand je suis complet, je vous le dis — je ne ferai pas semblant. Vous n'êtes jamais le projet n°37.",
+  "how_section_title": "Vous gardez la main.",
+  "how_section_lede": "Je livre des outils que vous maîtrisez et exploitez. Vous ne devenez jamais dépendant.",
+  "how_point_1_title": "Formation systématique",
+  "how_point_1": "Chaque livraison inclut une prise en main avec les personnes qui utiliseront l'outil au quotidien, et un guide utilisateur écrit en langage clair.",
+  "how_point_2_title": "Transfert de propriété intégrale",
+  "how_point_2": "Code, contenus, infrastructure, noms de domaine — tout vous appartient dès le premier jour. Pas d'éditeur propriétaire, pas de verrou plateforme.",
+  "how_point_3_title": "Code source documenté",
+  "how_point_3": "README en langage clair, notes d'architecture, runbook de déploiement. N'importe quel autre ingénieur peut reprendre là où je m'arrête.",
+  "how_point_4_title": "Garantie post-livraison",
+  "how_point_4": "Ce qui casse pendant la période de garantie après la mise en production, je le corrige sans surcoût. Un défaut n'est pas une demande d'évolution.",
 
   "pricing_title": "Un prix. Un ingénieur. Aucune surprise.",
   "pricing_subtitle": "Forfait mensuel fixe. Résiliable au mois.",
@@ -148,13 +154,10 @@
 
   "personal_eyebrow": "L'ingénieur avec qui vous travailleriez",
   "personal_title": "Laurent Curau",
-  "personal_subtitle": "Ingénieur logiciel · Monaco",
+  "personal_subtitle": "Ingénieur logiciel · Monaco · MSc Software Engineering, Université d'Oxford",
   "personal_message_1": "Je code des logiciels en production depuis plus de dix ans — principalement Ruby on Rails, plus tout ce qui gravite autour : Postgres, jobs en arrière-plan, intégrations, déploiement, astreinte.",
-  "personal_message_2": "Je travaille avec les PME de Monaco parce que j'y vis et que je connais la douleur locale : logiciels pensés pour grands groupes, agences qui envoient des juniors après avoir gagné l'appel d'offres, freelances qui disparaissent entre deux projets. Je ne sous-traite pas. Je ne fais pas de forfait que je n'ai pas cadré. Je ne fais pas semblant d'avoir de la capacité quand je n'en ai pas.",
-  "personal_education": "MSc Software Engineering, Université d'Oxford.",
+  "personal_message_2": "Monégasque de nationalité, résident en Principauté. Je travaille avec les PME de Monaco parce que j'y vis et que je connais la douleur locale : logiciels pensés pour grands groupes, agences qui envoient des juniors après avoir gagné l'appel d'offres, freelances qui disparaissent entre deux projets. Je ne sous-traite pas. Je ne fais pas de forfait que je n'ai pas cadré. Je ne fais pas semblant d'avoir de la capacité quand je n'en ai pas.",
   "personal_signature_name": "— Laurent",
-
-  "trust_label": "Logiciels livrés pour",
 
   "mission_eyebrow": "Ce que je crois",
   "mission_quote": "Chaque entreprise monégasque mérite des logiciels conçus autour de ses opérations — pas l'inverse.",

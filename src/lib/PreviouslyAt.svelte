@@ -1,28 +1,26 @@
 <script>
   import * as m from '$lib/paraglide/messages';
 
-  const clients = [
-    { name: 'Afida', href: 'https://afida.com' },
-    { name: 'Agence de la Gare', href: 'https://www.agencegaremonaco.com' },
-    { name: 'Christian Curau Architecte', href: 'https://cca-mc.com' }
+  const institutions = [
+    m.previously_at_1(),
+    m.previously_at_2(),
+    m.previously_at_3()
   ];
 </script>
 
-<section class="logo-wall">
+<section class="previously-at">
   <div class="container">
-    <div class="label">{m.trust_label()}</div>
-    <div class="logos">
-      {#each clients as c}
-        <a href={c.href} target="_blank" rel="noopener noreferrer" class="logo">
-          {c.name}
-        </a>
+    <div class="label">{m.previously_at_label()}</div>
+    <ul class="names">
+      {#each institutions as name}
+        <li class="name">{name}</li>
       {/each}
-    </div>
+    </ul>
   </div>
 </section>
 
 <style>
-  .logo-wall {
+  .previously-at {
     background: #0f0f1a;
     padding: 2.5rem 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -47,7 +45,10 @@
     flex-shrink: 0;
   }
 
-  .logos {
+  .names {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     align-items: center;
     gap: 2.5rem;
@@ -55,30 +56,18 @@
     flex: 1;
   }
 
-  .logo {
+  .name {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.45);
-    text-decoration: none;
-    letter-spacing: -0.01em;
-    transition: color 0.25s ease;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: -0.005em;
     white-space: nowrap;
   }
 
-  .logo:hover {
-    color: #e2e8f0;
-  }
-
   @media (max-width: 700px) {
-    .container {
-      gap: 1.25rem;
-    }
-    .logos {
-      gap: 1.5rem;
-    }
-    .logo {
-      font-size: 1rem;
-    }
+    .container { gap: 1.25rem; }
+    .names { gap: 1.5rem; }
+    .name { font-size: 0.95rem; }
   }
 </style>

@@ -9,7 +9,7 @@
   "whatsapp_cta": "WhatsApp me",
   "whatsapp_prefill": "Hi Laurent, I'd like to discuss a project.",
 
-  "hero_eyebrow": "Independent software engineer · Monaco · Est. 2014",
+  "hero_eyebrow": "Independent software engineer · Monaco",
   "hero_title_prefix": "I design and build",
   "hero_title_suffix": "in service of your business.",
   "hero_rotate_1": "websites",
@@ -25,8 +25,11 @@
   "stats_clients_label": "Active clients at a time",
   "stats_clients_value": "2–3",
 
-  "trust_label": "Built and shipped by me",
   "trust_clients_using": "Software in daily use at",
+  "previously_at_label": "Previously at",
+  "previously_at_1": "Government Digital Service",
+  "previously_at_2": "UK Ministry of Justice",
+  "previously_at_3": "UK Department for Education",
 
   "work_section_title": "Selected work",
   "work_view_case_study": "Read case study",
@@ -117,13 +120,16 @@
   "service_4_bullet_3": "Cron-backed integrations, monitored",
 
   "how_section_eyebrow": "How I work",
-  "how_section_title": "No tickets. No queue. No middlemen.",
-  "how_point_1_title": "You talk to the engineer",
-  "how_point_1": "Not an account manager. Not a PM. The person writing your code is the same person you message at 9am about a bug.",
-  "how_point_2_title": "No tickets, no ceremony",
-  "how_point_2": "No queues, no Slack channels to babysit, no JIRA. A short async message when something needs my eyes, a weekly written update for the rest.",
-  "how_point_3_title": "Two or three clients. That's it.",
-  "how_point_3": "I take a handful of clients at a time. When I'm full, I'll tell you — I won't pretend. You're never project #37.",
+  "how_section_title": "You stay in control.",
+  "how_section_lede": "I deliver tools you own and operate. You never become dependent.",
+  "how_point_1_title": "Hands-on training",
+  "how_point_1": "Every delivery includes a walkthrough with the people who will actually use the tool, plus a user guide written in plain language.",
+  "how_point_2_title": "Full ownership transfer",
+  "how_point_2": "Code, content, infrastructure, domain names — everything is yours from day one. No proprietary editor, no platform lock-in.",
+  "how_point_3_title": "Documented source code",
+  "how_point_3": "Plain-language README, architecture notes, deployment runbook. Any engineer can pick up where I left off.",
+  "how_point_4_title": "Post-delivery warranty",
+  "how_point_4": "Anything that breaks within the warranty window after launch, I fix at no extra cost. Defects are not change requests.",
 
   "pricing_title": "One price. One engineer. No surprises.",
   "pricing_subtitle": "Flat monthly fee. Cancel any month.",
@@ -148,13 +154,10 @@
 
   "personal_eyebrow": "The engineer you'd actually work with",
   "personal_title": "Laurent Curau",
-  "personal_subtitle": "Software engineer · Monaco",
+  "personal_subtitle": "Software engineer · Monaco · MSc Software Engineering, University of Oxford",
   "personal_message_1": "I've been writing production software for over ten years — primarily Ruby on Rails, plus everything that lives around it: Postgres, background jobs, integrations, deployment, on-call.",
-  "personal_message_2": "I work with Monaco SMEs because I live here and I know the local pain: software priced for global enterprises, agencies that send junior staff after they win the pitch, freelancers who disappear between projects. I don't subcontract. I don't fixed-price work I haven't scoped. I won't pretend I have capacity when I don't.",
-  "personal_education": "MSc in Software Engineering, University of Oxford.",
+  "personal_message_2": "Monégasque national, resident in the Principality. I work with Monaco SMEs because I live here and I know the local pain: software priced for global enterprises, agencies that send junior staff after they win the pitch, freelancers who disappear between projects. I don't subcontract. I don't fixed-price work I haven't scoped. I won't pretend I have capacity when I don't.",
   "personal_signature_name": "— Laurent",
-
-  "trust_label": "Software shipped for",
 
   "mission_eyebrow": "What I believe",
   "mission_quote": "Every Monaco business deserves software designed around its operations — not the other way around.",

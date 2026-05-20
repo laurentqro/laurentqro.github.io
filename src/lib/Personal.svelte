@@ -15,7 +15,6 @@
         <div class="subtitle">{m.personal_subtitle()}</div>
         <p>{m.personal_message_1()}</p>
         <p>{m.personal_message_2()}</p>
-        <p class="bio-detail">{m.personal_education()}</p>
         <div class="signature">{m.personal_signature_name()}</div>
       </div>
     </div>
@@ -87,12 +86,6 @@
     font-size: 1.05rem;
   }
 
-  .bio-detail {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem !important;
-    color: rgba(255, 255, 255, 0.45) !important;
-    letter-spacing: 0.01em;
-  }
 
   .signature {
     font-family: 'JetBrains Mono', monospace;
