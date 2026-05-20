@@ -112,13 +112,13 @@
   }
 
   .link-group h4 {
-    font-size: 0.95rem;
-    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
     margin-bottom: 1rem;
-    color: #e2e8f0;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.4);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
   }
 
   .link-group a {
