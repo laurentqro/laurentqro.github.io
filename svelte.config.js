@@ -8,9 +8,6 @@ const config = {
             assets: 'build',
             fallback: '404.html'
         }),
-        paths: {
-            base: process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/').pop()}` : ''
-        },
         prerender: {
             handleHttpError: 'warn',
             handleMissingId: 'warn'
