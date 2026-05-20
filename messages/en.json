@@ -198,6 +198,55 @@
   "footer_links_terms": "Terms",
   "footer_back_home": "All projects",
 
+  "legal_last_updated_label": "Last updated",
+  "legal_last_updated_value": "20 May 2026",
+
+  "privacy_meta_title": "Privacy notice | Laurent Curau",
+  "privacy_meta_description": "How laurentcurau.com handles your data. Short answer: barely any data, no cookies, no tracking beyond aggregated analytics.",
+  "privacy_title": "Privacy notice",
+  "privacy_intro": "This is a one-person freelance site. It collects as little data as possible, and what it does collect is described below — honestly and in plain language.",
+
+  "privacy_who_title": "Who's responsible",
+  "privacy_who_body": "This site is operated by Laurent Curau, independent software engineer, registered as a sole trader in Monaco (PR 01061), based in Monaco 98000. For any privacy-related question, write to hello@laurentcurau.com.",
+
+  "privacy_what_title": "What I collect",
+  "privacy_what_body": "Nothing about you personally, unless you choose to message me. The site has no contact form, no account system, no newsletter, no third-party advertising, and no cookies.",
+
+  "privacy_analytics_title": "Analytics",
+  "privacy_analytics_body": "The site uses Plausible Analytics — a privacy-friendly, cookieless analytics tool that records aggregated visit counts (pages viewed, country, referrer, browser type) without identifying individual visitors. No personal data is stored, no cross-site tracking, no advertising profiles. Plausible is hosted in the EU. You can read their data policy on plausible.io.",
+
+  "privacy_whatsapp_title": "WhatsApp",
+  "privacy_whatsapp_body": "If you click a \"WhatsApp\" button on this site, you're handed off to WhatsApp (operated by Meta Platforms Ireland Limited). At that point you're subject to WhatsApp's own privacy policy. Nothing about that click is recorded on this site beyond the aggregated Plausible event.",
+
+  "privacy_rights_title": "Your rights",
+  "privacy_rights_body": "Under EU/Monaco data-protection law you have the right to access, rectify, or erase any personal data held about you, and to lodge a complaint with the supervisory authority. Since this site doesn't hold personal data on you, there's typically nothing to access or erase — but write to hello@laurentcurau.com if you want to check.",
+
+  "privacy_changes_title": "Changes",
+  "privacy_changes_body": "If this notice changes meaningfully, the date at the top of the page will be updated. There's no notification mechanism — this site doesn't have your email.",
+
+  "terms_meta_title": "Terms | Laurent Curau",
+  "terms_meta_description": "Terms of use for laurentcurau.com — a static marketing site for an independent software engineering practice.",
+  "terms_title": "Terms",
+  "terms_intro": "These terms cover the use of this website. They don't constitute a service agreement — that's negotiated separately and signed in writing.",
+
+  "terms_about_title": "About this site",
+  "terms_about_body": "laurentcurau.com is the marketing site of Laurent Curau, independent software engineer, registered as a sole trader in Monaco (PR 01061), based in Monaco 98000. The site exists to describe the engineering services I offer and to show selected past projects.",
+
+  "terms_use_title": "Use of the site",
+  "terms_use_body": "You're welcome to read the site, link to it, and contact me through the channels listed. The content (text, screenshots, code samples) is provided as-is, for information only — not as professional advice. Please don't republish or scrape the content without asking first.",
+
+  "terms_third_parties_title": "Third-party links",
+  "terms_third_parties_body": "The site links out to live client sites (afida.com, agencegaremonaco.com, cca-mc.com) and to WhatsApp, LinkedIn, and email. I'm not responsible for the content or behaviour of those external services.",
+
+  "terms_warranty_title": "No warranty",
+  "terms_warranty_body": "Information on this site is provided in good faith but without any guarantee of completeness or accuracy. The case studies describe projects I've worked on; specific outcomes for any future engagement depend on the engagement itself.",
+
+  "terms_law_title": "Applicable law",
+  "terms_law_body": "These terms are governed by the law applicable in the Principality of Monaco.",
+
+  "terms_contact_title": "Contact",
+  "terms_contact_body": "Any question about these terms, or about working together, can be sent to hello@laurentcurau.com.",
+
   "services_page_eyebrow": "What I build",
   "services_page_title": "Services",
   "services_page_subtitle": "Five categories of work I take end-to-end. Specification, design, code, deployment, on-call.",

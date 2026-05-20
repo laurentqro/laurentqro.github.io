@@ -198,6 +198,55 @@
   "footer_links_terms": "Conditions",
   "footer_back_home": "Tous les projets",
 
+  "legal_last_updated_label": "Dernière mise à jour",
+  "legal_last_updated_value": "20 mai 2026",
+
+  "privacy_meta_title": "Politique de confidentialité | Laurent Curau",
+  "privacy_meta_description": "Comment laurentcurau.com traite vos données. Réponse courte : presque rien, aucun cookie, aucun pistage au-delà de statistiques agrégées.",
+  "privacy_title": "Politique de confidentialité",
+  "privacy_intro": "Ce site est celui d'un freelance, opéré par une seule personne. Il collecte le moins de données possible, et ce qu'il collecte est décrit ci-dessous — honnêtement et en langage clair.",
+
+  "privacy_who_title": "Qui est responsable",
+  "privacy_who_body": "Ce site est exploité par Laurent Curau, ingénieur logiciel indépendant, inscrit au répertoire du commerce de Monaco en tant qu'entreprise individuelle (PR 01061), basé à Monaco 98000. Pour toute question relative à la confidentialité, écrivez à hello@laurentcurau.com.",
+
+  "privacy_what_title": "Ce que je collecte",
+  "privacy_what_body": "Rien sur vous personnellement, sauf si vous choisissez de m'écrire. Le site n'a pas de formulaire de contact, pas de compte utilisateur, pas de newsletter, pas de publicité tierce, et pas de cookies.",
+
+  "privacy_analytics_title": "Statistiques",
+  "privacy_analytics_body": "Le site utilise Plausible Analytics — un outil de statistiques respectueux de la vie privée, sans cookies, qui enregistre des visites agrégées (pages vues, pays, source du trafic, type de navigateur) sans identifier les visiteurs. Aucune donnée personnelle n'est stockée, aucun pistage inter-sites, aucun profil publicitaire. Plausible est hébergé dans l'UE. Sa politique de données est disponible sur plausible.io.",
+
+  "privacy_whatsapp_title": "WhatsApp",
+  "privacy_whatsapp_body": "Si vous cliquez sur un bouton « WhatsApp » du site, vous êtes redirigé vers WhatsApp (exploité par Meta Platforms Ireland Limited). À ce moment-là, c'est la politique de confidentialité de WhatsApp qui s'applique. Aucune information sur ce clic n'est enregistrée par ce site au-delà de l'événement agrégé dans Plausible.",
+
+  "privacy_rights_title": "Vos droits",
+  "privacy_rights_body": "Le droit applicable en matière de protection des données (UE/Monaco) vous garantit un droit d'accès, de rectification et d'effacement des données personnelles vous concernant, ainsi que le droit de saisir l'autorité de contrôle compétente. Ce site ne détenant a priori aucune donnée personnelle vous concernant, il n'y a en général rien à consulter ou à effacer — mais écrivez à hello@laurentcurau.com si vous souhaitez vérifier.",
+
+  "privacy_changes_title": "Modifications",
+  "privacy_changes_body": "Si cette politique change de façon notable, la date en haut de page sera mise à jour. Il n'y a pas de mécanisme de notification — ce site n'a pas votre email.",
+
+  "terms_meta_title": "Conditions d'utilisation | Laurent Curau",
+  "terms_meta_description": "Conditions d'utilisation de laurentcurau.com — site vitrine d'une activité d'ingénierie logicielle indépendante.",
+  "terms_title": "Conditions d'utilisation",
+  "terms_intro": "Ces conditions encadrent l'utilisation du site. Elles ne constituent pas un contrat de prestation — celui-ci se négocie séparément et se signe par écrit.",
+
+  "terms_about_title": "À propos de ce site",
+  "terms_about_body": "laurentcurau.com est le site vitrine de Laurent Curau, ingénieur logiciel indépendant, inscrit au répertoire du commerce de Monaco en tant qu'entreprise individuelle (PR 01061), basé à Monaco 98000. Il sert à présenter les services proposés et quelques projets passés.",
+
+  "terms_use_title": "Utilisation du site",
+  "terms_use_body": "Vous êtes libre de consulter le site, d'y faire des liens et de me contacter via les canaux indiqués. Le contenu (textes, captures, extraits de code) est fourni en l'état, à titre informatif — il ne constitue pas un conseil professionnel. Merci de ne pas le republier ou le scraper sans accord préalable.",
+
+  "terms_third_parties_title": "Liens externes",
+  "terms_third_parties_body": "Le site renvoie vers des sites clients en production (afida.com, agencegaremonaco.com, cca-mc.com) ainsi que vers WhatsApp, LinkedIn et l'email. Je ne suis pas responsable du contenu ou du fonctionnement de ces services externes.",
+
+  "terms_warranty_title": "Absence de garantie",
+  "terms_warranty_body": "Les informations présentes sur ce site sont fournies de bonne foi mais sans garantie d'exhaustivité ou d'exactitude. Les études de cas décrivent des projets passés ; les résultats d'une éventuelle mission future dépendent de ladite mission.",
+
+  "terms_law_title": "Droit applicable",
+  "terms_law_body": "Ces conditions sont régies par le droit en vigueur dans la Principauté de Monaco.",
+
+  "terms_contact_title": "Contact",
+  "terms_contact_body": "Toute question sur ces conditions, ou sur une collaboration, peut être adressée à hello@laurentcurau.com.",
+
   "services_page_eyebrow": "Ce que je construis",
   "services_page_title": "Services",
   "services_page_subtitle": "Cinq catégories de travail prises en charge de bout en bout. Spécification, conception, code, déploiement, astreinte.",
