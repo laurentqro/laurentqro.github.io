@@ -38,7 +38,7 @@
   "portfolio_meta_title": "Portfolio — Réalisations choisies | Laurent Curau",
   "portfolio_meta_description": "Réalisations choisies de Laurent Curau, ingénieur logiciel indépendant à Monaco. E-commerce B2B, site immobilier multilingue, portfolio éditorial + FTP web sur mesure.",
   "portfolio_hero_title": "Mes réalisations",
-  "portfolio_hero_paragraph": "De l'e-commerce B2B aux plateformes immobilières multilingues, en passant par les portfolios éditoriaux — chaque projet est conçu, développé et livré de bout en bout.",
+  "portfolio_hero_paragraph": "De l'e-commerce B2B aux plateformes immobilières multilingues, en passant par les portfolios éditoriaux. Chaque projet est conçu, développé et livré de bout en bout.",
   "portfolio_hero_cta_primary": "Voir les projets",
   "portfolio_hero_cta_secondary": "Me contacter",
   "portfolio_stat_value": "10+",
@@ -78,7 +78,7 @@
   "cca_eyebrow": "Portfolio architecte · Outil sur mesure",
   "cca_title": "Christian Curau Architecte",
   "cca_tagline": "Cabinet d'architecture monégasque, plus un FTP web sur mesure pour les fichiers CAO.",
-  "cca_summary": "Portfolio éditorial pour Christian Curau Architecte — fondé en 1984, Conservateur du Palais Princier. Deux livrables : un site marketing sobre, centré sur les projets, et un client web FTP/FTPS sans état (CCA-FTP) pour partager des fichiers CAO volumineux en sécurité, sans logiciel desktop. Sans base de données — les identifiants vivent dans des cookies chiffrés, le temps de la session.",
+  "cca_summary": "Portfolio éditorial pour Christian Curau Architecte, fondé en 1984, Conservateur du Palais Princier. Deux livrables : un site marketing sobre, centré sur les projets, et un client web FTP/FTPS sans état (CCA-FTP) pour partager des fichiers CAO volumineux en sécurité, sans logiciel desktop. Sans base de données : les identifiants vivent dans des cookies chiffrés, le temps de la session.",
   "cca_stat_1_value": "1984",
   "cca_stat_1_label": "Fondation du cabinet",
   "cca_stat_2_value": "Zéro",
@@ -125,7 +125,7 @@
   "how_point_1_title": "Formation systématique",
   "how_point_1": "Chaque livraison inclut une prise en main avec les personnes qui utiliseront l'outil au quotidien, et un guide utilisateur écrit en langage clair.",
   "how_point_2_title": "Transfert de propriété intégrale",
-  "how_point_2": "Code, contenus, infrastructure, noms de domaine — tout vous appartient dès le premier jour. Pas d'éditeur propriétaire, pas de verrou plateforme.",
+  "how_point_2": "Code, contenus, infrastructure, noms de domaine : tout vous appartient dès le premier jour. Pas d'éditeur propriétaire, pas de verrou plateforme.",
   "how_point_3_title": "Code source documenté",
   "how_point_3": "README en langage clair, notes d'architecture, runbook de déploiement. N'importe quel autre ingénieur peut reprendre là où je m'arrête.",
   "how_point_4_title": "Garantie post-livraison",
@@ -155,12 +155,12 @@
   "personal_eyebrow": "L'ingénieur avec qui vous travailleriez",
   "personal_title": "Laurent Curau",
   "personal_subtitle": "Ingénieur logiciel · Monaco · MSc Software Engineering, Université d'Oxford",
-  "personal_message_1": "Je code des logiciels en production depuis plus de dix ans — principalement Ruby on Rails, plus tout ce qui gravite autour : Postgres, jobs en arrière-plan, intégrations, déploiement, astreinte.",
+  "personal_message_1": "Je code des logiciels en production depuis plus de dix ans, principalement Ruby on Rails, plus tout ce qui gravite autour : Postgres, jobs en arrière-plan, intégrations, déploiement, astreinte.",
   "personal_message_2": "Monégasque de nationalité, résident en Principauté. Je travaille avec les PME de Monaco parce que j'y vis et que je connais la douleur locale : logiciels pensés pour grands groupes, agences qui envoient des juniors après avoir gagné l'appel d'offres, freelances qui disparaissent entre deux projets. Je ne sous-traite pas. Je ne fais pas de forfait que je n'ai pas cadré. Je ne fais pas semblant d'avoir de la capacité quand je n'en ai pas.",
   "personal_signature_name": "— Laurent",
 
   "mission_eyebrow": "Ce que je crois",
-  "mission_quote": "Chaque entreprise monégasque mérite des logiciels conçus autour de ses opérations — pas l'inverse.",
+  "mission_quote": "Chaque entreprise monégasque mérite des logiciels conçus autour de ses opérations, pas l'inverse.",
   "mission_attribution": "— Laurent Curau",
 
   "testimonials_title": "Ce que disent les clients",
@@ -225,7 +225,7 @@
   "privacy_meta_title": "Politique de confidentialité | Laurent Curau",
   "privacy_meta_description": "Comment laurentcurau.com traite vos données. Réponse courte : presque rien, aucun cookie, aucun pistage au-delà de statistiques agrégées.",
   "privacy_title": "Politique de confidentialité",
-  "privacy_intro": "Ce site est celui d'un freelance, opéré par une seule personne. Il collecte le moins de données possible, et ce qu'il collecte est décrit ci-dessous — honnêtement et en langage clair.",
+  "privacy_intro": "Ce site est celui d'un freelance, opéré par une seule personne. Il collecte le moins de données possible, et ce qu'il collecte est décrit ci-dessous, honnêtement et en langage clair.",
 
   "privacy_who_title": "Qui est responsable",
   "privacy_who_body": "Ce site est exploité par Laurent Curau, ingénieur logiciel indépendant, inscrit au répertoire du commerce de Monaco en tant qu'entreprise individuelle (PR 01061), basé à Monaco 98000. Pour toute question relative à la confidentialité, écrivez à hello@laurentcurau.com.",
@@ -234,27 +234,27 @@
   "privacy_what_body": "Rien sur vous personnellement, sauf si vous choisissez de m'écrire. Le site n'a pas de formulaire de contact, pas de compte utilisateur, pas de newsletter, pas de publicité tierce, et pas de cookies.",
 
   "privacy_analytics_title": "Statistiques",
-  "privacy_analytics_body": "Le site utilise Plausible Analytics — un outil de statistiques respectueux de la vie privée, sans cookies, qui enregistre des visites agrégées (pages vues, pays, source du trafic, type de navigateur) sans identifier les visiteurs. Aucune donnée personnelle n'est stockée, aucun pistage inter-sites, aucun profil publicitaire. Plausible est hébergé dans l'UE. Sa politique de données est disponible sur plausible.io.",
+  "privacy_analytics_body": "Le site utilise Plausible Analytics, un outil de statistiques respectueux de la vie privée, sans cookies, qui enregistre des visites agrégées (pages vues, pays, source du trafic, type de navigateur) sans identifier les visiteurs. Aucune donnée personnelle n'est stockée, aucun pistage inter-sites, aucun profil publicitaire. Plausible est hébergé dans l'UE. Sa politique de données est disponible sur plausible.io.",
 
   "privacy_whatsapp_title": "WhatsApp",
   "privacy_whatsapp_body": "Si vous cliquez sur un bouton « WhatsApp » du site, vous êtes redirigé vers WhatsApp (exploité par Meta Platforms Ireland Limited). À ce moment-là, c'est la politique de confidentialité de WhatsApp qui s'applique. Aucune information sur ce clic n'est enregistrée par ce site au-delà de l'événement agrégé dans Plausible.",
 
   "privacy_rights_title": "Vos droits",
-  "privacy_rights_body": "Le droit applicable en matière de protection des données (UE/Monaco) vous garantit un droit d'accès, de rectification et d'effacement des données personnelles vous concernant, ainsi que le droit de saisir l'autorité de contrôle compétente. Ce site ne détenant a priori aucune donnée personnelle vous concernant, il n'y a en général rien à consulter ou à effacer — mais écrivez à hello@laurentcurau.com si vous souhaitez vérifier.",
+  "privacy_rights_body": "Le droit applicable en matière de protection des données (UE/Monaco) vous garantit un droit d'accès, de rectification et d'effacement des données personnelles vous concernant, ainsi que le droit de saisir l'autorité de contrôle compétente. Ce site ne détenant a priori aucune donnée personnelle vous concernant, il n'y a en général rien à consulter ou à effacer. Mais écrivez à hello@laurentcurau.com si vous souhaitez vérifier.",
 
   "privacy_changes_title": "Modifications",
-  "privacy_changes_body": "Si cette politique change de façon notable, la date en haut de page sera mise à jour. Il n'y a pas de mécanisme de notification — ce site n'a pas votre email.",
+  "privacy_changes_body": "Si cette politique change de façon notable, la date en haut de page sera mise à jour. Il n'y a pas de mécanisme de notification : ce site n'a pas votre email.",
 
   "terms_meta_title": "Conditions d'utilisation | Laurent Curau",
-  "terms_meta_description": "Conditions d'utilisation de laurentcurau.com — site vitrine d'une activité d'ingénierie logicielle indépendante.",
+  "terms_meta_description": "Conditions d'utilisation de laurentcurau.com, site vitrine d'une activité d'ingénierie logicielle indépendante.",
   "terms_title": "Conditions d'utilisation",
-  "terms_intro": "Ces conditions encadrent l'utilisation du site. Elles ne constituent pas un contrat de prestation — celui-ci se négocie séparément et se signe par écrit.",
+  "terms_intro": "Ces conditions encadrent l'utilisation du site. Elles ne constituent pas un contrat de prestation : celui-ci se négocie séparément et se signe par écrit.",
 
   "terms_about_title": "À propos de ce site",
   "terms_about_body": "laurentcurau.com est le site vitrine de Laurent Curau, ingénieur logiciel indépendant, inscrit au répertoire du commerce de Monaco en tant qu'entreprise individuelle (PR 01061), basé à Monaco 98000. Il sert à présenter les services proposés et quelques projets passés.",
 
   "terms_use_title": "Utilisation du site",
-  "terms_use_body": "Vous êtes libre de consulter le site, d'y faire des liens et de me contacter via les canaux indiqués. Le contenu (textes, captures, extraits de code) est fourni en l'état, à titre informatif — il ne constitue pas un conseil professionnel. Merci de ne pas le republier ou le scraper sans accord préalable.",
+  "terms_use_body": "Vous êtes libre de consulter le site, d'y faire des liens et de me contacter via les canaux indiqués. Le contenu (textes, captures, extraits de code) est fourni en l'état, à titre informatif. Il ne constitue pas un conseil professionnel. Merci de ne pas le republier ou le scraper sans accord préalable.",
 
   "terms_third_parties_title": "Liens externes",
   "terms_third_parties_body": "Le site renvoie vers des sites clients en production (afida.com, agencegaremonaco.com, cca-mc.com) ainsi que vers WhatsApp, LinkedIn et l'email. Je ne suis pas responsable du contenu ou du fonctionnement de ces services externes.",
@@ -326,7 +326,7 @@
   "case_cca_meta_title": "Christian Curau Architecte — Site éditorial + FTP web sur mesure | Laurent Curau",
   "case_cca_meta_description": "Portfolio éditorial sobre pour un cabinet d'architecture monégasque, plus un client FTP/FTPS web sans état pour partager des fichiers CAO en sécurité sans logiciel desktop.",
   "case_cca_title": "Christian Curau Architecte",
-  "case_cca_description": "Deux livrables pour un cabinet d'architecture monégasque — fondé en 1984, Conservateur du Palais Princier. Un portfolio éditorial Rails sobre centré sur les pages projets, où la typographie fait le gros du travail et où l'ordre d'affichage en page d'accueil est curé plutôt que chronologique. Plus CCA-FTP, un client FTP/FTPS web sans état construit pour que le cabinet puisse partager des fichiers CAO volumineux en sécurité depuis n'importe quel navigateur — protocole auto-sélectionné selon l'identifiant, sessions par cookie chiffré, sans base de données à sauvegarder ou à fuiter, sanitisation des noms de fichiers et CAPTCHA invisible contre l'abus drive-by. Les deux apps se déploient avec Kamal.",
+  "case_cca_description": "Deux livrables pour un cabinet d'architecture monégasque, fondé en 1984, Conservateur du Palais Princier. Un portfolio éditorial Rails sobre centré sur les pages projets, où la typographie fait le gros du travail et où l'ordre d'affichage en page d'accueil est curé plutôt que chronologique. Plus CCA-FTP, un client FTP/FTPS web sans état construit pour que le cabinet puisse partager des fichiers CAO volumineux en sécurité depuis n'importe quel navigateur : protocole auto-sélectionné selon l'identifiant, sessions par cookie chiffré, sans base de données à sauvegarder ou à fuiter, sanitisation des noms de fichiers et CAPTCHA invisible contre l'abus drive-by. Les deux apps se déploient avec Kamal.",
   "case_cca_visit_cta": "Voir cca-mc.com",
   "case_cca_tag_1": "Rails 8",
   "case_cca_tag_2": "Éditorial",
@@ -344,7 +344,7 @@
   "case_cca_related_service_body": "Les logiciels discrets qui vivent derrière vos opérations.",
 
   "meta_title": "Laurent Curau — Ingénieur logiciel à Monaco",
-  "meta_description": "Ingénieur logiciel à Monaco. Applications web sur mesure, e-commerce, sites multilingues et outils de conformité — construits de bout en bout par une seule personne.",
+  "meta_description": "Ingénieur logiciel à Monaco. Applications web sur mesure, e-commerce, sites multilingues et outils de conformité, construits de bout en bout par une seule personne.",
   "meta_keywords": "ingénieur logiciel Monaco, logiciel sur mesure Monaco, développeur Rails Monaco, CTO fractionnaire Monaco",
   "meta_og_title": "Laurent Curau — Ingénieur logiciel à Monaco",
   "meta_og_description": "Logiciels sur mesure pour entreprises monégasques, construits de bout en bout par une seule personne."

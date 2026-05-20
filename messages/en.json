@@ -38,7 +38,7 @@
   "portfolio_meta_title": "Portfolio — Selected work | Laurent Curau",
   "portfolio_meta_description": "Selected work by Laurent Curau, independent software engineer in Monaco. B2B e-commerce, multilingual real-estate site, editorial portfolio + custom web FTP.",
   "portfolio_hero_title": "Selected work",
-  "portfolio_hero_paragraph": "From B2B e-commerce to multilingual real-estate platforms and editorial portfolios — every project is designed, built and shipped end-to-end.",
+  "portfolio_hero_paragraph": "From B2B e-commerce to multilingual real-estate platforms and editorial portfolios. Every project is designed, built and shipped end-to-end.",
   "portfolio_hero_cta_primary": "See the projects",
   "portfolio_hero_cta_secondary": "Get in touch",
   "portfolio_stat_value": "10+",
@@ -78,7 +78,7 @@
   "cca_eyebrow": "Architect portfolio · Custom tool",
   "cca_title": "Christian Curau Architecte",
   "cca_tagline": "Heritage Monaco architect, plus a custom web FTP for handing off CAD files.",
-  "cca_summary": "Editorial portfolio for Christian Curau Architecte — founded 1984, Conservateur du Palais Princier. Two deliverables: a sober, project-led marketing site, and a stateless web FTP/FTPS client (CCA-FTP) so the firm could share large CAD files securely, without a desktop tool. No database — credentials live in encrypted cookies for the session only.",
+  "cca_summary": "Editorial portfolio for Christian Curau Architecte, founded 1984, Conservateur du Palais Princier. Two deliverables: a sober, project-led marketing site, and a stateless web FTP/FTPS client (CCA-FTP) so the firm could share large CAD files securely, without a desktop tool. No database: credentials live in encrypted cookies for the session only.",
   "cca_stat_1_value": "1984",
   "cca_stat_1_label": "Cabinet founded",
   "cca_stat_2_value": "Zero",
@@ -125,7 +125,7 @@
   "how_point_1_title": "Hands-on training",
   "how_point_1": "Every delivery includes a walkthrough with the people who will actually use the tool, plus a user guide written in plain language.",
   "how_point_2_title": "Full ownership transfer",
-  "how_point_2": "Code, content, infrastructure, domain names — everything is yours from day one. No proprietary editor, no platform lock-in.",
+  "how_point_2": "Code, content, infrastructure, domain names: everything is yours from day one. No proprietary editor, no platform lock-in.",
   "how_point_3_title": "Documented source code",
   "how_point_3": "Plain-language README, architecture notes, deployment runbook. Any engineer can pick up where I left off.",
   "how_point_4_title": "Post-delivery warranty",
@@ -155,12 +155,12 @@
   "personal_eyebrow": "The engineer you'd actually work with",
   "personal_title": "Laurent Curau",
   "personal_subtitle": "Software engineer · Monaco · MSc Software Engineering, University of Oxford",
-  "personal_message_1": "I've been writing production software for over ten years — primarily Ruby on Rails, plus everything that lives around it: Postgres, background jobs, integrations, deployment, on-call.",
+  "personal_message_1": "I've been writing production software for over ten years, primarily Ruby on Rails, plus everything that lives around it: Postgres, background jobs, integrations, deployment, on-call.",
   "personal_message_2": "Monégasque national, resident in the Principality. I work with Monaco SMEs because I live here and I know the local pain: software priced for global enterprises, agencies that send junior staff after they win the pitch, freelancers who disappear between projects. I don't subcontract. I don't fixed-price work I haven't scoped. I won't pretend I have capacity when I don't.",
   "personal_signature_name": "— Laurent",
 
   "mission_eyebrow": "What I believe",
-  "mission_quote": "Every Monaco business deserves software designed around its operations — not the other way around.",
+  "mission_quote": "Every Monaco business deserves software designed around its operations, not the other way around.",
   "mission_attribution": "— Laurent Curau",
 
   "testimonials_title": "What clients say",
@@ -225,7 +225,7 @@
   "privacy_meta_title": "Privacy notice | Laurent Curau",
   "privacy_meta_description": "How laurentcurau.com handles your data. Short answer: barely any data, no cookies, no tracking beyond aggregated analytics.",
   "privacy_title": "Privacy notice",
-  "privacy_intro": "This is a one-person freelance site. It collects as little data as possible, and what it does collect is described below — honestly and in plain language.",
+  "privacy_intro": "This is a one-person freelance site. It collects as little data as possible, and what it does collect is described below, honestly and in plain language.",
 
   "privacy_who_title": "Who's responsible",
   "privacy_who_body": "This site is operated by Laurent Curau, independent software engineer, registered as a sole trader in Monaco (PR 01061), based in Monaco 98000. For any privacy-related question, write to hello@laurentcurau.com.",
@@ -234,27 +234,27 @@
   "privacy_what_body": "Nothing about you personally, unless you choose to message me. The site has no contact form, no account system, no newsletter, no third-party advertising, and no cookies.",
 
   "privacy_analytics_title": "Analytics",
-  "privacy_analytics_body": "The site uses Plausible Analytics — a privacy-friendly, cookieless analytics tool that records aggregated visit counts (pages viewed, country, referrer, browser type) without identifying individual visitors. No personal data is stored, no cross-site tracking, no advertising profiles. Plausible is hosted in the EU. You can read their data policy on plausible.io.",
+  "privacy_analytics_body": "The site uses Plausible Analytics, a privacy-friendly, cookieless analytics tool that records aggregated visit counts (pages viewed, country, referrer, browser type) without identifying individual visitors. No personal data is stored, no cross-site tracking, no advertising profiles. Plausible is hosted in the EU. You can read their data policy on plausible.io.",
 
   "privacy_whatsapp_title": "WhatsApp",
   "privacy_whatsapp_body": "If you click a \"WhatsApp\" button on this site, you're handed off to WhatsApp (operated by Meta Platforms Ireland Limited). At that point you're subject to WhatsApp's own privacy policy. Nothing about that click is recorded on this site beyond the aggregated Plausible event.",
 
   "privacy_rights_title": "Your rights",
-  "privacy_rights_body": "Under EU/Monaco data-protection law you have the right to access, rectify, or erase any personal data held about you, and to lodge a complaint with the supervisory authority. Since this site doesn't hold personal data on you, there's typically nothing to access or erase — but write to hello@laurentcurau.com if you want to check.",
+  "privacy_rights_body": "Under EU/Monaco data-protection law you have the right to access, rectify, or erase any personal data held about you, and to lodge a complaint with the supervisory authority. Since this site doesn't hold personal data on you, there's typically nothing to access or erase. But write to hello@laurentcurau.com if you want to check.",
 
   "privacy_changes_title": "Changes",
-  "privacy_changes_body": "If this notice changes meaningfully, the date at the top of the page will be updated. There's no notification mechanism — this site doesn't have your email.",
+  "privacy_changes_body": "If this notice changes meaningfully, the date at the top of the page will be updated. There's no notification mechanism: this site doesn't have your email.",
 
   "terms_meta_title": "Terms | Laurent Curau",
-  "terms_meta_description": "Terms of use for laurentcurau.com — a static marketing site for an independent software engineering practice.",
+  "terms_meta_description": "Terms of use for laurentcurau.com, a static marketing site for an independent software engineering practice.",
   "terms_title": "Terms",
-  "terms_intro": "These terms cover the use of this website. They don't constitute a service agreement — that's negotiated separately and signed in writing.",
+  "terms_intro": "These terms cover the use of this website. They don't constitute a service agreement: that's negotiated separately and signed in writing.",
 
   "terms_about_title": "About this site",
   "terms_about_body": "laurentcurau.com is the marketing site of Laurent Curau, independent software engineer, registered as a sole trader in Monaco (PR 01061), based in Monaco 98000. The site exists to describe the engineering services I offer and to show selected past projects.",
 
   "terms_use_title": "Use of the site",
-  "terms_use_body": "You're welcome to read the site, link to it, and contact me through the channels listed. The content (text, screenshots, code samples) is provided as-is, for information only — not as professional advice. Please don't republish or scrape the content without asking first.",
+  "terms_use_body": "You're welcome to read the site, link to it, and contact me through the channels listed. The content (text, screenshots, code samples) is provided as-is, for information only, not as professional advice. Please don't republish or scrape the content without asking first.",
 
   "terms_third_parties_title": "Third-party links",
   "terms_third_parties_body": "The site links out to live client sites (afida.com, agencegaremonaco.com, cca-mc.com) and to WhatsApp, LinkedIn, and email. I'm not responsible for the content or behaviour of those external services.",
@@ -326,7 +326,7 @@
   "case_cca_meta_title": "Christian Curau Architecte — Editorial site + custom web FTP | Laurent Curau",
   "case_cca_meta_description": "Sober editorial portfolio for a heritage Monaco architect, plus a stateless web FTP/FTPS client for sharing CAD files securely without a desktop tool.",
   "case_cca_title": "Christian Curau Architecte",
-  "case_cca_description": "Two deliverables for a heritage Monaco architect — founded in 1984, Conservateur du Palais Princier. A sober Rails editorial portfolio centred on project pages, where typography does the heavy lifting and the homepage order is curated rather than chronological. Plus CCA-FTP, a stateless web FTP/FTPS client built so the firm can share large CAD files securely from any browser — protocol auto-selected from the username, encrypted-cookie sessions, no database to back up or leak, filename sanitisation and an invisible CAPTCHA against drive-by abuse. Both apps deploy with Kamal.",
+  "case_cca_description": "Two deliverables for a heritage Monaco architect, founded in 1984, Conservateur du Palais Princier. A sober Rails editorial portfolio centred on project pages, where typography does the heavy lifting and the homepage order is curated rather than chronological. Plus CCA-FTP, a stateless web FTP/FTPS client built so the firm can share large CAD files securely from any browser: protocol auto-selected from the username, encrypted-cookie sessions, no database to back up or leak, filename sanitisation and an invisible CAPTCHA against drive-by abuse. Both apps deploy with Kamal.",
   "case_cca_visit_cta": "Visit cca-mc.com",
   "case_cca_tag_1": "Rails 8",
   "case_cca_tag_2": "Editorial",
@@ -344,7 +344,7 @@
   "case_cca_related_service_body": "Quiet software that sits behind your operations.",
 
   "meta_title": "Laurent Curau — Software engineer in Monaco",
-  "meta_description": "Software engineer in Monaco. Custom web applications, e-commerce, multilingual sites and compliance tooling — built end-to-end by one person.",
+  "meta_description": "Software engineer in Monaco. Custom web applications, e-commerce, multilingual sites and compliance tooling, built end-to-end by one person.",
   "meta_keywords": "software engineer Monaco, custom software Monaco, Rails developer Monaco, fractional CTO Monaco",
   "meta_og_title": "Laurent Curau — Software engineer in Monaco",
   "meta_og_description": "Custom software for Monaco businesses, built end-to-end by one person."
