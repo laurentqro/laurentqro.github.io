@@ -154,7 +154,8 @@
 
   "personal_eyebrow": "The engineer you'd actually work with",
   "personal_title": "Laurent Curau",
-  "personal_subtitle": "Software engineer · Monaco · MSc Software Engineering, University of Oxford",
+  "personal_subtitle": "Software engineer · Monaco",
+  "personal_credential": "MSc Software Engineering, University of Oxford",
   "personal_message_1": "I've been writing production software for over ten years, primarily Ruby on Rails, plus everything that lives around it: Postgres, background jobs, integrations, deployment, on-call.",
   "personal_message_2": "Monégasque national, resident in the Principality. I work with Monaco SMEs because I live here and I know the local pain: software priced for global enterprises, agencies that send junior staff after they win the pitch, freelancers who disappear between projects. I don't subcontract. I don't fixed-price work I haven't scoped. I won't pretend I have capacity when I don't.",
   "personal_signature_name": "— Laurent",

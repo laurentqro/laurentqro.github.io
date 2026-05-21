@@ -13,6 +13,7 @@
         <div class="eyebrow">{m.personal_eyebrow()}</div>
         <h2>{m.personal_title()}</h2>
         <div class="subtitle">{m.personal_subtitle()}</div>
+        <div class="credential">{m.personal_credential()}</div>
         <p>{m.personal_message_1()}</p>
         <p>{m.personal_message_2()}</p>
         <div class="signature">{m.personal_signature_name()}</div>
@@ -76,6 +77,13 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.95rem;
     color: #a5b4fc;
+    margin-bottom: 0.4rem;
+  }
+
+  .credential {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.45);
     margin-bottom: 1.5rem;
   }
 
