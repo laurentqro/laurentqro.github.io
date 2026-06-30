@@ -18,17 +18,25 @@
   let measureEl = $state(null);
   let stableWidth = $state(0);
 
+  function measureWords() {
+    if (!measureEl) return;
+    let max = 0;
+    for (const word of rotatingWords) {
+      measureEl.textContent = word;
+      max = Math.max(max, measureEl.getBoundingClientRect().width);
+    }
+    stableWidth = Math.ceil(max) + 4;
+    measureEl.textContent = '';
+  }
+
   onMount(() => {
     reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (measureEl) {
-      let max = 0;
-      for (const word of rotatingWords) {
-        measureEl.textContent = word;
-        max = Math.max(max, measureEl.getBoundingClientRect().width);
-      }
-      stableWidth = Math.ceil(max);
-      measureEl.textContent = '';
+    measureWords();
+    // Re-measure once web fonts have loaded, since the initial measure may
+    // use a fallback font that renders narrower and clips the longest word.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(measureWords);
     }
 
     if (reducedMotion) return;
