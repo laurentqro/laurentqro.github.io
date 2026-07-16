@@ -349,7 +349,7 @@
 	"case_mdb_meta_title": "Maison de Bacon — Visual redesign and performance remediation | Laurent Curau",
 	"case_mdb_meta_description": "A full visual redesign of the Maison de Bacon website, a seafront dining institution on Cap d'Antibes. New identity, Roof Top page, Zenchef booking, plus a performance audit and remediation.",
 	"case_mdb_title": "Maison de Bacon",
-	"case_mdb_description": "A full visual redesign of the website of a seafront dining institution on Cap d'Antibes, open since 1948. A new bilingual FR / EN art direction on WordPress and Elementor: a reworked homepage, a dedicated terracotta identity for the Roof Top, a clearer mega-menu, verified Zenchef reviews, and a fixed reservation button on every page. The project also covered a performance audit and its remediation: trimming the plugin stack from 41 to 17, getting WP Rocket caching working properly again, and optimising images with automatic compression and WebP conversion on upload. Shipped by promoting staging to production with end-to-end verification.",
+	"case_mdb_description": "A full visual redesign of the website of a seafront dining institution on Cap d'Antibes, open since 1948. A new bilingual FR / EN art direction on WordPress and Elementor: a reworked homepage, a dedicated terracotta identity for the Roof Top, a clearer mega-menu, verified Zenchef reviews, and a fixed reservation button on every page. The project also covered a performance audit and its remediation: trimming the plugin stack from 41 to 17, getting WP Rocket caching working properly again, and optimising images with automatic compression and WebP conversion on upload.",
 	"case_mdb_visit_cta": "Visit maisondebacon.fr",
 	"case_mdb_tag_1": "WordPress",
 	"case_mdb_tag_2": "Visual redesign",
