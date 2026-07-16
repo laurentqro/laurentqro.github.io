@@ -6,19 +6,25 @@
   import afidaImg from '$lib/assets/work-afida.png';
   import gareImg from '$lib/assets/work-gare.png';
   import ccaImg from '$lib/assets/work-cca.png';
+  import mdbImg from '$lib/assets/work-mdb.png';
 
   const waHref = whatsappLink(m.whatsapp_prefill());
 
-  const featured = {
-    image: afidaImg,
-    category: m.portfolio_card_afida_category(),
-    year: m.portfolio_card_year(),
-    title: m.case_afida_title(),
-    description: m.case_afida_description(),
-    href: '/case-study/afida'
-  };
-
-  const rest = [
+  const projects = [
+    {
+      image: afidaImg,
+      category: m.portfolio_card_afida_category(),
+      year: m.portfolio_card_year(),
+      title: m.case_afida_title(),
+      href: '/case-study/afida'
+    },
+    {
+      image: mdbImg,
+      category: m.portfolio_card_mdb_category(),
+      year: m.case_mdb_meta_year_value(),
+      title: m.case_mdb_title(),
+      href: '/case-study/maison-de-bacon'
+    },
     {
       image: gareImg,
       category: m.portfolio_card_gare_category(),
@@ -85,23 +91,11 @@
 
 <section id="projects" class="projects">
   <div class="projects-inner">
-    <a href={localizeHref(featured.href)} class="card card-featured">
-      <div class="card-media">
-        <img src={featured.image} alt={featured.title} />
-      </div>
-      <div class="card-body">
-        <span class="card-badge">{m.portfolio_latest_badge()}</span>
-        <div class="card-meta">{featured.category} · {featured.year}</div>
-        <h2 class="card-title">{featured.title}</h2>
-        <p class="card-description">{featured.description}</p>
-      </div>
-    </a>
-
     <div class="card-grid">
-      {#each rest as p}
-        <a href={localizeHref(p.href)} class="card card-small">
+      {#each projects as p, i}
+        <a href={localizeHref(p.href)} class="card">
           <div class="card-media">
-            <img src={p.image} alt={p.title} loading="lazy" />
+            <img src={p.image} alt={p.title} loading={i === 0 ? 'eager' : 'lazy'} />
           </div>
           <div class="card-body">
             <div class="card-meta">{p.category} · {p.year}</div>
@@ -282,19 +276,9 @@
     box-shadow: 0 0 40px rgba(102, 126, 234, 0.12);
   }
 
-  .card-featured {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 0;
-    align-items: stretch;
-  }
-
-  .card-featured .card-media {
-    border-right: 1px solid rgba(102, 126, 234, 0.08);
-  }
-
   .card-media {
     overflow: hidden;
+    aspect-ratio: 4 / 3;
     background: #0f0f1a;
   }
 
@@ -311,24 +295,7 @@
   }
 
   .card-body {
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .card-badge {
-    align-self: flex-start;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: #67e8f9;
-    background: rgba(103, 232, 249, 0.1);
-    border: 1px solid rgba(103, 232, 249, 0.25);
-    padding: 0.25rem 0.65rem;
-    border-radius: 999px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
+    padding: 1.75rem 2rem 2rem;
   }
 
   .card-meta {
@@ -342,23 +309,12 @@
 
   .card-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: 1.4rem;
     font-weight: 800;
     color: #f5f5fa;
     margin: 0;
     line-height: 1.15;
     letter-spacing: -0.02em;
-  }
-
-  .card-featured .card-title {
-    margin-bottom: 1rem;
-  }
-
-  .card-description {
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.6;
-    margin: 0;
-    font-size: 0.95rem;
   }
 
   .card-grid {
@@ -367,24 +323,7 @@
     gap: 1.5rem;
   }
 
-  .card-small .card-body {
-    padding: 1.75rem 2rem 2rem;
-  }
-
-  .card-small .card-title {
-    font-size: 1.4rem;
-  }
-
   @media (max-width: 900px) {
-    .card-featured {
-      grid-template-columns: 1fr;
-    }
-
-    .card-featured .card-media {
-      border-right: 0;
-      border-bottom: 1px solid rgba(102, 126, 234, 0.08);
-    }
-
     .card-grid {
       grid-template-columns: 1fr;
     }

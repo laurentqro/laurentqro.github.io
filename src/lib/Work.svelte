@@ -4,10 +4,12 @@
   import afidaImg from '$lib/assets/work-afida.png';
   import gareImg from '$lib/assets/work-gare.png';
   import ccaImg from '$lib/assets/work-cca.png';
+  import mdbImg from '$lib/assets/work-mdb.png';
 
   const projects = [
     { image: afidaImg, title: m.case_afida_title(), category: m.portfolio_card_afida_category(), href: '/case-study/afida' },
     { image: gareImg, title: m.case_gare_title(), category: m.portfolio_card_gare_category(), href: '/case-study/agence-de-la-gare' },
+    { image: mdbImg, title: m.case_mdb_title(), category: m.portfolio_card_mdb_category(), href: '/case-study/maison-de-bacon' },
     { image: ccaImg, title: m.case_cca_title(), category: m.portfolio_card_cca_category(), href: '/case-study/christian-curau-architecte' }
   ];
 </script>
@@ -16,7 +18,6 @@
   <div class="container">
     <div class="header">
       <h2>{m.home_work_title()}</h2>
-      <p>{m.home_work_subtitle()}</p>
     </div>
 
     <div class="grid">

@@ -24,6 +24,7 @@
           <h4>{m.footer_work_title()}</h4>
           <a href={localizeHref('/case-study/afida')}>{m.footer_work_afida()}</a>
           <a href={localizeHref('/case-study/agence-de-la-gare')}>{m.footer_work_gare()}</a>
+          <a href={localizeHref('/case-study/maison-de-bacon')}>{m.footer_work_mdb()}</a>
           <a href={localizeHref('/case-study/christian-curau-architecte')}>{m.footer_work_cca()}</a>
         </div>
 
