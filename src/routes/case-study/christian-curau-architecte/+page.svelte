@@ -27,7 +27,14 @@
     metaYearValue: m.case_cca_meta_year_value(),
     relatedServiceLabel: m.case_cca_related_service_label(),
     relatedServiceTitle: m.case_cca_related_service_title(),
-    relatedServiceBody: m.case_cca_related_service_body()
+    relatedServiceBody: m.case_cca_related_service_body(),
+    sections: [
+      { heading: m.case_cca_section_1_heading(), body: m.case_cca_section_1_body() },
+      { heading: m.case_cca_section_2_heading(), body: m.case_cca_section_2_body() },
+      { heading: m.case_cca_section_3_heading(), body: m.case_cca_section_3_body() },
+      { heading: m.case_cca_section_4_heading(), body: m.case_cca_section_4_body() },
+      { heading: m.case_cca_section_5_heading(), body: m.case_cca_section_5_body() }
+    ]
   };
 </script>
 

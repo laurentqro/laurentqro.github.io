@@ -107,6 +107,17 @@
   </div>
 </section>
 
+{#if data.sections?.length}
+  <section class="case-body">
+    <div class="case-body-inner">
+      {#each data.sections as s}
+        <h2>{s.heading}</h2>
+        <p>{s.body}</p>
+      {/each}
+    </div>
+  </section>
+{/if}
+
 <section class="related">
   <div class="related-inner">
     <div class="related-label">{data.relatedServiceLabel}</div>
@@ -269,6 +280,36 @@
     display: block;
   }
 
+  .case-body {
+    padding: 1rem 2rem 5rem;
+    background: #0f0f1a;
+  }
+
+  .case-body-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .case-body h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+    font-weight: 800;
+    color: #f5f5fa;
+    letter-spacing: -0.02em;
+    margin: 2.75rem 0 1rem;
+  }
+
+  .case-body h2:first-child {
+    margin-top: 0;
+  }
+
+  .case-body p {
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.75;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
   .related {
     padding: 5rem 2rem 7rem;
     background: #141422;
@@ -330,7 +371,7 @@
 
   @media (max-width: 700px) {
     .case-hero { padding: 8rem 1.25rem 3rem; }
-    .shots, .related { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .shots, .case-body, .related { padding-left: 1.25rem; padding-right: 1.25rem; }
 
     .meta-grid {
       grid-template-columns: 1fr;
