@@ -1,14 +1,11 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-
 	"nav_work": "Portfolio",
 	"nav_services": "Services",
 	"nav_pricing": "Pricing",
 	"nav_whatsapp": "WhatsApp",
-
 	"whatsapp_cta": "WhatsApp me",
 	"whatsapp_prefill": "Hi Laurent, I'd like to discuss a project.",
-
 	"hero_eyebrow": "Independent software engineer · Monaco",
 	"hero_title_prefix": "I design and build",
 	"hero_title_suffix": "in service of your business.",
@@ -19,22 +16,18 @@
 	"hero_subtitle": "Software engineer. 10+ years of production systems.",
 	"hero_cta_primary": "See the work",
 	"hero_cta_secondary": "Get in touch",
-
 	"stats_years_label": "Years shipping software",
 	"stats_years_value": "10+",
 	"stats_clients_label": "Active clients at a time",
 	"stats_clients_value": "2–3",
-
 	"trust_clients_using": "Software in daily use at",
 	"previously_at_label": "Previously at",
 	"previously_at_1": "Government Digital Service (GOV.UK)",
 	"previously_at_2": "UK Ministry of Justice",
 	"previously_at_3": "UK Department for Education",
-
 	"work_section_title": "Selected work",
 	"work_view_case_study": "Read case study",
 	"work_visit_site": "Visit live site",
-
 	"portfolio_meta_title": "Portfolio — Selected work | Laurent Curau",
 	"portfolio_meta_description": "Selected work by Laurent Curau, independent software engineer in Monaco. B2B e-commerce, multilingual real-estate site, editorial portfolio + custom web FTP.",
 	"portfolio_hero_title": "Selected work",
@@ -49,11 +42,9 @@
 	"portfolio_card_gare_category": "Multilingual · Real Estate",
 	"portfolio_card_cca_category": "Editorial · Internal tool",
 	"portfolio_card_mdb_category": "Redesign · Performance",
-
 	"home_work_title": "Selected work",
 	"home_work_subtitle": "Three projects, end-to-end.",
 	"home_work_cta": "See the portfolio",
-
 	"afida_eyebrow": "B2B e-commerce · Rails 8",
 	"afida_title": "Afida",
 	"afida_tagline": "A B2B packaging store the Mandarin Oriental orders from.",
@@ -64,7 +55,6 @@
 	"afida_stat_2_label": "Custom-built, end-to-end",
 	"afida_stat_3_value": "£0.009",
 	"afida_stat_3_label": "Smallest line item billed",
-
 	"gare_eyebrow": "Real estate · Multilingual",
 	"gare_title": "Agence de la Gare",
 	"gare_tagline": "Pioneer real-estate agency in Monaco, online since 1942.",
@@ -75,7 +65,6 @@
 	"gare_stat_2_label": "Agency founding year",
 	"gare_stat_3_value": "Daily",
 	"gare_stat_3_label": "Property + FX sync",
-
 	"cca_eyebrow": "Architect portfolio · Custom tool",
 	"cca_title": "Christian Curau Architecte",
 	"cca_tagline": "Heritage Monaco architect, plus a custom web FTP for handing off CAD files.",
@@ -86,40 +75,34 @@
 	"cca_stat_2_label": "DB rows · stateless web FTP",
 	"cca_stat_3_value": "FTP+S",
 	"cca_stat_3_label": "Auto-selected by username",
-
 	"services_section_eyebrow": "What I build",
 	"services_section_title": "What I build",
 	"services_section_subtitle": "Specification, design, code, deployment, monitoring, on-call. One engineer for the whole stack.",
 	"services_section_cta": "All services",
-
 	"service_1_index": "01",
 	"service_1_title": "Websites",
 	"service_1_summary": "Multilingual, properly indexed, built to grow.",
 	"service_1_bullet_1": "Up to 9+ locales",
 	"service_1_bullet_2": "hreflang + sitemap-per-locale",
 	"service_1_bullet_3": "PDF brochures, video feeds, CRM sync",
-
 	"service_2_index": "02",
 	"service_2_title": "E-commerce stores",
 	"service_2_summary": "Stripe checkout. Custom logic. No platform lock-in.",
 	"service_2_bullet_1": "Stripe Checkout + webhooks",
 	"service_2_bullet_2": "Branded / configurable products",
 	"service_2_bullet_3": "Google Shopping feed",
-
 	"service_3_index": "03",
 	"service_3_title": "Apps",
 	"service_3_summary": "Custom web applications, built end-to-end.",
 	"service_3_bullet_1": "Rails 8, Hotwire, Postgres",
 	"service_3_bullet_2": "Auth, audit logs, role-based access",
 	"service_3_bullet_3": "Deployed on Kamal, monitored with Sentry",
-
 	"service_4_index": "04",
 	"service_4_title": "Internal tools",
 	"service_4_summary": "Your back-office, automated.",
 	"service_4_bullet_1": "CRM, dashboards, sync engines",
 	"service_4_bullet_2": "KYC / AML / STRIX / XBRL",
 	"service_4_bullet_3": "Cron-backed integrations, monitored",
-
 	"how_section_eyebrow": "How I work",
 	"how_section_title": "You stay in control.",
 	"how_section_lede": "I deliver tools you own and operate. You never become dependent.",
@@ -131,7 +114,6 @@
 	"how_point_3": "Plain-language README, architecture notes, deployment runbook. Any engineer can pick up where I left off.",
 	"how_point_4_title": "Post-delivery warranty",
 	"how_point_4": "Anything that breaks within the warranty window after launch, I fix at no extra cost. Defects are not change requests.",
-
 	"pricing_title": "One price. One engineer. No surprises.",
 	"pricing_subtitle": "Flat monthly fee. Cancel any month.",
 	"pricing_price": "3,500",
@@ -152,7 +134,6 @@
 	"pricing_compare_freelance_price": "€500 – 800/day",
 	"pricing_compare_freelance_detail": "Per-project quotes, hand-offs",
 	"pricing_note_text": "You message requests. I ship them, one at a time. No limits. No commitment.",
-
 	"personal_eyebrow": "The engineer you'd actually work with",
 	"personal_title": "Laurent Curau",
 	"personal_subtitle": "Software engineer · Monaco",
@@ -160,11 +141,9 @@
 	"personal_message_1": "I've been writing production software for over ten years, primarily Ruby on Rails, plus everything that lives around it: Postgres, background jobs, integrations, deployment, on-call.",
 	"personal_message_2": "Monégasque national, resident in the Principality. I work with Monaco SMEs because I live here and I know the local pain: software priced for global enterprises, agencies that send junior staff after they win the pitch, freelancers who disappear between projects. I don't subcontract. I don't fixed-price work I haven't scoped. I won't pretend I have capacity when I don't.",
 	"personal_signature_name": "— Laurent",
-
 	"mission_eyebrow": "What I believe",
 	"mission_quote": "Every Monaco business deserves software designed around its operations, not the other way around.",
 	"mission_attribution": "— Laurent Curau",
-
 	"testimonials_title": "What clients say",
 	"testimonials_quote_1": "[Placeholder — real client quote to come]",
 	"testimonials_author_1_name": "Client name",
@@ -175,7 +154,6 @@
 	"testimonials_quote_3": "[Placeholder — real client quote to come]",
 	"testimonials_author_3_name": "Client name",
 	"testimonials_author_3_role": "Role · Company",
-
 	"contact_title": "Let's talk on WhatsApp",
 	"contact_subtitle": "Quick message, no commitment. If we're a fit, we'll know in 15 minutes.",
 	"contact_whatsapp": "WhatsApp",
@@ -200,7 +178,6 @@
 	"contact_form_submit": "Send",
 	"contact_form_submitting": "Sending...",
 	"contact_form_success": "Message sent. I'll reply within a few hours.",
-
 	"footer_brand_description": "Software engineer in Monaco.",
 	"footer_address_line_1": "Monaco",
 	"footer_address_line_2": "98000 🇲🇨",
@@ -221,59 +198,45 @@
 	"footer_links_privacy": "Privacy",
 	"footer_links_terms": "Terms",
 	"footer_back_home": "All projects",
-
 	"legal_last_updated_label": "Last updated",
 	"legal_last_updated_value": "20 May 2026",
-
 	"privacy_meta_title": "Privacy notice | Laurent Curau",
 	"privacy_meta_description": "How laurentcurau.com handles your data. Short answer: barely any data, no cookies, no tracking beyond aggregated analytics.",
 	"privacy_title": "Privacy notice",
 	"privacy_intro": "This is a one-person freelance site. It collects as little data as possible, and what it does collect is described below, honestly and in plain language.",
-
 	"privacy_who_title": "Who's responsible",
 	"privacy_who_body": "This site is operated by Laurent Curau, independent software engineer, registered as a sole trader in Monaco (PR 01061), based in Monaco 98000. For any privacy-related question, write to hello@laurentcurau.com.",
-
 	"privacy_what_title": "What I collect",
 	"privacy_what_body": "Nothing about you personally, unless you choose to message me. The site has no contact form, no account system, no newsletter, no third-party advertising, and no cookies.",
-
 	"privacy_analytics_title": "Analytics",
 	"privacy_analytics_body": "The site uses Plausible Analytics, a privacy-friendly, cookieless analytics tool that records aggregated visit counts (pages viewed, country, referrer, browser type) without identifying individual visitors. No personal data is stored, no cross-site tracking, no advertising profiles. Plausible is hosted in the EU. You can read their data policy on plausible.io.",
-
 	"privacy_whatsapp_title": "WhatsApp",
 	"privacy_whatsapp_body": "If you click a \"WhatsApp\" button on this site, you're handed off to WhatsApp (operated by Meta Platforms Ireland Limited). At that point you're subject to WhatsApp's own privacy policy. Nothing about that click is recorded on this site beyond the aggregated Plausible event.",
-
 	"privacy_rights_title": "Your rights",
 	"privacy_rights_body": "Under EU/Monaco data-protection law you have the right to access, rectify, or erase any personal data held about you, and to lodge a complaint with the supervisory authority. Since this site doesn't hold personal data on you, there's typically nothing to access or erase. But write to hello@laurentcurau.com if you want to check.",
-
 	"privacy_changes_title": "Changes",
 	"privacy_changes_body": "If this notice changes meaningfully, the date at the top of the page will be updated. There's no notification mechanism: this site doesn't have your email.",
-
 	"terms_meta_title": "Terms | Laurent Curau",
 	"terms_meta_description": "Terms of use for laurentcurau.com, a static marketing site for an independent software engineering practice.",
 	"terms_title": "Terms",
 	"terms_intro": "These terms cover the use of this website. They don't constitute a service agreement: that's negotiated separately and signed in writing.",
-
 	"terms_about_title": "About this site",
 	"terms_about_body": "laurentcurau.com is the marketing site of Laurent Curau, independent software engineer, registered as a sole trader in Monaco (PR 01061), based in Monaco 98000. The site exists to describe the engineering services I offer and to show selected past projects.",
-
 	"terms_use_title": "Use of the site",
 	"terms_use_body": "You're welcome to read the site, link to it, and contact me through the channels listed. The content (text, screenshots, code samples) is provided as-is, for information only, not as professional advice. Please don't republish or scrape the content without asking first.",
-
 	"terms_third_parties_title": "Third-party links",
 	"terms_third_parties_body": "The site links out to live client sites (afida.com, agencegaremonaco.com, cca-mc.com) and to WhatsApp, LinkedIn, and email. I'm not responsible for the content or behaviour of those external services.",
-
 	"terms_warranty_title": "No warranty",
 	"terms_warranty_body": "Information on this site is provided in good faith but without any guarantee of completeness or accuracy. The case studies describe projects I've worked on; specific outcomes for any future engagement depend on the engagement itself.",
-
 	"terms_law_title": "Applicable law",
 	"terms_law_body": "These terms are governed by the law applicable in the Principality of Monaco.",
-
 	"terms_contact_title": "Contact",
 	"terms_contact_body": "Any question about these terms, or about working together, can be sent to hello@laurentcurau.com.",
-
 	"services_page_eyebrow": "What I build",
 	"services_page_title": "Services",
 	"services_page_subtitle": "Five categories of work I take end-to-end. Specification, design, code, deployment, on-call.",
+	"services_meta_title": "Services — Custom software in Monaco | Laurent Curau",
+	"services_meta_description": "Custom CRM, e-commerce, automation and compliance tooling for Monaco businesses. One senior engineer based in Monaco, from design to production.",
 	"services_page_cta_primary": "Get in touch",
 	"services_page_process_eyebrow": "How a project actually runs",
 	"services_page_process_title": "Four steps. No theatre.",
@@ -285,7 +248,6 @@
 	"services_page_process_step_3": "You message requests. I work them one at a time. You see progress every week.",
 	"services_page_process_step_4_title": "Evolution",
 	"services_page_process_step_4": "Your needs change, I adapt. Cancel any month. No notice-period games.",
-
 	"case_afida_meta_title": "Afida — Custom Rails 8 B2B e-commerce | Laurent Curau",
 	"case_afida_meta_description": "Custom Rails 8 e-commerce for eco-friendly packaging. Stripe, scheduled reorders, branded-product configurator, Google Merchant feed. Trusted by 500+ UK businesses.",
 	"case_afida_title": "Afida",
@@ -305,7 +267,6 @@
 	"case_afida_related_service_label": "Related service",
 	"case_afida_related_service_title": "E-commerce stores",
 	"case_afida_related_service_body": "Stripe-powered B2B and B2C commerce, built end-to-end.",
-
 	"case_gare_meta_title": "Agence de la Gare — Monaco real estate, 9 locales | Laurent Curau",
 	"case_gare_meta_description": "Rails 8 multilingual real-estate site for Monaco's pioneer agency (founded 1942). 9 locales, Immotoolbox sync, Typst PDFs, multi-currency.",
 	"case_gare_title": "Agence de la Gare",
@@ -325,7 +286,6 @@
 	"case_gare_related_service_label": "Related service",
 	"case_gare_related_service_title": "Websites",
 	"case_gare_related_service_body": "Server-rendered, multilingual, properly indexed.",
-
 	"case_cca_meta_title": "Christian Curau Architecte — Editorial site + custom web FTP | Laurent Curau",
 	"case_cca_meta_description": "Sober editorial portfolio for a heritage Monaco architect, plus a stateless web FTP/FTPS client for sharing CAD files securely without a desktop tool.",
 	"case_cca_title": "Christian Curau Architecte",
@@ -345,7 +305,6 @@
 	"case_cca_related_service_label": "Related service",
 	"case_cca_related_service_title": "Internal tools",
 	"case_cca_related_service_body": "Quiet software that sits behind your operations.",
-
 	"case_mdb_meta_title": "Maison de Bacon — Visual redesign and performance remediation | Laurent Curau",
 	"case_mdb_meta_description": "A full visual redesign of the Maison de Bacon website, a seafront dining institution on Cap d'Antibes. New identity, Roof Top page, Zenchef booking, plus a performance audit and remediation.",
 	"case_mdb_title": "Maison de Bacon",
@@ -365,7 +324,6 @@
 	"case_mdb_related_service_label": "Related service",
 	"case_mdb_related_service_title": "Websites",
 	"case_mdb_related_service_body": "Fast, polished, built to convert.",
-
 	"meta_title": "Laurent Curau — Software engineer in Monaco",
 	"meta_description": "Software engineer in Monaco. Custom web applications, e-commerce, multilingual sites and compliance tooling, built end-to-end by one person.",
 	"meta_keywords": "software engineer Monaco, custom software Monaco, Rails developer Monaco, fractional CTO Monaco",

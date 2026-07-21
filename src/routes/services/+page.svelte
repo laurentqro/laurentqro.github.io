@@ -1,5 +1,6 @@
 <script>
   import * as m from '$lib/paraglide/messages';
+  import Seo from '$lib/Seo.svelte';
   import { whatsappLink } from '$lib/whatsapp.js';
   import Footer from '$lib/Footer.svelte';
 
@@ -33,6 +34,8 @@
   ];
 
 </script>
+
+<Seo title={m.services_meta_title()} description={m.services_meta_description()} />
 
 <section class="hero">
   <div class="hero-inner">

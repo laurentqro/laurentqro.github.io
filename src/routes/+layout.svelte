@@ -152,32 +152,24 @@
 
 <svelte:head>
 	<!-- Basic Meta Tags -->
-	<title>{m.meta_title()}</title>
-	<meta name="description" content={m.meta_description()} />
-	<meta name="keywords" content={m.meta_keywords()} />
+	<!-- Title, description and og:title/og:description are set per page via Seo.svelte -->
 	<meta name="author" content="Laurent Curau" />
 	<meta name="robots" content="index, follow" />
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	
+
 	<!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
-	<meta property="og:title" content={m.meta_og_title()} />
-	<meta property="og:description" content={m.meta_og_description()} />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={canonicalUrl} />
-	<meta property="og:site_name" content="Laurent Curau - Fractional CTO" />
-	<meta property="og:image" content="https://laurentcurau.com/logo.png" />
+	<meta property="og:site_name" content="Laurent Curau" />
+	<meta property="og:image" content="https://laurentcurau.com/og-image.png" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Laurent Curau Logo" />
-	
+	<meta property="og:image:alt" content="Laurent Curau — Ingénieur logiciel à Monaco" />
+
 	<!-- Twitter Card Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={m.meta_og_title()} />
-	<meta name="twitter:description" content={m.meta_og_description()} />
-	<meta name="twitter:image" content="https://laurentcurau.com/logo.png" />
-	<meta name="twitter:image:alt" content="Laurent Curau Logo" />
+	<meta name="twitter:image" content="https://laurentcurau.com/og-image.png" />
+	<meta name="twitter:image:alt" content="Laurent Curau — Ingénieur logiciel à Monaco" />
 	
 	<!-- Additional SEO Meta Tags -->
 	<meta name="theme-color" content="#667eea" />

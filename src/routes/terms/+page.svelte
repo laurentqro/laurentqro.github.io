@@ -1,5 +1,6 @@
 <script>
   import * as m from '$lib/paraglide/messages';
+  import Seo from '$lib/Seo.svelte';
   import LegalPage from '$lib/LegalPage.svelte';
 
   const sections = [
@@ -12,9 +13,6 @@
   ];
 </script>
 
-<svelte:head>
-  <title>{m.terms_meta_title()}</title>
-  <meta name="description" content={m.terms_meta_description()} />
-</svelte:head>
+<Seo title={m.terms_meta_title()} description={m.terms_meta_description()} />
 
 <LegalPage title={m.terms_title()} intro={m.terms_intro()} {sections} />

@@ -1,8 +1,9 @@
 <script>
   import * as m from '$lib/paraglide/messages';
+  import Seo from '$lib/Seo.svelte';
   import CaseStudy from '$lib/CaseStudy.svelte';
-  import imagePrimary from '$lib/assets/work-mdb.png';
-  import imageSecondary from '$lib/assets/work-mdb-2.png';
+  import imagePrimary from '$lib/assets/work-mdb.webp';
+  import imageSecondary from '$lib/assets/work-mdb-2.webp';
 
   const data = {
     title: m.case_mdb_title(),
@@ -10,6 +11,8 @@
     liveUrl: 'https://maisondebacon.fr/',
     visitCta: m.case_mdb_visit_cta(),
     imagePrimary,
+    imageWidth: 1483,
+    imageHeight: 812,
     imageSecondary,
     tags: [
       m.case_mdb_tag_1(),
@@ -30,9 +33,6 @@
   };
 </script>
 
-<svelte:head>
-  <title>{m.case_mdb_meta_title()}</title>
-  <meta name="description" content={m.case_mdb_meta_description()} />
-</svelte:head>
+<Seo title={m.case_mdb_meta_title()} description={m.case_mdb_meta_description()} />
 
 <CaseStudy {data} />

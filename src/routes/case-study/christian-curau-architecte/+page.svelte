@@ -1,8 +1,9 @@
 <script>
   import * as m from '$lib/paraglide/messages';
+  import Seo from '$lib/Seo.svelte';
   import CaseStudy from '$lib/CaseStudy.svelte';
-  import imagePrimary from '$lib/assets/work-cca.png';
-  import imageSecondary from '$lib/assets/work-cca-2.png';
+  import imagePrimary from '$lib/assets/work-cca.webp';
+  import imageSecondary from '$lib/assets/work-cca-2.webp';
 
   const data = {
     title: m.case_cca_title(),
@@ -30,9 +31,6 @@
   };
 </script>
 
-<svelte:head>
-  <title>{m.case_cca_meta_title()}</title>
-  <meta name="description" content={m.case_cca_meta_description()} />
-</svelte:head>
+<Seo title={m.case_cca_meta_title()} description={m.case_cca_meta_description()} />
 
 <CaseStudy {data} />

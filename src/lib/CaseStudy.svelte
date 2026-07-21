@@ -2,9 +2,39 @@
   import * as m from '$lib/paraglide/messages';
   import { localizeHref } from '$lib/paraglide/runtime';
   import Footer from '$lib/Footer.svelte';
+  import JsonLd from '$lib/JsonLd.svelte';
+  import { page } from '$app/stores';
 
   let { data } = $props();
+
+  const SITE_URL = 'https://laurentcurau.com';
+  const breadcrumb = $derived({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Laurent Curau',
+        item: SITE_URL + localizeHref('/')
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Portfolio',
+        item: SITE_URL + localizeHref('/portfolio') + '/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: data.title,
+        item: SITE_URL + $page.url.pathname
+      }
+    ]
+  });
 </script>
+
+<JsonLd data={breadcrumb} />
 
 <section class="case-hero">
   <div class="case-hero-inner">
@@ -55,11 +85,23 @@
 <section class="shots">
   <div class="shots-inner">
     <figure class="shot">
-      <img src={data.imagePrimary} alt={data.title} />
+      <img
+        src={data.imagePrimary}
+        alt={data.title}
+        width={data.imageWidth ?? 1440}
+        height={data.imageHeight ?? 900}
+        fetchpriority="high"
+      />
     </figure>
     {#if data.imageSecondary}
       <figure class="shot">
-        <img src={data.imageSecondary} alt={data.title} loading="lazy" />
+        <img
+          src={data.imageSecondary}
+          alt={data.title}
+          width={data.imageWidth ?? 1440}
+          height={data.imageHeight ?? 900}
+          loading="lazy"
+        />
       </figure>
     {/if}
   </div>

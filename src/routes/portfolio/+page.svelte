@@ -1,12 +1,13 @@
 <script>
   import * as m from '$lib/paraglide/messages';
+  import Seo from '$lib/Seo.svelte';
   import { localizeHref } from '$lib/paraglide/runtime';
   import { whatsappLink } from '$lib/whatsapp.js';
   import Footer from '$lib/Footer.svelte';
-  import afidaImg from '$lib/assets/work-afida.png';
-  import gareImg from '$lib/assets/work-gare.png';
-  import ccaImg from '$lib/assets/work-cca.png';
-  import mdbImg from '$lib/assets/work-mdb.png';
+  import afidaImg from '$lib/assets/work-afida.webp';
+  import gareImg from '$lib/assets/work-gare.webp';
+  import ccaImg from '$lib/assets/work-cca.webp';
+  import mdbImg from '$lib/assets/work-mdb.webp';
 
   const waHref = whatsappLink(m.whatsapp_prefill());
 
@@ -50,10 +51,7 @@
   }
 </script>
 
-<svelte:head>
-  <title>{m.portfolio_meta_title()}</title>
-  <meta name="description" content={m.portfolio_meta_description()} />
-</svelte:head>
+<Seo title={m.portfolio_meta_title()} description={m.portfolio_meta_description()} />
 
 <section class="hero">
   <div class="hero-inner">
@@ -95,7 +93,13 @@
       {#each projects as p, i}
         <a href={localizeHref(p.href)} class="card">
           <div class="card-media">
-            <img src={p.image} alt={p.title} loading={i === 0 ? 'eager' : 'lazy'} />
+            <img
+              src={p.image}
+              alt={p.title}
+              width="1440"
+              height="900"
+              loading={i === 0 ? 'eager' : 'lazy'}
+            />
           </div>
           <div class="card-body">
             <div class="card-meta">{p.category} · {p.year}</div>

@@ -1,10 +1,10 @@
 <script>
   import * as m from '$lib/paraglide/messages';
   import { localizeHref } from '$lib/paraglide/runtime';
-  import afidaImg from '$lib/assets/work-afida.png';
-  import gareImg from '$lib/assets/work-gare.png';
-  import ccaImg from '$lib/assets/work-cca.png';
-  import mdbImg from '$lib/assets/work-mdb.png';
+  import afidaImg from '$lib/assets/work-afida.webp';
+  import gareImg from '$lib/assets/work-gare.webp';
+  import ccaImg from '$lib/assets/work-cca.webp';
+  import mdbImg from '$lib/assets/work-mdb.webp';
 
   const projects = [
     { image: afidaImg, title: m.case_afida_title(), category: m.portfolio_card_afida_category(), href: '/case-study/afida' },
@@ -24,7 +24,13 @@
       {#each projects as p, i}
         <a href={localizeHref(p.href)} class="card">
           <div class="card-media">
-            <img src={p.image} alt={p.title} loading={i === 0 ? 'eager' : 'lazy'} />
+            <img
+              src={p.image}
+              alt={p.title}
+              width="1440"
+              height="900"
+              loading={i === 0 ? 'eager' : 'lazy'}
+            />
           </div>
           <div class="card-body">
             <div class="card-meta">{p.category}</div>
