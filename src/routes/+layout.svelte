@@ -170,22 +170,22 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:image" content="https://laurentcurau.com/og-image.png" />
 	<meta name="twitter:image:alt" content="Laurent Curau — Ingénieur logiciel à Monaco" />
-	
+
 	<!-- Additional SEO Meta Tags -->
 	<meta name="theme-color" content="#667eea" />
 	<meta name="msapplication-TileColor" content="#667eea" />
 	<link rel="canonical" href={canonicalUrl} />
-	
+
 	<!-- Multilingual SEO -->
 	{#each locales as lang}
 		<link rel="alternate" hreflang={lang} href={altHref(lang)} />
 	{/each}
 	<link rel="alternate" hreflang="x-default" href={altHref('fr')} />
-	
+
 	<!-- Favicon -->
 	<link rel="icon" href={favicon} />
 	<link rel="apple-touch-icon" href={favicon} />
-	
+
 	<!-- Structured Data: Person (JSON-LD) -->
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html `<script type="application/ld+json">${personLd}<` + `/script>`}

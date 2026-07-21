@@ -5,21 +5,21 @@
 
 /* Smooth scrolling for the entire document */
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  background: #0f0f1a;
-  color: #e2e8f0;
+	background: #0f0f1a;
+	color: #e2e8f0;
 }
 
 /* Offset scroll targets to account for fixed nav */
 [id] {
-  scroll-margin-top: 80px;
+	scroll-margin-top: 80px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+	html {
+		scroll-behavior: auto;
+	}
 }

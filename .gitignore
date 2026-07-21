@@ -21,3 +21,12 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Tooling artifacts
+.playwright-mcp/
+/pricing-*.png
+
+# Outreach working files (prospect data; keep out of the public repo)
+docs/plans/meb-*
+docs/plans/monaco-real-estate-prospects.md
+docs/plans/outreach-*

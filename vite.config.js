@@ -5,12 +5,12 @@ import { paraglideVitePlugin } from '@inlang/paraglide-js';
 
 export default defineConfig({
 	plugins: [
-		tailwindcss(), 
+		tailwindcss(),
 		sveltekit(),
 		paraglideVitePlugin({
 			project: './project.inlang',
 			outdir: './src/lib/paraglide',
-			strategy: ['url', 'cookie', 'baseLocale'],
+			strategy: ['url', 'cookie', 'baseLocale']
 		})
 	]
 });

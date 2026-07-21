@@ -7,3 +7,15 @@ bun.lockb
 
 # Miscellaneous
 /static/
+
+# Generated
+/src/lib/paraglide/
+
+# Machine-managed
+/.claude/
+/project.inlang/
+
+# Prose and working documents (not code style targets)
+/docs/
+/CLAUDE.md
+/cold-email-template.md

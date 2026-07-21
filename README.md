@@ -13,6 +13,7 @@ This website serves as a professional landing page for Laurent Curau's fractiona
 ## ✨ Features
 
 ### 🎨 Design & UX
+
 - **Modern gradient design** with blue-to-teal color scheme
 - **Responsive layout** optimized for all devices
 - **Smooth scrolling navigation** with custom 1.2-second animations
@@ -20,6 +21,7 @@ This website serves as a professional landing page for Laurent Curau's fractiona
 - **Personal branding** with custom logo integration
 
 ### 📱 Components
+
 - **Hero Section** - Compelling value proposition and call-to-action
 - **Personal Message** - Human touch with profile photo and personal story
 - **Problem/Solution** - Clear articulation of client pain points and solutions
@@ -31,6 +33,7 @@ This website serves as a professional landing page for Laurent Curau's fractiona
 - **Footer** - Contact information and legal links
 
 ### 🌍 Internationalization
+
 - **Bilingual support** - French (default) and English
 - **Paraglide.js** - Type-safe i18n with automatic locale detection
 - **URL-based locales** - `/` for French, `/en/` for English
@@ -38,6 +41,7 @@ This website serves as a professional landing page for Laurent Curau's fractiona
 - **SEO-friendly** - Proper `hreflang` tags for multilingual SEO
 
 ### 🔧 Technical Features
+
 - **SvelteKit** - Modern web framework
 - **Static Site Generation** - Fast loading and SEO-friendly
 - **GitHub Pages** deployment with custom domain
@@ -90,10 +94,12 @@ project.inlang/
 ## 🚀 Development
 
 ### Prerequisites
+
 - Node.js (v20+)
 - npm
 
 ### Setup
+
 ```bash
 # Clone the repository
 git clone https://github.com/laurentqro/laurentqro.github.io.git
@@ -107,6 +113,7 @@ npm run dev
 ```
 
 ### Available Scripts
+
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
@@ -118,6 +125,7 @@ npm run dev
 The site automatically deploys to GitHub Pages when changes are pushed to the `master` branch using GitHub Actions.
 
 ### Deployment Configuration
+
 - **Source**: GitHub Actions workflow (`.github/workflows/pages.yml`)
 - **Build**: SvelteKit static adapter
 - **Output**: `build/` directory
@@ -126,6 +134,7 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
 ## 📊 SEO & Social Media
 
 ### SEO Features
+
 - Comprehensive meta tags (title, description, keywords)
 - Open Graph tags for social media sharing
 - Twitter Card integration
@@ -134,6 +143,7 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
 - Proper heading hierarchy
 
 ### Social Media Preview
+
 - Custom logo as preview image (`logo.png`)
 - Optimized dimensions (1200x630px)
 - Professional branding across all platforms
@@ -141,12 +151,14 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
 ## 🎨 Brand Guidelines
 
 ### Colors
+
 - **Primary Blue**: `#667eea`
 - **Accent Teal**: `#0891b2`
 - **Background**: White with subtle gradients
 - **Text**: Professional dark grays
 
 ### Typography
+
 - Clean, modern sans-serif fonts
 - Hierarchical heading structure
 - Readable line heights and spacing
@@ -164,4 +176,4 @@ This project is private and proprietary to Laurent Curau.
 
 ---
 
-*Built with ❤️ using SvelteKit*
+_Built with ❤️ using SvelteKit_
