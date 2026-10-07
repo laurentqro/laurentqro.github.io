@@ -1,6 +1,6 @@
 <script>
 	import * as m from '$lib/paraglide/messages';
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { localizeHref } from '$lib/href';
 	import afidaImg from '$lib/assets/work-afida.webp';
 	import gareImg from '$lib/assets/work-gare.webp';
 	import ccaImg from '$lib/assets/work-cca.webp';

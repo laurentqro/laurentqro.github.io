@@ -3,7 +3,8 @@
 	import favicon from '$lib/assets/favicon.ico';
 	import Navigation from '$lib/Navigation.svelte';
 	import { onMount } from 'svelte';
-	import { locales, localizeHref } from '$lib/paraglide/runtime';
+	import { locales } from '$lib/paraglide/runtime';
+	import { localizeHref } from '$lib/href';
 	import * as m from '$lib/paraglide/messages';
 	import { page } from '$app/stores';
 
@@ -17,12 +18,7 @@
 	const SITE_URL = 'https://laurentcurau.com';
 	const canonicalUrl = $derived(SITE_URL + $page.url.pathname);
 
-	// localizeHref drops the trailing slash the site is configured to use,
-	// which would point hreflang at a URL that redirects.
-	const altHref = (locale) => {
-		const path = localizeHref($page.url.pathname, { locale });
-		return SITE_URL + (path.endsWith('/') ? path : path + '/');
-	};
+	const altHref = (locale) => SITE_URL + localizeHref($page.url.pathname, { locale });
 
 	// Escape the "less than" character so a closing script tag inside any
 	// string can't break out. Built from its code point because the Svelte
@@ -69,17 +65,17 @@
 				'Monaco SME IT Services',
 				'Professional Services Software'
 			],
-			offers: {
-				'@type': 'Service',
-				name: m.meta_og_title(),
-				description: m.meta_description(),
-				areaServed: {
-					'@type': 'City',
-					name: 'Monaco'
-				},
-				provider: {
-					'@type': 'Person',
-					name: 'Laurent Curau'
+			// schema.org has no `offers` on Person; `makesOffer` is the valid property.
+			makesOffer: {
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: m.meta_og_title(),
+					description: m.meta_description(),
+					areaServed: {
+						'@type': 'City',
+						name: 'Monaco'
+					}
 				}
 			}
 		})

@@ -1,6 +1,6 @@
 <script>
 	import * as m from '$lib/paraglide/messages';
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { localizeHref } from '$lib/href';
 
 	const services = [
 		{ title: m.service_1_title(), icon: 'globe' },

@@ -1,6 +1,6 @@
 <script>
 	import * as m from '$lib/paraglide/messages';
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { localizeHref } from '$lib/href';
 	import { whatsappLink } from '$lib/whatsapp.js';
 	import logo from '$lib/assets/logo.svg';
 

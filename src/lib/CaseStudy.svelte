@@ -1,6 +1,6 @@
 <script>
 	import * as m from '$lib/paraglide/messages';
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { localizeHref } from '$lib/href';
 	import Footer from '$lib/Footer.svelte';
 	import JsonLd from '$lib/JsonLd.svelte';
 	import { page } from '$app/stores';
@@ -22,7 +22,7 @@
 				'@type': 'ListItem',
 				position: 2,
 				name: 'Portfolio',
-				item: SITE_URL + localizeHref('/portfolio') + '/'
+				item: SITE_URL + localizeHref('/portfolio')
 			},
 			{
 				'@type': 'ListItem',

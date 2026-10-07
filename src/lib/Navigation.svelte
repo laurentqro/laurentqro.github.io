@@ -1,7 +1,8 @@
 <script>
 	import logo from '$lib/assets/logo.svg';
 	import * as m from '$lib/paraglide/messages';
-	import { locales, localizeHref, getLocale } from '$lib/paraglide/runtime';
+	import { locales, getLocale } from '$lib/paraglide/runtime';
+	import { localizeHref } from '$lib/href';
 	import { page } from '$app/stores';
 	import { whatsappLink } from '$lib/whatsapp.js';
 

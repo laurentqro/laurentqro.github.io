@@ -1,7 +1,7 @@
 <script>
 	import * as m from '$lib/paraglide/messages';
 	import Seo from '$lib/Seo.svelte';
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { localizeHref } from '$lib/href';
 	import { whatsappLink } from '$lib/whatsapp.js';
 	import Footer from '$lib/Footer.svelte';
 	import afidaImg from '$lib/assets/work-afida.webp';
