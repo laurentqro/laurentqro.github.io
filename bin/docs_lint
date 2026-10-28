@@ -1,0 +1,161 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Lints the docs/ OKF bundle (see CLAUDE.md, "docs/ knowledge bundle").
+# Gitignored working files under docs/ (private outreach data) are outside the
+# bundle: this repo is public, so the lint must never ask to index them.
+# Stdlib only. There is no CI; run it before ending a session. Usage: bin/docs_lint [bundle_root]
+
+require "yaml"
+require "date"
+require "set"
+
+BUNDLE_ROOT = File.expand_path(ARGV[0] || File.join(__dir__, "..", "docs"))
+RESERVED = %w[index.md log.md].freeze
+STATUSES = %w[active shipped superseded abandoned].freeze
+IGNORED = begin
+  `git -C #{BUNDLE_ROOT.inspect} ls-files --others --ignored --exclude-standard -z`
+    .split("\0").map { |rel| File.join(BUNDLE_ROOT, rel) }.to_set
+rescue SystemCallError
+  Set.new
+end.freeze
+
+@problems = []
+
+def problem(path, message)
+  @problems << "#{path.delete_prefix("#{BUNDLE_ROOT}/")}: #{message}"
+end
+
+def frontmatter(path)
+  lines = File.readlines(path, encoding: Encoding::UTF_8)
+  return nil unless lines.first&.strip == "---"
+
+  closing = lines[1..].index { |l| l.strip == "---" }
+  return nil unless closing
+
+  fm = YAML.safe_load(lines[1..closing].join, permitted_classes: [Date, Time])
+  fm.is_a?(Hash) ? fm : :not_a_mapping
+rescue Psych::Exception
+  # SyntaxError, but also DisallowedClass, BadAlias, AliasesNotEnabled: any
+  # frontmatter Psych rejects is a lint problem, never a crash.
+  :unparseable
+end
+
+# One link grammar for the whole script: a .md target with an optional
+# #anchor and an optional "title". check_links and check_index_coverage must
+# parse links identically, or a link style one accepts makes the other lie.
+LINK_TARGET = /\]\(([^)\s#"]+\.md)(?:#[^)"]*)?(?:\s+"[^"]*")?\)/
+
+# The file's markdown outside fenced code blocks: an example link inside a
+# fence is illustration, not a claim about the bundle.
+def prose(path)
+  fenced = false
+  File.readlines(path, encoding: Encoding::UTF_8).filter_map do |line|
+    fence_delimiter = line.lstrip.start_with?("```")
+    fenced = !fenced if fence_delimiter
+    line unless fenced || fence_delimiter
+  end.join
+end
+
+def md_link_targets(path)
+  prose(path).scan(LINK_TARGET).flatten
+end
+
+def check_concept(path)
+  fm = frontmatter(path)
+  return problem(path, "missing YAML frontmatter") if fm.nil?
+  return problem(path, "frontmatter does not parse as YAML") if fm == :unparseable
+  return problem(path, "frontmatter is not a YAML mapping") if fm == :not_a_mapping
+
+  %w[type description].each do |field|
+    value = fm[field]
+    problem(path, "frontmatter missing non-empty `#{field}`") unless value.is_a?(String) && !value.strip.empty?
+  end
+
+  status = fm["status"]
+  if status && !STATUSES.include?(status)
+    problem(path, "unknown status `#{status}` (expected #{STATUSES.join(" | ")})")
+  end
+  if status == "superseded" && !fm["superseded_by"]
+    problem(path, "status is superseded but `superseded_by` is missing")
+  end
+
+  timestamp = fm["timestamp"]
+  if timestamp && !timestamp.is_a?(Date) && !timestamp.is_a?(Time)
+    begin
+      Date.iso8601(timestamp.to_s)
+    rescue ArgumentError
+      problem(path, "`timestamp` is not an ISO 8601 date: #{timestamp.inspect}")
+    end
+  end
+end
+
+# Only .md targets are bundle links; http(s) targets are external.
+def check_links(path)
+  md_link_targets(path).each do |target|
+    next if target.start_with?("http://", "https://")
+
+    resolved = if target.start_with?("/")
+      File.join(BUNDLE_ROOT, target)
+    else
+      File.expand_path(target, File.dirname(path))
+    end
+    problem(path, "broken bundle link: #{target}") unless File.file?(resolved)
+  end
+end
+
+def check_index_coverage(dir)
+  subdirs = Dir.glob(File.join(dir, "**/")).map { |d| d.chomp("/") }
+  ([dir] + subdirs).uniq.each do |d|
+    concepts = Dir.glob(File.join(d, "*.md")).reject { |p| RESERVED.include?(File.basename(p)) || IGNORED.include?(p) }
+    next if concepts.empty?
+
+    index = File.join(d, "index.md")
+    unless File.file?(index)
+      problem(d, "directory with concept docs has no index.md")
+      next
+    end
+
+    listed = md_link_targets(index).map do |target|
+      target.start_with?("/") ? File.join(BUNDLE_ROOT, target) : File.expand_path(target, d)
+    end
+
+    concepts.each do |path|
+      problem(path, "not listed in #{index.delete_prefix("#{BUNDLE_ROOT}/")}") unless listed.include?(path)
+    end
+  end
+end
+
+def check_log
+  log = File.join(BUNDLE_ROOT, "log.md")
+  return problem(log, "missing bundle log.md") unless File.file?(log)
+
+  File.read(log, encoding: Encoding::UTF_8).scan(/^## (.+)$/).flatten.each do |heading|
+    Date.iso8601(heading.strip)
+  rescue ArgumentError
+    problem(log, "log heading is not an ISO date: `## #{heading}`")
+  end
+end
+
+problem(File.join(BUNDLE_ROOT, "index.md"), "missing bundle root index.md") unless File.file?(File.join(BUNDLE_ROOT, "index.md"))
+check_log
+check_index_coverage(BUNDLE_ROOT)
+
+concept_count = 0
+Dir.glob(File.join(BUNDLE_ROOT, "**", "*.md")).each do |path|
+  next if IGNORED.include?(path)
+
+  check_links(path)
+  next if RESERVED.include?(File.basename(path))
+
+  concept_count += 1
+  check_concept(path)
+end
+
+if @problems.empty?
+  puts "docs_lint: OK (#{concept_count} concept docs)"
+else
+  puts "docs_lint: #{@problems.size} problem(s)"
+  @problems.each { |p| puts "  #{p}" }
+  exit 1
+end

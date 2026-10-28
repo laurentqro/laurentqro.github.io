@@ -1,3 +1,10 @@
+---
+type: Copy
+description: Draft FR and EN copy that expands each case study into five h2 sections, reviewed before it went into the message files.
+status: shipped
+timestamp: 2026-07-21
+---
+
 # Expanded case-study copy (draft for review)
 
 Drafted 2026-07-21 as part of the SEO work: each case study grows from ~190 words without headings to ~450-550 words structured in h2 sections, FR and EN. Every fact comes from the existing published copy; nothing is invented. Metrics I could not verify are marked `[À CONFIRMER: ...]` and should be filled or the sentence dropped.

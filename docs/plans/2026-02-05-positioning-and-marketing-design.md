@@ -1,3 +1,10 @@
+---
+type: Plan
+description: Positioning and go-to-market plan for selling flat-fee software work to small Monaco real estate agencies, as a way to fund and inform ImmoCRM.
+status: active
+timestamp: 2026-02-05
+---
+
 # Positioning & Marketing Design
 
 ## Context

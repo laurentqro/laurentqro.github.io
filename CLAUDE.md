@@ -2,6 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## docs/ knowledge bundle (OKF)
+
+`docs/` is an [OKF v0.1](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) bundle, registered as `site:` in the personal catalog.
+
+- Every `docs/**/*.md` (except reserved `index.md` and `log.md`) starts with YAML frontmatter. Required: `type` and `description` (one sentence). Recommended: `status` (`active` | `shipped` | `superseded` | `abandoned`), `timestamp` (date of last substantive update), and `superseded_by` (bundle-absolute link) when superseded.
+- Type vocabulary: Plan, Copy. Add a new type only when none fits.
+- Cross-link with bundle-absolute markdown links: `/plans/case-study-expanded-copy.md` means `docs/plans/case-study-expanded-copy.md`.
+- Every directory with concept docs has an `index.md` listing each doc with a one-line description; `docs/log.md` records changes newest-first under `## YYYY-MM-DD` headings.
+- This repo is public. Gitignored outreach files in `docs/plans/` (prospect lists, email drafts) are not part of the bundle: do not list them, link them or commit them. `bin/docs_lint` skips them.
+- After any session that changes knowledge under `docs/`: update the touched docs' frontmatter, the directory's `index.md`, and `docs/log.md`, then run `bin/docs_lint`. Supersede, never delete.
+
 ## Commands
 
 ```bash
