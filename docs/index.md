@@ -8,4 +8,4 @@ OKF bundle for laurentcurau.com, the site of a solo freelance software engineer 
 
 # Areas
 
-* [Plans](/plans/index.md) - The positioning plan and the reviewed case-study copy.
+* [Plans](/plans/index.md) - The reviewed case-study copy.
