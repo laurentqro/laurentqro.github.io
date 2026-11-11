@@ -7,6 +7,7 @@
 	<nav>
 		<a class="link" href={localizeHref('/portfolio')}>{m.footer_portfolio()}</a>
 		<a class="link" href={localizeHref('/about')}>{m.footer_about()}</a>
+		<a class="link" href={localizeHref('/faq')}>{m.footer_faq()}</a>
 		<a class="link" href="mailto:hello@laurentcurau.com">{m.footer_email()}</a>
 		<a
 			class="link"

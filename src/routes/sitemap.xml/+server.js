@@ -7,6 +7,7 @@ const SITE_URL = 'https://laurentcurau.com';
 const pages = [
 	'',
 	'about',
+	'faq',
 	'portfolio',
 	'case-study/agence-de-la-gare',
 	'case-study/maison-de-bacon',

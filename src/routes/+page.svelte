@@ -5,7 +5,6 @@
 	import Seo from '$lib/Seo.svelte';
 	import Asterisk from '$lib/Asterisk.svelte';
 	import Closing from '$lib/Closing.svelte';
-	import JsonLd from '$lib/JsonLd.svelte';
 	import profile from '$lib/assets/profile.jpg';
 
 	const waHref = whatsappLink(m.whatsapp_prefill());
@@ -15,7 +14,7 @@
 		{ href: '#what', link: m.home_guide_2_link(), text: m.home_guide_2_text() },
 		{ href: '#what', link: m.home_guide_3_link(), text: m.home_guide_3_text() },
 		{ href: '#safe', link: m.home_guide_4_link(), text: m.home_guide_4_text() },
-		{ href: '#questions', link: m.home_guide_6_link(), text: m.home_guide_6_text() },
+		{ href: localizeHref('/faq'), link: m.home_guide_6_link(), text: m.home_guide_6_text() },
 		{
 			href: localizeHref('/portfolio'),
 			link: m.home_guide_5_link(),
@@ -56,46 +55,6 @@
 		{ title: m.home_start_3_title(), text: m.home_start_3_text() }
 	];
 
-	const faq = [
-		{
-			title: m.home_faq_cost_title(),
-			items: [
-				{ q: m.home_faq_cost_1_q(), a: m.home_faq_cost_1_a() },
-				{ q: m.home_faq_cost_2_q(), a: m.home_faq_cost_2_a() },
-				{ q: m.home_faq_cost_3_q(), a: m.home_faq_cost_3_a() }
-			]
-		},
-		{
-			title: m.home_faq_data_title(),
-			items: [
-				{ q: m.home_faq_data_1_q(), a: m.home_faq_data_1_a() },
-				{ q: m.home_faq_data_2_q(), a: m.home_faq_data_2_a() },
-				{ q: m.home_faq_data_3_q(), a: m.home_faq_data_3_a() }
-			]
-		},
-		{
-			title: m.home_faq_security_title(),
-			items: [
-				{ q: m.home_faq_security_1_q(), a: m.home_faq_security_1_a() },
-				{ q: m.home_faq_security_2_q(), a: m.home_faq_security_2_a() },
-				{ q: m.home_faq_security_3_q(), a: m.home_faq_security_3_a() }
-			]
-		}
-	];
-
-	// Built from the visible questions, so the structured data cannot differ from the page.
-	const faqSchema = {
-		'@context': 'https://schema.org',
-		'@type': 'FAQPage',
-		mainEntity: faq.flatMap((group) =>
-			group.items.map((item) => ({
-				'@type': 'Question',
-				name: item.q,
-				acceptedAnswer: { '@type': 'Answer', text: item.a }
-			}))
-		)
-	};
-
 	const zigzag = Array.from(
 		{ length: 35 },
 		(_, i) => `${i ? 'L' : 'M'}${i * 5} ${i % 2 ? 2 : 6}`
@@ -103,7 +62,6 @@
 </script>
 
 <Seo title={m.meta_title()} description={m.meta_description()} />
-<JsonLd data={faqSchema} />
 
 <div class="frame">
 	<div class="canvas">
@@ -199,21 +157,6 @@
 					</div>
 				{/each}
 			</dl>
-		</section>
-
-		<section class="sheet second" id="questions">
-			<h2 class="title">{m.home_faq_title()}</h2>
-			{#each faq as group}
-				<div class="column faq">
-					<h3 class="subtitle">{group.title}</h3>
-					{#each group.items as item}
-						<details>
-							<summary>{item.q}<span class="mark" aria-hidden="true"></span></summary>
-							<p class="prose">{item.a}</p>
-						</details>
-					{/each}
-				</div>
-			{/each}
 		</section>
 
 		<section class="start" id="start">
@@ -473,69 +416,6 @@
 		margin-top: 46px;
 	}
 
-	.faq .subtitle {
-		padding-bottom: 12px;
-		border-bottom: 1px solid var(--rule);
-	}
-
-	.faq details {
-		border-bottom: 1px solid var(--rule);
-	}
-
-	.faq details:last-child {
-		border-bottom: 0;
-	}
-
-	.faq summary {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 16px;
-		padding-block: 18px;
-		font-weight: 700;
-		cursor: pointer;
-		list-style: none;
-	}
-
-	.faq summary::-webkit-details-marker {
-		display: none;
-	}
-
-	.faq summary:hover {
-		color: var(--teal);
-	}
-
-	.mark {
-		position: relative;
-		flex-shrink: 0;
-		width: 14px;
-		height: 14px;
-		color: var(--teal);
-	}
-
-	.mark::before,
-	.mark::after {
-		content: '';
-		position: absolute;
-		top: 6px;
-		left: 0;
-		width: 14px;
-		height: 2px;
-		background: currentColor;
-	}
-
-	.mark::after {
-		rotate: 90deg;
-	}
-
-	details[open] .mark::after {
-		display: none;
-	}
-
-	.faq .prose {
-		padding-bottom: 20px;
-	}
-
 	.start {
 		width: calc(100% - 2 * var(--gutter));
 		max-width: var(--sheet-width);
@@ -707,18 +587,6 @@
 
 		.sheet.second {
 			margin-top: 20px;
-		}
-
-		.sheet#questions {
-			gap: 28px;
-		}
-
-		.faq summary {
-			padding-block: 14px;
-		}
-
-		.faq .prose {
-			padding-bottom: 16px;
 		}
 
 		.start {

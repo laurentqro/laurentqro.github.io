@@ -53,7 +53,7 @@ The `src/hooks.ts` reroute hook strips locale prefixes from URLs so SvelteKit ro
 ### Component Structure
 
 - `src/routes/+layout.svelte` renders `Header` (sticky, with the FR / EN language links and the WhatsApp button), the page, then `Footer`. It also holds the site-wide meta tags and JSON-LD.
-- Pages: home (`/`), `/about`, `/portfolio`, `/case-study/*` (all use `src/lib/CaseStudy.svelte`), `/privacy` and `/terms` (both use `src/lib/LegalPage.svelte`).
+- Pages: home (`/`), `/about`, `/faq`, `/portfolio`, `/case-study/*` (all use `src/lib/CaseStudy.svelte`), `/privacy` and `/terms` (both use `src/lib/LegalPage.svelte`).
 - `/services` and `/case-study/afida` are retired. Their `+page.js` redirects, and prerendering writes a meta-refresh page, because GitHub Pages has no server redirects.
 - Shared layout classes (`.frame`, `.canvas`, `.sheet`, `.rows`, `.title`, `.link`) and the design tokens live in `src/app.css`.
 
