@@ -52,11 +52,11 @@ The `src/hooks.ts` reroute hook strips locale prefixes from URLs so SvelteKit ro
 
 ### Component Structure
 
-- `src/routes/+layout.svelte` renders `Header` (sticky, with the language flags and the WhatsApp button), the page, then `Footer`. It also holds the site-wide meta tags and JSON-LD.
+- `src/routes/+layout.svelte` renders `Header` (sticky, with the FR / EN language links and the WhatsApp button), the page, then `Footer`. It also holds the site-wide meta tags and JSON-LD.
 - Pages: home (`/`), `/about`, `/portfolio`, `/case-study/*` (all use `src/lib/CaseStudy.svelte`), `/privacy` and `/terms` (both use `src/lib/LegalPage.svelte`).
 - `/services` and `/case-study/afida` are retired. Their `+page.js` redirects, and prerendering writes a meta-refresh page, because GitHub Pages has no server redirects.
 - Shared layout classes (`.frame`, `.canvas`, `.sheet`, `.rows`, `.title`, `.link`) and the design tokens live in `src/app.css`.
 
 ### Design tokens
 
-Defined as CSS variables in `src/app.css`: ink `#111111`, teal `#008080` (links and actions), canvas `#F1F8F8`, rule `#ECECEC`, muted `#6B7478`. The typeface is Inter.
+The site is dark. All colours are CSS variables in `src/app.css`: page `#0A0F10`, canvas `#101A1B`, sheet `#1A2728`, ink `#EDF2F2`, teal `#4CC4BF` (links), teal fill `#008080` (the WhatsApp button), rule `#2B3B3C`, muted `#96A5A7`. Do not hard-code a colour in a component. The typeface is Inter.

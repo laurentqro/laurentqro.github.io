@@ -5,26 +5,30 @@
 	import { localizeHref } from '$lib/href';
 	import { page } from '$app/stores';
 	import { whatsappLink } from '$lib/whatsapp.js';
-	import Flag from '$lib/Flag.svelte';
 
 	const waHref = whatsappLink(m.whatsapp_prefill());
+
+	const languages = [
+		{ code: 'fr', short: 'FR', label: m.header_lang_fr() },
+		{ code: 'en', short: 'EN', label: m.header_lang_en() }
+	];
 </script>
 
 <header class="header">
-	<div class="side">
-		<Flag
-			country="fr"
-			href={localizeHref($page.url.pathname, { locale: 'fr' })}
-			label={m.header_lang_fr()}
-			current={getLocale() === 'fr'}
-		/>
-		<Flag
-			country="gb"
-			href={localizeHref($page.url.pathname, { locale: 'en' })}
-			label={m.header_lang_en()}
-			current={getLocale() === 'en'}
-		/>
-	</div>
+	<nav class="side languages" aria-label="Langue / Language">
+		{#each languages as l}
+			<a
+				href={localizeHref($page.url.pathname, { locale: l.code })}
+				class={getLocale() === l.code ? 'current' : 'link'}
+				aria-current={getLocale() === l.code ? 'true' : undefined}
+				aria-label={l.label}
+				title={l.label}
+				lang={l.code}
+				hreflang={l.code}
+				data-sveltekit-reload>{l.short}</a
+			>
+		{/each}
+	</nav>
 
 	<a href={localizeHref('/')} class="brand" aria-label={m.header_home_label()}>
 		<img src={logo} alt="" width="54" height="54" />
@@ -56,7 +60,7 @@
 		z-index: 100;
 		height: var(--header-height);
 		padding-inline: var(--frame-inset);
-		background: #ffffff;
+		background: var(--page);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -64,10 +68,21 @@
 
 	.side {
 		display: flex;
-		align-items: flex-start;
-		gap: 12px;
+		align-items: center;
+		gap: 16px;
 		flex-shrink: 0;
 		width: 200px;
+	}
+
+	.languages {
+		font-size: 17px;
+		line-height: 24px;
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+
+	.languages .current {
+		font-weight: 800;
 	}
 
 	.side.end {
@@ -85,16 +100,18 @@
 		white-space: nowrap;
 	}
 
+	/* logo.svg is black with a teal mark: invert turns the black white, hue-rotate puts the teal back. */
 	.brand img {
 		width: 54px;
 		height: 54px;
 		flex-shrink: 0;
+		filter: invert(1) hue-rotate(180deg);
 	}
 
 	.whatsapp {
 		width: 48px;
 		height: 48px;
-		background: var(--teal);
+		background: var(--teal-fill);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -102,7 +119,7 @@
 	}
 
 	.whatsapp:hover {
-		background: #006b6b;
+		background: var(--teal-fill-hover);
 	}
 
 	.whatsapp svg {
@@ -117,8 +134,12 @@
 		}
 
 		.side {
-			gap: 8px;
+			gap: 12px;
 			width: 76px;
+		}
+
+		.languages {
+			font-size: 15px;
 		}
 
 		.brand {

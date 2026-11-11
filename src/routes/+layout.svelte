@@ -138,7 +138,7 @@
 	/>
 
 	<!-- Additional SEO Meta Tags -->
-	<meta name="theme-color" content="#008080" />
+	<meta name="theme-color" content="#0a0f10" />
 	<meta name="msapplication-TileColor" content="#008080" />
 	<link rel="canonical" href={canonicalUrl} />
 

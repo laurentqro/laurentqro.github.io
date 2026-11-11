@@ -102,7 +102,7 @@
 	.media {
 		flex: 0 0 540px;
 		aspect-ratio: 540 / 338;
-		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+		box-shadow: 0 0 0 1px var(--hairline);
 	}
 
 	.media img {
