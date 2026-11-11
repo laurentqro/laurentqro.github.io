@@ -25,7 +25,7 @@ npm run lint     # Check code formatting
 
 ## Architecture
 
-This is a static SvelteKit site for a Fractional CTO services landing page, deployed to GitHub Pages.
+This is a static SvelteKit site that presents Laurent Curau's offer (AI integration for companies, plus sites and tools), deployed to GitHub Pages.
 
 ### Internationalization (Paraglide.js)
 
@@ -52,9 +52,11 @@ The `src/hooks.ts` reroute hook strips locale prefixes from URLs so SvelteKit ro
 
 ### Component Structure
 
-All page sections are in `src/lib/` as Svelte components (Hero, Personal, Problem, Solution, Services, Pricing, Target, Contact, Process, Footer). The main page at `src/routes/+page.svelte` composes them.
+- `src/routes/+layout.svelte` renders `Header` (sticky, with the language flags and the WhatsApp button), the page, then `Footer`. It also holds the site-wide meta tags and JSON-LD.
+- Pages: home (`/`), `/about`, `/portfolio`, `/case-study/*` (all use `src/lib/CaseStudy.svelte`), `/privacy` and `/terms` (both use `src/lib/LegalPage.svelte`).
+- `/services` and `/case-study/afida` are retired. Their `+page.js` redirects, and prerendering writes a meta-refresh page, because GitHub Pages has no server redirects.
+- Shared layout classes (`.frame`, `.canvas`, `.sheet`, `.rows`, `.title`, `.link`) and the design tokens live in `src/app.css`.
 
-### Brand Colors
+### Design tokens
 
-- Primary Blue: `#667eea`
-- Accent Teal: `#0891b2`
+Defined as CSS variables in `src/app.css`: ink `#111111`, teal `#008080` (links and actions), canvas `#F1F8F8`, rule `#ECECEC`, muted `#6B7478`. The typeface is Inter.

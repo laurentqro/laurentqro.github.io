@@ -1,361 +1,191 @@
 <script>
 	import * as m from '$lib/paraglide/messages';
-	import Seo from '$lib/Seo.svelte';
 	import { localizeHref } from '$lib/href';
-	import { whatsappLink } from '$lib/whatsapp.js';
-	import Footer from '$lib/Footer.svelte';
-	import afidaImg from '$lib/assets/work-afida.webp';
+	import Seo from '$lib/Seo.svelte';
+	import Closing from '$lib/Closing.svelte';
+	import mdbImg from '$lib/assets/work-mdb.webp';
 	import gareImg from '$lib/assets/work-gare.webp';
 	import ccaImg from '$lib/assets/work-cca.webp';
-	import mdbImg from '$lib/assets/work-mdb.webp';
-
-	const waHref = whatsappLink(m.whatsapp_prefill());
 
 	const projects = [
 		{
-			image: afidaImg,
-			category: m.portfolio_card_afida_category(),
-			year: m.portfolio_card_year(),
-			title: m.case_afida_title(),
-			href: '/case-study/afida'
-		},
-		{
 			image: mdbImg,
-			category: m.portfolio_card_mdb_category(),
+			width: 1483,
+			height: 812,
+			category: m.case_mdb_meta_category_value(),
 			year: m.case_mdb_meta_year_value(),
 			title: m.case_mdb_title(),
+			description: m.case_mdb_description(),
 			href: '/case-study/maison-de-bacon'
 		},
 		{
 			image: gareImg,
-			category: m.portfolio_card_gare_category(),
-			year: m.portfolio_card_year(),
+			width: 1440,
+			height: 900,
+			category: m.case_gare_meta_category_value(),
+			year: m.case_gare_meta_year_value(),
 			title: m.case_gare_title(),
+			description: m.case_gare_description(),
 			href: '/case-study/agence-de-la-gare'
 		},
 		{
 			image: ccaImg,
-			category: m.portfolio_card_cca_category(),
-			year: m.portfolio_card_year(),
+			width: 1440,
+			height: 900,
+			category: m.case_cca_meta_category_value(),
+			year: m.case_cca_meta_year_value(),
 			title: m.case_cca_title(),
+			description: m.case_cca_description(),
 			href: '/case-study/christian-curau-architecte'
 		}
 	];
-
-	function handleAnchorClick(event) {
-		event.preventDefault();
-		const link = event.currentTarget;
-		const anchorId = new URL(link.href).hash.replace('#', '');
-		const anchor = document.getElementById(anchorId);
-		if (anchor) anchor.scrollIntoView({ behavior: 'smooth' });
-	}
 </script>
 
 <Seo title={m.portfolio_meta_title()} description={m.portfolio_meta_description()} />
 
-<section class="hero">
-	<div class="hero-inner">
-		<h1>{m.portfolio_hero_title()}</h1>
-		<p class="hero-paragraph">{m.portfolio_hero_paragraph()}</p>
-		<div class="hero-actions">
-			<a href="#projects" class="cta-primary" onclick={handleAnchorClick}>
-				{m.portfolio_hero_cta_primary()}
-				<svg
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					aria-hidden="true"
-				>
-					<line x1="5" y1="12" x2="19" y2="12" />
-					<polyline points="12,5 19,12 12,19" />
-				</svg>
-			</a>
-			<a href={waHref} target="_blank" rel="noopener noreferrer" class="cta-secondary">
-				{m.portfolio_hero_cta_secondary()}
-			</a>
-		</div>
-	</div>
-</section>
+<div class="frame">
+	<div class="canvas portfolio">
+		<header class="column intro">
+			<h1 class="title">{m.portfolio_title()}</h1>
+			<p class="lead">{m.portfolio_lead()}</p>
+		</header>
 
-<section class="strip">
-	<div class="strip-inner">
-		<div class="strip-stat">
-			<span class="strip-stat-value">{m.portfolio_stat_value()}</span>
-			<span class="strip-stat-label">{m.portfolio_stat_label()}</span>
-		</div>
-		<div class="strip-chips">
-			<span class="strip-chip">Rails 8</span>
-			<span class="strip-chip">Hotwire</span>
-			<span class="strip-chip">Postgres</span>
-			<span class="strip-chip">Stripe</span>
-		</div>
-	</div>
-</section>
-
-<section id="projects" class="projects">
-	<div class="projects-inner">
-		<div class="card-grid">
-			{#each projects as p, i}
-				<a href={localizeHref(p.href)} class="card">
-					<div class="card-media">
-						<img
-							src={p.image}
-							alt={p.title}
-							width="1440"
-							height="900"
-							loading={i === 0 ? 'eager' : 'lazy'}
-						/>
-					</div>
-					<div class="card-body">
-						<div class="card-meta">{p.category} · {p.year}</div>
-						<h3 class="card-title">{p.title}</h3>
-					</div>
+		{#each projects as p, i}
+			<article class="sheet project">
+				<a class="media" href={localizeHref(p.href)} tabindex="-1" aria-hidden="true">
+					<img
+						src={p.image}
+						alt=""
+						width={p.width}
+						height={p.height}
+						loading={i === 0 ? 'eager' : 'lazy'}
+					/>
 				</a>
-			{/each}
-		</div>
+				<div class="text">
+					<p class="meta">{p.category}, {p.year}</p>
+					<h2>{p.title}</h2>
+					<p class="description">{p.description}</p>
+					<p class="more">
+						<a class="link strong" href={localizeHref(p.href)}
+							>{m.portfolio_read_case()}<span class="sr-only">: {p.title}</span></a
+						>
+					</p>
+				</div>
+			</article>
+		{/each}
 	</div>
-</section>
+</div>
 
-<Footer />
+<Closing question={m.closing_portfolio_question()} />
 
 <style>
-	.hero {
-		padding: 11rem 2rem 4rem;
-		background: #0f0f1a;
+	.portfolio {
+		padding-top: 72px;
+		gap: 31px;
 	}
 
-	.hero-inner {
-		max-width: 900px;
-		margin: 0 auto;
-	}
-
-	.hero h1 {
-		font-family: 'Plus Jakarta Sans', sans-serif;
-		font-size: clamp(2.5rem, 6vw, 4.5rem);
-		font-weight: 800;
-		color: #f5f5fa;
-		margin: 0 0 1.25rem;
-		line-height: 1.05;
-		letter-spacing: -0.03em;
-	}
-
-	.hero-paragraph {
-		font-size: 1.15rem;
-		color: rgba(255, 255, 255, 0.6);
-		line-height: 1.6;
-		margin: 0 0 2rem;
-		max-width: 700px;
-	}
-
-	.hero-actions {
-		display: flex;
-		gap: 1rem;
-		flex-wrap: wrap;
-		align-items: center;
-	}
-
-	.cta-primary {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		font-family: 'JetBrains Mono', monospace;
-		background: linear-gradient(135deg, #667eea 0%, #0891b2 100%);
-		color: white;
-		padding: 0.95rem 1.75rem;
-		border-radius: 0.5rem;
-		text-decoration: none;
-		font-weight: 700;
-		font-size: 0.9rem;
-		transition:
-			transform 0.25s ease,
-			box-shadow 0.25s ease;
-		box-shadow: 0 0 25px rgba(102, 126, 234, 0.3);
-	}
-
-	.cta-primary:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 0 40px rgba(102, 126, 234, 0.5);
-	}
-
-	.cta-primary svg {
-		width: 1rem;
-		height: 1rem;
-	}
-
-	.cta-secondary {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		font-family: 'JetBrains Mono', monospace;
-		background: transparent;
-		border: 1px solid rgba(255, 255, 255, 0.15);
-		color: rgba(255, 255, 255, 0.7);
-		padding: 0.95rem 1.5rem;
-		border-radius: 0.5rem;
-		text-decoration: none;
-		font-weight: 600;
-		font-size: 0.9rem;
-		transition: all 0.25s ease;
-	}
-
-	.cta-secondary:hover {
-		background: rgba(255, 255, 255, 0.04);
-		border-color: rgba(255, 255, 255, 0.3);
-		color: white;
-	}
-
-	.strip {
-		padding: 2.5rem 2rem;
-		background: #0f0f1a;
-		border-top: 1px solid rgba(255, 255, 255, 0.06);
-		border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-	}
-
-	.strip-inner {
-		max-width: 1200px;
-		margin: 0 auto;
-		display: flex;
-		align-items: center;
-		gap: 2.5rem;
-		flex-wrap: wrap;
-	}
-
-	.strip-stat {
-		display: flex;
-		align-items: baseline;
-		gap: 0.75rem;
-	}
-
-	.strip-stat-value {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 1.75rem;
-		font-weight: 700;
-		color: #e2e8f0;
-	}
-
-	.strip-stat-label {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.75rem;
-		color: rgba(255, 255, 255, 0.4);
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
-	}
-
-	.strip-chips {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-	}
-
-	.strip-chip {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.78rem;
-		color: #a5b4fc;
-		background: rgba(102, 126, 234, 0.08);
-		border: 1px solid rgba(102, 126, 234, 0.22);
-		padding: 0.35rem 0.75rem;
-		border-radius: 999px;
-	}
-
-	.projects {
-		padding: 4rem 2rem 6rem;
-		background: #0f0f1a;
-	}
-
-	.projects-inner {
-		max-width: 1200px;
-		margin: 0 auto;
+	.intro {
 		display: flex;
 		flex-direction: column;
-		gap: 1.5rem;
+		gap: 14px;
+		padding: 0 var(--gutter) 24px;
+		text-align: center;
 	}
 
-	.card {
-		display: block;
-		background: #1a1a2e;
-		border: 1px solid rgba(102, 126, 234, 0.12);
-		border-radius: 1rem;
-		overflow: hidden;
-		text-decoration: none;
-		color: inherit;
-		transition:
-			transform 0.25s ease,
-			border-color 0.25s ease,
-			box-shadow 0.25s ease;
+	.project {
+		flex-direction: row;
+		align-items: center;
+		gap: 46px;
+		padding: 46px;
 	}
 
-	.card:hover {
-		transform: translateY(-3px);
-		border-color: rgba(102, 126, 234, 0.3);
-		box-shadow: 0 0 40px rgba(102, 126, 234, 0.12);
+	.media {
+		flex: 0 0 540px;
+		aspect-ratio: 540 / 338;
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 	}
 
-	.card-media {
-		overflow: hidden;
-		aspect-ratio: 4 / 3;
-		background: #0f0f1a;
-	}
-
-	.card-media img {
+	.media img {
 		width: 100%;
 		height: 100%;
-		display: block;
 		object-fit: cover;
-		transition: transform 0.4s ease;
+		object-position: center top;
 	}
 
-	.card:hover .card-media img {
-		transform: scale(1.02);
+	.text {
+		flex: 1 1 0;
+		min-width: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
 	}
 
-	.card-body {
-		padding: 1.75rem 2rem 2rem;
+	.meta {
+		font-size: 16px;
+		line-height: 24px;
+		color: var(--muted);
 	}
 
-	.card-meta {
-		font-family: 'JetBrains Mono', monospace;
-		font-size: 0.75rem;
-		color: rgba(255, 255, 255, 0.45);
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
-		margin-bottom: 0.75rem;
-	}
-
-	.card-title {
-		font-family: 'Plus Jakarta Sans', sans-serif;
-		font-size: 1.4rem;
+	h2 {
+		font-size: 32px;
+		line-height: 38px;
 		font-weight: 800;
-		color: #f5f5fa;
-		margin: 0;
-		line-height: 1.15;
-		letter-spacing: -0.02em;
+		letter-spacing: -0.026em;
 	}
 
-	.card-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5rem;
+	.description {
+		line-height: 28px;
 	}
 
-	@media (max-width: 900px) {
-		.card-grid {
-			grid-template-columns: 1fr;
+	.more {
+		padding-top: 6px;
+	}
+
+	@media (max-width: 1100px) {
+		.project {
+			flex-direction: column;
+			align-items: stretch;
+			gap: 28px;
+			padding: 31px;
+		}
+
+		.media {
+			flex: none;
 		}
 	}
 
-	@media (max-width: 700px) {
-		.hero {
-			padding: 9rem 1.25rem 3rem;
+	@media (max-width: 760px) {
+		.portfolio {
+			padding-top: 36px;
+			gap: 16px;
 		}
-		.strip {
-			padding: 2rem 1.25rem;
+
+		.intro {
+			gap: 10px;
+			padding-bottom: 12px;
 		}
-		.projects {
-			padding: 3rem 1.25rem 5rem;
+
+		.project {
+			gap: 20px;
+			padding: 16px 16px 24px;
 		}
-		.card-body {
-			padding: 1.75rem;
+
+		.text {
+			gap: 8px;
+			padding-inline: 8px;
+		}
+
+		h2 {
+			font-size: 26px;
+			line-height: 31px;
+		}
+
+		.description {
+			line-height: 25px;
+		}
+
+		.more {
+			padding-top: 2px;
 		}
 	}
 </style>

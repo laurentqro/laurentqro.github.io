@@ -9,6 +9,8 @@ const config = {
 			fallback: '404.html'
 		}),
 		prerender: {
+			// The retired pages have no inbound links, so the crawler never reaches their English URLs.
+			entries: ['*', '/en/services/', '/en/case-study/afida/'],
 			handleHttpError: 'warn',
 			handleMissingId: 'warn'
 		}

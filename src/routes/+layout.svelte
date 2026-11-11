@@ -1,18 +1,14 @@
 <script>
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.ico';
-	import Navigation from '$lib/Navigation.svelte';
-	import { onMount } from 'svelte';
+	import Header from '$lib/Header.svelte';
+	import Footer from '$lib/Footer.svelte';
 	import { locales } from '$lib/paraglide/runtime';
 	import { localizeHref } from '$lib/href';
 	import * as m from '$lib/paraglide/messages';
 	import { page } from '$app/stores';
 
 	let { children } = $props();
-
-	onMount(() => {
-		// Any initialization code if needed
-	});
 
 	// Canonical origin — $page.url is "http://sveltekit-prerender" during SSG
 	const SITE_URL = 'https://laurentcurau.com';
@@ -31,7 +27,7 @@
 			'@context': 'https://schema.org',
 			'@type': 'Person',
 			name: 'Laurent Curau',
-			jobTitle: m.footer_brand_description(),
+			jobTitle: m.meta_job_title(),
 			description: m.meta_description(),
 			url: SITE_URL,
 			image: SITE_URL + '/logo.png',
@@ -59,18 +55,17 @@
 				}
 			},
 			knowsAbout: [
-				'Custom Software Development',
-				'Custom CRM Development',
-				'Business Automation',
-				'Monaco SME IT Services',
-				'Professional Services Software'
+				'AI integration',
+				'Business process automation',
+				'Custom software development',
+				'Web development'
 			],
 			// schema.org has no `offers` on Person; `makesOffer` is the valid property.
 			makesOffer: {
 				'@type': 'Offer',
 				itemOffered: {
 					'@type': 'Service',
-					name: m.meta_og_title(),
+					name: m.meta_service_name(),
 					description: m.meta_description(),
 					areaServed: {
 						'@type': 'City',
@@ -85,7 +80,7 @@
 		jsonLd({
 			'@context': 'https://schema.org',
 			'@type': 'ProfessionalService',
-			name: 'Laurent Curau - ' + m.footer_brand_description(),
+			name: 'Laurent Curau',
 			description: m.meta_description(),
 			url: SITE_URL,
 			image: SITE_URL + '/logo.png',
@@ -105,42 +100,11 @@
 				'@type': 'City',
 				name: 'Monaco'
 			},
-			priceRange: '€€€',
 			openingHoursSpecification: {
 				'@type': 'OpeningHoursSpecification',
 				dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
 				opens: '09:00',
 				closes: '18:00'
-			},
-			hasOfferCatalog: {
-				'@type': 'OfferCatalog',
-				name: 'Services',
-				itemListElement: [
-					{
-						'@type': 'Offer',
-						itemOffered: {
-							'@type': 'Service',
-							name: m.service_1_title(),
-							description: m.service_1_summary()
-						}
-					},
-					{
-						'@type': 'Offer',
-						itemOffered: {
-							'@type': 'Service',
-							name: m.service_2_title(),
-							description: m.service_2_summary()
-						}
-					},
-					{
-						'@type': 'Offer',
-						itemOffered: {
-							'@type': 'Service',
-							name: m.service_3_title(),
-							description: m.service_3_summary()
-						}
-					}
-				]
 			}
 		})
 	);
@@ -160,16 +124,22 @@
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Laurent Curau — Ingénieur logiciel à Monaco" />
+	<meta
+		property="og:image:alt"
+		content="Laurent Curau. J'intègre l'IA dans votre entreprise, de façon sécurisée."
+	/>
 
 	<!-- Twitter Card Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:image" content="https://laurentcurau.com/og-image.png" />
-	<meta name="twitter:image:alt" content="Laurent Curau — Ingénieur logiciel à Monaco" />
+	<meta
+		name="twitter:image:alt"
+		content="Laurent Curau. J'intègre l'IA dans votre entreprise, de façon sécurisée."
+	/>
 
 	<!-- Additional SEO Meta Tags -->
-	<meta name="theme-color" content="#667eea" />
-	<meta name="msapplication-TileColor" content="#667eea" />
+	<meta name="theme-color" content="#008080" />
+	<meta name="msapplication-TileColor" content="#008080" />
 	<link rel="canonical" href={canonicalUrl} />
 
 	<!-- Multilingual SEO -->
@@ -197,5 +167,8 @@
 	{/each}
 </div>
 
-<Navigation />
-{@render children?.()}
+<Header />
+<main>
+	{@render children?.()}
+</main>
+<Footer />

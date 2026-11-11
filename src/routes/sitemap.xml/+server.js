@@ -6,9 +6,8 @@ const SITE_URL = 'https://laurentcurau.com';
 // Add new pages (e.g. case studies) here so they land in the sitemap.
 const pages = [
 	'',
-	'services',
+	'about',
 	'portfolio',
-	'case-study/afida',
 	'case-study/agence-de-la-gare',
 	'case-study/maison-de-bacon',
 	'case-study/christian-curau-architecte',
