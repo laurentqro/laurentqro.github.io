@@ -10,6 +10,8 @@
 
 	let { children } = $props();
 
+	const shareImageAlt = `Laurent Curau. ${m.home_headline()}`;
+
 	// Canonical origin — $page.url is "http://sveltekit-prerender" during SSG
 	const SITE_URL = 'https://laurentcurau.com';
 	const canonicalUrl = $derived(SITE_URL + $page.url.pathname);
@@ -124,18 +126,12 @@
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta
-		property="og:image:alt"
-		content="Laurent Curau. J'intègre l'IA dans votre entreprise, de façon sécurisée."
-	/>
+	<meta property="og:image:alt" content={shareImageAlt} />
 
 	<!-- Twitter Card Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:image" content="https://laurentcurau.com/og-image.png" />
-	<meta
-		name="twitter:image:alt"
-		content="Laurent Curau. J'intègre l'IA dans votre entreprise, de façon sécurisée."
-	/>
+	<meta name="twitter:image:alt" content={shareImageAlt} />
 
 	<!-- Additional SEO Meta Tags -->
 	<meta name="theme-color" content="#0a0f10" />

@@ -11,6 +11,7 @@
 	--teal: #4cc4bf;
 	--teal-fill: #008080;
 	--teal-fill-hover: #0a9797;
+	--on-fill: #ffffff;
 	--teal-tint: #143c3c;
 	--chip-done: #243132;
 	--rule: #2b3b3c;
@@ -138,7 +139,8 @@ body {
 	border-bottom: 0;
 }
 
-.row dt {
+.row dt,
+.row .label {
 	flex-shrink: 0;
 	width: var(--label-width, 230px);
 	font-weight: 700;
@@ -210,7 +212,8 @@ body {
 		padding-block: 16px;
 	}
 
-	.row dt {
+	.row dt,
+	.row .label {
 		width: auto;
 	}
 }

@@ -1,10 +1,10 @@
 <script>
 	import * as m from '$lib/paraglide/messages';
-	import { whatsappLink } from '$lib/whatsapp.js';
+	import { prefilledWhatsappLink } from '$lib/whatsapp.js';
 	import Seo from '$lib/Seo.svelte';
 	import profile from '$lib/assets/profile.jpg';
 
-	const waHref = whatsappLink(m.whatsapp_prefill());
+	const waHref = prefilledWhatsappLink();
 
 	const background = [
 		{ label: m.about_bg_1_label(), when: m.about_bg_1_when(), text: m.about_bg_1_text() },

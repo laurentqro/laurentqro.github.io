@@ -4,9 +4,9 @@
 	import { getLocale } from '$lib/paraglide/runtime';
 	import { localizeHref } from '$lib/href';
 	import { page } from '$app/stores';
-	import { whatsappLink } from '$lib/whatsapp.js';
+	import { prefilledWhatsappLink } from '$lib/whatsapp.js';
 
-	const waHref = whatsappLink(m.whatsapp_prefill());
+	const waHref = prefilledWhatsappLink();
 
 	const languages = [
 		{ code: 'fr', short: 'FR', label: m.header_lang_fr() },
@@ -125,7 +125,7 @@
 	.whatsapp svg {
 		width: 26px;
 		height: 26px;
-		fill: #ffffff;
+		fill: var(--on-fill);
 	}
 
 	@media (max-width: 760px) {
@@ -161,6 +161,12 @@
 		.whatsapp svg {
 			width: 24px;
 			height: 24px;
+		}
+	}
+
+	@media (max-width: 370px) {
+		.side {
+			width: auto;
 		}
 	}
 </style>

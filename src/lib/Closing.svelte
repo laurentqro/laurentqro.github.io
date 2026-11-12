@@ -1,10 +1,10 @@
 <script>
 	import * as m from '$lib/paraglide/messages';
-	import { whatsappLink } from '$lib/whatsapp.js';
+	import { prefilledWhatsappLink } from '$lib/whatsapp.js';
 
 	let { question, greeting = false } = $props();
 
-	const waHref = whatsappLink(m.whatsapp_prefill());
+	const waHref = prefilledWhatsappLink();
 </script>
 
 <section class="closing">

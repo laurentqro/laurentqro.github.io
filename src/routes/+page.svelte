@@ -1,13 +1,13 @@
 <script>
 	import * as m from '$lib/paraglide/messages';
 	import { localizeHref } from '$lib/href';
-	import { whatsappLink } from '$lib/whatsapp.js';
+	import { prefilledWhatsappLink } from '$lib/whatsapp.js';
 	import Seo from '$lib/Seo.svelte';
 	import Asterisk from '$lib/Asterisk.svelte';
 	import Closing from '$lib/Closing.svelte';
 	import profile from '$lib/assets/profile.jpg';
 
-	const waHref = whatsappLink(m.whatsapp_prefill());
+	const waHref = prefilledWhatsappLink();
 
 	const guide = [
 		{ href: '#what', link: m.home_guide_1_link(), text: m.home_guide_1_text() },
@@ -535,7 +535,7 @@
 		}
 
 		.status {
-			width: 92px;
+			width: 116px;
 			padding: 7px 9px;
 			font-size: 12px;
 			line-height: 12px;

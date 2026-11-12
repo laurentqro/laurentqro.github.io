@@ -65,14 +65,14 @@
 				fetchpriority="high"
 			/>
 
-			<dl class="rows">
+			<div class="rows">
 				{#each data.sections as s}
-					<div class="row">
-						<dt>{s.heading}</dt>
-						<dd>{s.body}</dd>
-					</div>
+					<section class="row">
+						<h2 class="label">{s.heading}</h2>
+						<p>{s.body}</p>
+					</section>
 				{/each}
-			</dl>
+			</div>
 
 			{#if data.imageSecondary}
 				<img
