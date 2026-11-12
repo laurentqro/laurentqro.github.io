@@ -1,0 +1,30 @@
+# Laurent Curau
+
+> Laurent Curau is an independent software engineer in Monaco. He embeds AI in a company's workflows, documents and data, in a secure way. He also builds websites, online shops and internal tools.
+
+The site is in French (default) and in English (under /en/). Laurent is Monégasque, lives and works in Monaco, and holds an MSc in Software Engineering from the University of Oxford. Contact: hello@laurentcurau.com, or the WhatsApp button on each page.
+
+## Main pages
+
+- [Home](https://laurentcurau.com/en/): what the AI integration service is, how it works and how it stays secure
+- [FAQ](https://laurentcurau.com/en/faq/): upfront and ongoing cost, data protection and cybersecurity
+- [About Laurent](https://laurentcurau.com/en/about/): background, way of working and contact
+- [Portfolio](https://laurentcurau.com/en/portfolio/): sites and tools built for clients
+
+## Case studies
+
+- [Agence de la Gare](https://laurentcurau.com/en/case-study/agence-de-la-gare/): a Monaco real estate site in nine languages
+- [Maison de Bacon](https://laurentcurau.com/en/case-study/maison-de-bacon/): a restaurant site redesign
+- [Christian Curau Architecte](https://laurentcurau.com/en/case-study/christian-curau-architecte/): an architect's site and file sharing tool
+
+## En français
+
+- [Accueil](https://laurentcurau.com/): l'intégration de l'IA en entreprise, de façon sécurisée
+- [Questions fréquentes](https://laurentcurau.com/faq/): coût, données et cybersécurité
+- [À propos de Laurent](https://laurentcurau.com/about/): parcours, façon de travailler et contact
+- [Réalisations](https://laurentcurau.com/portfolio/): sites et outils construits pour des clients
+
+## Optional
+
+- [Privacy policy](https://laurentcurau.com/en/privacy/)
+- [Terms of use](https://laurentcurau.com/en/terms/)

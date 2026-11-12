@@ -3,9 +3,14 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- Fonts are loaded via @import in app.css; preconnect shortens that chain -->
+		<!-- A link here and not an @import in app.css: the browser finds the font
+		     stylesheet without first downloading and parsing the site CSS. -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+		/>
 		%sveltekit.head%
 		<!-- Privacy-friendly analytics by Plausible -->
 		<script async src="https://plausible.io/js/pa-1Qb-rBe3ibpYcpomV3h83.js"></script>

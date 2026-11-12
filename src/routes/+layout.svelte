@@ -3,7 +3,8 @@
 	import favicon from '$lib/assets/favicon.ico';
 	import Header from '$lib/Header.svelte';
 	import Footer from '$lib/Footer.svelte';
-	import { locales } from '$lib/paraglide/runtime';
+	import { locales, getLocale } from '$lib/paraglide/runtime';
+	import profile from '$lib/assets/profile.jpg';
 	import { localizeHref } from '$lib/href';
 	import * as m from '$lib/paraglide/messages';
 	import { page } from '$app/stores';
@@ -24,22 +25,44 @@
 	const LT = String.fromCharCode(60);
 	const jsonLd = (data) => JSON.stringify(data).split(LT).join('\\u003c');
 
+	// One @id per entity, so search engines and AI systems read the person, the
+	// business and the site as linked records and not as three unrelated ones.
+	const PERSON_ID = SITE_URL + '/#person';
+	const BUSINESS_ID = SITE_URL + '/#business';
+	const LINKEDIN_URL = 'https://www.linkedin.com/in/laurentcurau';
+	const ogLocale = { fr: 'fr_FR', en: 'en_GB' };
+
+	const websiteLd = $derived(
+		jsonLd({
+			'@context': 'https://schema.org',
+			'@type': 'WebSite',
+			'@id': SITE_URL + '/#website',
+			name: 'Laurent Curau',
+			url: SITE_URL + localizeHref('/'),
+			inLanguage: getLocale(),
+			publisher: { '@id': PERSON_ID }
+		})
+	);
+
 	const personLd = $derived(
 		jsonLd({
 			'@context': 'https://schema.org',
 			'@type': 'Person',
+			'@id': PERSON_ID,
 			name: 'Laurent Curau',
 			jobTitle: m.meta_job_title(),
 			description: m.meta_description(),
 			url: SITE_URL,
-			image: SITE_URL + '/logo.png',
+			image: SITE_URL + profile,
+			mainEntityOfPage: SITE_URL + localizeHref('/about'),
+			worksFor: { '@id': BUSINESS_ID },
 			address: {
 				'@type': 'PostalAddress',
 				addressLocality: 'Monaco',
 				postalCode: '98000',
 				addressCountry: 'MC'
 			},
-			sameAs: ['https://www.linkedin.com/in/laurentcurau'],
+			sameAs: [LINKEDIN_URL],
 			alumniOf: {
 				'@type': 'CollegeOrUniversity',
 				name: 'University of Oxford',
@@ -82,10 +105,14 @@
 		jsonLd({
 			'@context': 'https://schema.org',
 			'@type': 'ProfessionalService',
+			'@id': BUSINESS_ID,
 			name: 'Laurent Curau',
 			description: m.meta_description(),
 			url: SITE_URL,
 			image: SITE_URL + '/logo.png',
+			logo: SITE_URL + '/logo.png',
+			founder: { '@id': PERSON_ID },
+			sameAs: [LINKEDIN_URL],
 			email: 'hello@laurentcurau.com',
 			address: {
 				'@type': 'PostalAddress',
@@ -122,6 +149,10 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={canonicalUrl} />
 	<meta property="og:site_name" content="Laurent Curau" />
+	<meta property="og:locale" content={ogLocale[getLocale()]} />
+	{#each locales.filter((l) => l !== getLocale()) as other}
+		<meta property="og:locale:alternate" content={ogLocale[other]} />
+	{/each}
 	<meta property="og:image" content="https://laurentcurau.com/og-image.png" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
@@ -147,6 +178,8 @@
 	<!-- Favicon -->
 	<link rel="icon" href={favicon} />
 	<link rel="apple-touch-icon" href={favicon} />
+
+	{@html `<script type="application/ld+json">${websiteLd}<` + `/script>`}
 
 	<!-- Structured Data: Person (JSON-LD) -->
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
