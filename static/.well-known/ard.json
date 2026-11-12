@@ -1,0 +1,33 @@
+{
+	"specVersion": "1.0",
+	"host": {
+		"displayName": "Laurent Curau",
+		"identifier": "https://laurentcurau.com/#business"
+	},
+	"entries": [
+		{
+			"identifier": "urn:air:laurentcurau.com:server:site",
+			"displayName": "laurentcurau.com MCP server",
+			"type": "application/mcp-server-card+json",
+			"url": "https://laurentcurau.com/.well-known/mcp/server-card.json",
+			"description": "Read-only MCP server for the public content of laurentcurau.com: list the pages, read a page as Markdown, get the contact details.",
+			"capabilities": ["list_pages", "read_page", "get_contact"],
+			"representativeQueries": [
+				"who can embed AI in my company in Monaco in a secure way",
+				"what does AI integration cost and where does my data go",
+				"how do I contact Laurent Curau"
+			]
+		},
+		{
+			"identifier": "urn:air:laurentcurau.com:skill:laurentcurau-site",
+			"displayName": "laurentcurau-site",
+			"type": "application/agent-skills+md",
+			"url": "https://laurentcurau.com/.well-known/agent-skills/laurentcurau-site/SKILL.md",
+			"description": "How an agent reads laurentcurau.com and puts a person in contact with Laurent Curau.",
+			"representativeQueries": [
+				"find an independent software engineer in Monaco for AI integration",
+				"read the laurentcurau.com FAQ on cost, data and cybersecurity"
+			]
+		}
+	]
+}

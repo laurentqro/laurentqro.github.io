@@ -8,13 +8,17 @@
 	import { localizeHref } from '$lib/href';
 	import * as m from '$lib/paraglide/messages';
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+	import { SITE_URL, LINKEDIN_URL } from '$lib/contact';
+	import { registerWebMcpTools } from '$lib/webmcp';
 
 	let { children } = $props();
 
+	onMount(registerWebMcpTools);
+
 	const shareImageAlt = `Laurent Curau. ${m.home_headline()}`;
 
-	// Canonical origin — $page.url is "http://sveltekit-prerender" during SSG
-	const SITE_URL = 'https://laurentcurau.com';
+	// SITE_URL and not $page.url: the origin is "http://sveltekit-prerender" during SSG.
 	const canonicalUrl = $derived(SITE_URL + $page.url.pathname);
 
 	const altHref = (locale) => SITE_URL + localizeHref($page.url.pathname, { locale });
@@ -29,7 +33,6 @@
 	// business and the site as linked records and not as three unrelated ones.
 	const PERSON_ID = SITE_URL + '/#person';
 	const BUSINESS_ID = SITE_URL + '/#business';
-	const LINKEDIN_URL = 'https://www.linkedin.com/in/laurentcurau';
 	const ogLocale = { fr: 'fr_FR', en: 'en_GB' };
 
 	const websiteLd = $derived(

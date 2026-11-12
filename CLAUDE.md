@@ -17,7 +17,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 npm run dev      # Start development server (http://localhost:5173)
-npm run build    # Build for production (outputs to build/)
+npm run build    # Build for production (outputs to build/), then write the agent files
+npm run deploy   # Build, then deploy to Cloudflare with wrangler
 npm run preview  # Preview production build locally
 npm run format   # Format code with Prettier
 npm run lint     # Check code formatting
@@ -25,7 +26,7 @@ npm run lint     # Check code formatting
 
 ## Architecture
 
-This is a static SvelteKit site that presents Laurent Curau's offer (AI integration for companies, plus sites and tools), deployed to GitHub Pages.
+This is a static SvelteKit site that presents Laurent Curau's offer (AI integration for companies, plus sites and tools), deployed to Cloudflare Workers as static assets with a small Worker in front of the pages.
 
 ### Internationalization (Paraglide.js)
 
@@ -47,14 +48,23 @@ The `src/hooks.ts` reroute hook strips locale prefixes from URLs so SvelteKit ro
 ### Static Site Generation
 
 - `src/routes/+layout.ts` exports `prerender = true` and `trailingSlash = 'always'`
-- The trailing slash setting is required for GitHub Pages to serve `/en/` correctly (generates `en/index.html` instead of `en.html`)
-- Deployment via GitHub Actions on push to `master` branch
+- The trailing slash setting generates `en/index.html` instead of `en.html`, so every page URL ends with a slash
+- Deployment is manual: `npm run deploy`. A push to `master` deploys nothing.
+
+### Hosting and agent files (Cloudflare)
+
+- `wrangler.jsonc` serves `build/` as static assets on the route `laurentcurau.com/*`. The DNS records still point to GitHub Pages, which holds an old build: removing the route sends traffic back there.
+- `worker/index.js` runs before the HTML pages only (`run_worker_first` in `wrangler.jsonc`). It answers `Accept: text/markdown` with the page's Markdown copy, adds the `Link` headers, and serves a read-only MCP server at `/mcp`. If it throws, it serves the static page. A new top-level page must be added to `run_worker_first`.
+- `scripts/agent-files.js` runs after `vite build`. It writes an `index.md` beside each page, `pages.json` for the MCP server, and the Agent Skills index with its digest. An element with `data-markdown="skip"` is left out of the Markdown.
+- `static/.well-known/` holds the agent manifests (API catalog, MCP server card, ARD, Poppy, the skill). `static/_headers` sets their content types; `static/_redirects` holds the server redirects.
+- Publish only true things in the manifests. The site has no login, so there is no OAuth metadata.
+- The free Workers plan allows 100,000 Worker runs per day. Past that, the HTML pages return 429.
 
 ### Component Structure
 
 - `src/routes/+layout.svelte` renders `Header` (sticky, with the FR / EN language links and the WhatsApp button), the page, then `Footer`. It also holds the site-wide meta tags and JSON-LD.
 - Pages: home (`/`), `/about`, `/faq`, `/portfolio`, `/case-study/*` (all use `src/lib/CaseStudy.svelte`), `/privacy` and `/terms` (both use `src/lib/LegalPage.svelte`).
-- `/services` and `/case-study/afida` are retired. Their `+page.js` redirects, and prerendering writes a meta-refresh page, because GitHub Pages has no server redirects.
+- `/services` and `/case-study/afida` are retired. `static/_redirects` answers them with a 301. Their `+page.js` still redirects for client-side navigation.
 - Shared layout classes (`.frame`, `.canvas`, `.sheet`, `.rows`, `.title`, `.link`) and the design tokens live in `src/app.css`.
 
 ### Design tokens

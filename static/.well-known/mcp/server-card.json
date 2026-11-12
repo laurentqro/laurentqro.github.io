@@ -1,0 +1,15 @@
+{
+	"serverInfo": {
+		"name": "laurentcurau.com",
+		"version": "1.0.0"
+	},
+	"description": "Read-only access to the public content of laurentcurau.com, the site of Laurent Curau, an independent software engineer in Monaco who embeds AI in companies in a secure way. List the pages, read a page as Markdown, get the contact details.",
+	"url": "https://laurentcurau.com/mcp",
+	"transport": {
+		"type": "streamable-http",
+		"endpoint": "https://laurentcurau.com/mcp"
+	},
+	"capabilities": {
+		"tools": true
+	}
+}

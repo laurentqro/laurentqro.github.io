@@ -1,11 +1,8 @@
 import * as m from '$lib/paraglide/messages';
-
-// Format: international, digits only (no +, no spaces).
-export const WHATSAPP_NUMBER = '33675298871';
+import { WHATSAPP_URL } from '$lib/contact';
 
 export function whatsappLink(prefillText = '') {
-	const base = `https://wa.me/${WHATSAPP_NUMBER}`;
-	return prefillText ? `${base}?text=${encodeURIComponent(prefillText)}` : base;
+	return prefillText ? `${WHATSAPP_URL}?text=${encodeURIComponent(prefillText)}` : WHATSAPP_URL;
 }
 
 export function prefilledWhatsappLink() {

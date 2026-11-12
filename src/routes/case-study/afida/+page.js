@@ -3,7 +3,7 @@ import { localizeHref } from '$lib/href';
 
 export const prerender = true;
 
-// GitHub Pages has no server redirects: prerendering this writes a meta-refresh page at the old URL.
+// On the server, static/_redirects answers this URL with a 301 before this page is reached.
 export function load() {
 	redirect(308, localizeHref('/portfolio'));
 }

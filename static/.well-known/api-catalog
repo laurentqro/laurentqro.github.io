@@ -1,0 +1,19 @@
+{
+	"linkset": [
+		{
+			"anchor": "https://laurentcurau.com/mcp",
+			"service-desc": [
+				{
+					"href": "https://laurentcurau.com/.well-known/mcp/server-card.json",
+					"type": "application/json"
+				}
+			],
+			"service-doc": [
+				{
+					"href": "https://laurentcurau.com/llms.txt",
+					"type": "text/plain"
+				}
+			]
+		}
+	]
+}

@@ -77,7 +77,8 @@
 				{/each}
 			</ul>
 
-			<figure class="example">
+			<!-- An illustration with invented items: scripts/agent-files.js leaves it out of the Markdown copy. -->
+			<figure class="example" data-markdown="skip">
 				<div class="window">
 					<div class="window-bar">
 						<div class="window-title"><Asterisk size={15} />{m.home_example_title()}</div>

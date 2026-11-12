@@ -1,0 +1,30 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "laurentcurau-com",
+	"main": "worker/index.js",
+	"compatibility_date": "2026-11-01",
+	// A route and not a custom domain: the DNS records stay as they are, and removing
+	// the route sends traffic back to the previous host.
+	"routes": [{ "pattern": "laurentcurau.com/*", "zone_name": "laurentcurau.com" }],
+	"assets": {
+		"directory": "./build",
+		"binding": "ASSETS",
+		"not_found_handling": "404-page",
+		"html_handling": "auto-trailing-slash",
+		// Only the HTML pages and /mcp go through the Worker. Every other file is served
+		// as a static asset: free, not counted, and it still works if the Worker fails.
+		// A new top-level page must be added here to get Markdown negotiation.
+		"run_worker_first": [
+			"/",
+			"/about/",
+			"/faq/",
+			"/portfolio/",
+			"/privacy/",
+			"/terms/",
+			"/case-study/*",
+			"/en/*",
+			"/mcp",
+			"!/*.md"
+		]
+	}
+}
